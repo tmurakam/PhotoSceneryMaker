@@ -37,8 +37,12 @@ protected:
 
 	void SetStatusMsg(AnsiString msg);
 
+	void __fastcall ShowMsg(void);
+	AnsiString ResultMsg;
+
 public:
 	__fastcall SCGenThread(PSMProject *proj, int sw);
+
 };
 //---------------------------------------------------------------------------
 #endif

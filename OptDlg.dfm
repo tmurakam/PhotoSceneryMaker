@@ -1,6 +1,6 @@
 object OptionDlg: TOptionDlg
-  Left = 444
-  Top = 335
+  Left = 409
+  Top = 299
   BorderStyle = bsDialog
   Caption = 'Options'
   ClientHeight = 168
@@ -96,5 +96,10 @@ object OptionDlg: TOptionDlg
     Style = csDropDownList
     ItemHeight = 12
     TabOrder = 6
+  end
+  object OpenDialog: TOpenDialog
+    DefaultExt = 'exe'
+    Left = 344
+    Top = 80
   end
 end

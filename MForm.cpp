@@ -366,16 +366,25 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 		delete bitmap;
 	}
 	bitmap = new Graphics::TBitmap;
-	bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
+	try {
+		bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
 
-	// •`‰æ—Ìˆæ‚ÌƒTƒCƒY‚ðC³
-	proj->Trans->Width = bitmap->Width;
-	proj->Trans->Height = bitmap->Height;
+		// •`‰æ—Ìˆæ‚ÌƒTƒCƒY‚ðC³
+		proj->Trans->Width = bitmap->Width;
+		proj->Trans->Height = bitmap->Height;
 
-	PaintBox->Width = bitmap->Width;
-	PaintBox->Height = bitmap->Height;
+		PaintBox->Width = bitmap->Width;
+		PaintBox->Height = bitmap->Height;
 
-	PaintBox->Invalidate();
+		PaintBox->Invalidate();
+	}
+	catch (Exception &e) {
+		AnsiString msg = _("Can't open bitmap file.");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);	
+
+		delete bitmap;
+		bitmap = NULL;
+	}
 
 	UpdateMenu();
 }

@@ -119,20 +119,37 @@ void __fastcall TOptionDlg::ButtonOKClick(TObject *Sender)
 
 void __fastcall TOptionDlg::ButtonBrowseSDKClick(TObject *Sender)
 {
+#if 0
 	AnsiString f = SelectFolder("", Handle);
 	if (!f.IsEmpty()) {
 		EditSDKPath->Text = f;
 	}
+#endif
+	OpenDialog->InitialDir = EditSDKPath->Text;
+	OpenDialog->FileName = "resample.exe";
+	OpenDialog->Filter = "Terrain SDK Resample tool|resample.exe";
+	if (!OpenDialog->Execute()) return;
+
+	EditSDKPath->Text = ExtractFileDir(OpenDialog->FileName);
+
 }
 //---------------------------------------------------------------------------
 
 
 void __fastcall TOptionDlg::ButtonBrowserImagetoolClick(TObject *Sender)
 {
+#if 0
 	AnsiString f = SelectFolder("", Handle);
 	if (!f.IsEmpty()) {
 		EditImagetoolPath->Text = f;
 	}
+#endif
+	OpenDialog->InitialDir = EditImagetoolPath->Text;
+	OpenDialog->FileName = "imagetool.exe";
+	OpenDialog->Filter = "Imagetool|imagetool.exe";
+	if (!OpenDialog->Execute()) return;
+
+	EditImagetoolPath->Text = ExtractFileDir(OpenDialog->FileName);
 }
 //---------------------------------------------------------------------------
 

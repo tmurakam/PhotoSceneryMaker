@@ -57,7 +57,8 @@ void TPrjForm::LoadData(PSMProject *proj)
 	EditBmpAlpha->Text    = proj->BmpFile(BM_ALPHA);
 
 	CheckSeason->Checked = proj->HasSeason;
-
+	CheckSeasonClick(NULL);
+	
 	EditWidth->Text = proj->Trans->Width;
 	EditHeight->Text = proj->Trans->Height;
 
@@ -209,6 +210,24 @@ void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
 
         EditS->Text = se.lat.GetStr();
         EditE->Text = se.lon.GetStr();
+}
+//---------------------------------------------------------------------------
+void __fastcall TPrjForm::CheckSeasonClick(TObject *Sender)
+{
+	bool sw;
+
+	sw = CheckSeason->Checked;
+
+#define	SETV(t) \
+	EditBmp ## t ## ->Enabled = sw; \
+	ButtonRefBmp ## t ## ->Enabled = sw
+
+	SETV(Spring);
+	SETV(Fall);
+	SETV(Winter);
+	SETV(HSWinter);
+	SETV(Lightmap);
+	
 }
 //---------------------------------------------------------------------------
 

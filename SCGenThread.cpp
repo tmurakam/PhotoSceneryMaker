@@ -73,19 +73,30 @@ __fastcall SCGenThread::SCGenThread(PSMProject *proj, int sw)
 //---------------------------------------------------------------------------
 void __fastcall SCGenThread::Execute()
 {
-	if (Sw & EX_MAKEINF) MakeInf();
-	if (Terminated) return;
+	try {
+		if (Sw & EX_MAKEINF) MakeInf();
+		if (!Terminated && Sw & EX_RESAMPLE) Resample();
+		if (!Terminated && Sw & EX_MRGALPHA) MergeAlpha();
+		if (!Terminated && Sw & EX_CONVTEX) ConvTex();
+		if (!Terminated && Sw & EX_GENBGL) GenBgl();
 
-	if (Sw & EX_RESAMPLE) Resample();
-	if (Terminated) return;
+		if (Terminated) {
+			ResultMsg = _("Interrupted");
+		} else {
+			ResultMsg = _("Done");
+		}
+	}
+	catch (Exception &e) {
+		//ShowMessage(e.Message);
+		ResultMsg = e.Message;
+	}
 
-	if (Sw & EX_MRGALPHA) MergeAlpha();
-	if (Terminated) return;
+	Synchronize(ShowMsg);
+}
 
-	if (Sw & EX_CONVTEX) ConvTex();
-	if (Terminated) return;
-
-	if (Sw & EX_GENBGL) GenBgl();
+void __fastcall SCGenThread::ShowMsg(void)
+{
+	Application->MessageBox(ResultMsg.c_str(), "Result", MB_OK);
 }
 
 //---------------------------------------------------------------------------
@@ -110,7 +121,6 @@ void SCGenThread::MakeInf(void)
 	}
 }
 
-//---------------------------------------------------------------------------
 // INF ファイル名決定
 AnsiString SCGenThread::InfFileName(int season)
 {
@@ -132,7 +142,6 @@ AnsiString SCGenThread::BmpPath(int season)
 	return path;
 }
 
-//---------------------------------------------------------------------------
 // 一個の INF ファイルを生成する
 void SCGenThread::MakeInf(int season)
 {
@@ -184,9 +193,33 @@ int SCGenThread::ExecCmd(AnsiString cmdline)
 	memset(&si, 0, sizeof(si));
 	si.cb=sizeof(si);
 
-	CreateProcess(NULL, cmdline.c_str(),NULL,NULL,FALSE,
+	ret = CreateProcess(NULL, cmdline.c_str(),NULL,NULL,FALSE,
 		BELOW_NORMAL_PRIORITY_CLASS,
 		NULL,NULL,&si,&pi);
+
+	if (ret == 0) {
+		// execution failed
+		LPTSTR buf;
+		FormatMessage(
+			FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
+			NULL,
+			GetLastError(),
+			LANG_USER_DEFAULT,
+//			MAKELANGID(LANG_NEUTRAL, SUBLANG_SYS_DEFAULT),
+			(LPTSTR)&buf,
+			0,
+			NULL );
+
+		AnsiString msg, desc;
+		msg = _("Command Execution Error");
+		msg += " : ";
+		msg += buf;
+		msg += cmdline;
+		LocalFree(buf);
+
+		throw Exception(msg);
+	}
+
 
 	for (;;) {
 		int st = WaitForSingleObject(pi.hProcess, 200);
@@ -199,7 +232,7 @@ int SCGenThread::ExecCmd(AnsiString cmdline)
 		
 	CloseHandle(pi.hProcess);
 
-	return ret;
+	return 0;
 }
 
 //---------------------------------------------------------------------------

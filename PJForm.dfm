@@ -97,6 +97,7 @@ object PrjForm: TPrjForm
         Height = 17
         Caption = 'Support Seasons'
         TabOrder = 2
+        OnClick = CheckSeasonClick
       end
       object EditBmpFall: TEdit
         Left = 88

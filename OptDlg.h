@@ -29,6 +29,7 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <Dialogs.hpp>
 //---------------------------------------------------------------------------
 class TOptionDlg : public TForm
 {
@@ -43,6 +44,7 @@ __published:	// IDE managed components
 	TButton *ButtonBrowserImagetool;
 	TComboBox *ListLang;
 	TLabel *Label3;
+	TOpenDialog *OpenDialog;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall ButtonOKClick(TObject *Sender);
 	void __fastcall ButtonBrowseSDKClick(TObject *Sender);
