@@ -300,7 +300,13 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 	c->v.y = Y;
 
 	// Show lat/lon
-	LatLonDlg->ShowModal();
+	if (LatLonDlg->ShowModal() == mrCancel) {
+		StatusBar->Panels->Items[0]->Text = _("Ready");
+		isCpSpecifing = false;
+		UpdateMenu();
+		return;
+	}
+
 	c->p.lat.SetStr(LatLonDlg->LatEdit->Text);
 	c->p.lon.SetStr(LatLonDlg->LonEdit->Text);
 
