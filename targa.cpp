@@ -145,5 +145,7 @@ static int WriteMergedTGA(Graphics::TBitmap *bmp, Graphics::TBitmap *alpha,
 	FILE *fp = fopen(tgafile.c_str(), "wb");
 	fwrite(buf, 1, sizeof(buf), fp);
 	fclose(fp);
+
+	return 0;
 }
 

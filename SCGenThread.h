@@ -35,6 +35,8 @@ protected:
 	void ConvTex(void);
 	void GenBgl(void);
 
+	void SetStatusMsg(AnsiString msg);
+
 public:
 	__fastcall SCGenThread(PSMProject *proj, int sw);
 };

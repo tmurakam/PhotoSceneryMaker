@@ -82,7 +82,8 @@ void __fastcall TSCGenForm::OnThreadTerminate(TObject *Sender)
 	thr = NULL;
 
 	ProcessState(false);
-	Application->MessageBox("Done", "Done", MB_OK);
+//	Application->MessageBox("Done", "Done", MB_OK);
+	StatusBar->SimpleText = _("Done");
 }
 
 //---------------------------------------------------------------------------

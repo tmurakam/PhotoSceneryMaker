@@ -29,6 +29,7 @@
 #include "gnugettext.hpp"
 
 #include "SCGenThread.h"
+#include "SCGenFrm.h"
 #include "OptDlg.h"
 #include "targa.h"
 
@@ -93,6 +94,9 @@ void __fastcall SCGenThread::Execute()
 // INF ファイル作成
 void SCGenThread::MakeInf(void)
 {
+	AnsiString msg = _("Creating inf files...");
+	SetStatusMsg(msg);
+
 	// 出力ディレクトリを作成
 	MkDir(Proj->OutDir);
 	MkDir(Proj->OutDir + "\\TmpBmp");
@@ -212,6 +216,11 @@ void SCGenThread::Resample(void)
 			continue;
 		}
 
+		AnsiString fmt = _("Resampling : %s...");
+		AnsiString msg;
+		msg.sprintf(fmt.c_str(), SeasonName[i]);
+		SetStatusMsg(msg);
+
 		// 作業用ディレクトリにchdir する
 		AnsiString bmppath = BmpPath(i);
 		ChDir(bmppath);
@@ -246,6 +255,9 @@ void SCGenThread::Resample(void)
 // Alpha テクスチャのマージ
 void SCGenThread::MergeAlpha(void)
 {
+	AnsiString msg = _("Merging Alpha Textures...");
+	SetStatusMsg(msg);
+
 	// texture ディレクトリ生成
 	AnsiString texdir;
 	texdir.sprintf("%s\\texture", Proj->OutDir);
@@ -299,6 +311,9 @@ void SCGenThread::MergeAlpha(void)
 // テクスチャ変換
 void SCGenThread::ConvTex(void)
 {
+	AnsiString msg = _("Converting Textures...");
+	SetStatusMsg(msg);
+
 	AnsiString Imagetool;
 	Imagetool.sprintf("%s\\imagetool.exe", OptionDlg->GetImagetoolPath());
 
@@ -312,6 +327,9 @@ void SCGenThread::ConvTex(void)
 // BGL 生成
 void SCGenThread::GenBgl(void)
 {
+	AnsiString msg = _("Generating BGL files...");
+	SetStatusMsg(msg);
+
 	AnsiString outdir = Proj->OutDir;
 	AnsiString basefile = Proj->BaseFile;
 
@@ -341,4 +359,11 @@ void SCGenThread::GenBgl(void)
 	// BGL に変換する
 	cmdline.sprintf("%s\\tmf2bgl.exe %s %s", sdkpath, tmfc, bgl);
 	ExecCmd(cmdline);
+}
+
+//---------------------------------------------------------------------------
+// BGL 生成
+void SCGenThread::SetStatusMsg(AnsiString msg)
+{
+	SCGenForm->StatusBar->SimpleText = msg;
 }
