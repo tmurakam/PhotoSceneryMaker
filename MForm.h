@@ -1,3 +1,4 @@
+
 /*
  * Photo Scenery Maker
  *
@@ -124,7 +125,7 @@ public:		// User decl.
 
 protected:
 	void StartCpSpecify(void);
-	void ChangeBmp(int bmpidx);
+	void ChangeBmp(int bmpidx, bool reload = false);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TMainForm *MainForm;

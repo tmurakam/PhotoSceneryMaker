@@ -95,7 +95,7 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 	proj->LoadFromFile(OpenPrjDialog->FileName);
 
 	// BMP ファイル読み直し
-	ChangeBmp(curBmpIdx);
+	ChangeBmp(curBmpIdx, true);
 }
 //---------------------------------------------------------------------------
 // Save project
@@ -120,6 +120,7 @@ void __fastcall TMainForm::MenuPrjPropertyClick(TObject *Sender)
 	PrjForm->LoadData(proj);
 	if (PrjForm->ShowModal() == mrOk) {
 		PrjForm->UpdateData(proj);
+		ChangeBmp(curBmpIdx, true);
 		UpdateMenu();
 	}
 
@@ -139,7 +140,7 @@ void TMainForm::UpdateMenu(void)
 		SetCPoint->Enabled = true;
 		ExecCorrection->Enabled = true;
 		MenuPrjSave->Enabled = proj->Modified;
-		MenuPrjSaveAs->Enabled = proj->Modified;
+		MenuPrjSaveAs->Enabled = true;
 		MenuSCGen->Enabled = true;
 	}
 
@@ -327,7 +328,7 @@ void TMainForm::SetProgress(int perc)
 }
 //---------------------------------------------------------------------------
 // Switch seasonal bitmaps
-void TMainForm::ChangeBmp(int bmpidx)
+void TMainForm::ChangeBmp(int bmpidx, bool reload)
 {
 	curBmpIdx = bmpidx;
 	
@@ -338,6 +339,9 @@ void TMainForm::ChangeBmp(int bmpidx)
 	bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
 
 	// 描画領域のサイズを修正
+	proj->Trans->Width = bitmap->Width;
+	proj->Trans->Height = bitmap->Height;
+
 	PaintBox->Width = bitmap->Width;
 	PaintBox->Height = bitmap->Height;
 

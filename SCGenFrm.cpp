@@ -35,6 +35,7 @@
 #include "SCGenFrm.h"
 #include "Util.h"
 #include "OptDlg.h"
+#include "Exec.h"
 #include "targa.h"
 
 //---------------------------------------------------------------------------
@@ -338,4 +339,5 @@ void __fastcall TSCGenForm::ButtonStopClick(TObject *Sender)
 	ProcessState(false);
 }
 //---------------------------------------------------------------------------
+
 

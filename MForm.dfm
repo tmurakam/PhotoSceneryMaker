@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 354
-  Top = 127
-  Width = 756
-  Height = 624
+  Left = 283
+  Top = 111
+  Width = 637
+  Height = 481
   Caption = 'Photo Scenery Maker'
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
@@ -17,8 +17,8 @@ object MainForm: TMainForm
   TextHeight = 12
   object StatusBar: TStatusBar
     Left = 0
-    Top = 556
-    Width = 748
+    Top = 408
+    Width = 629
     Height = 19
     Panels = <
       item
@@ -37,8 +37,8 @@ object MainForm: TMainForm
   object ScrollBox: TScrollBox
     Left = 0
     Top = 0
-    Width = 748
-    Height = 556
+    Width = 629
+    Height = 408
     HorzScrollBar.Tracking = True
     VertScrollBar.Tracking = True
     Align = alClient
@@ -152,13 +152,13 @@ object MainForm: TMainForm
   end
   object OpenPrjDialog: TOpenDialog
     DefaultExt = 'psm'
-    Filter = #12503#12525#12472#12455#12463#12488#12501#12449#12452#12523'(*.psm)|*.psm|'#20840#12390#12398#12501#12449#12452#12523'(*.*)|*.*'
+    Filter = 'Project files (*.psm)|*.psm|All files (*.*)|*.*'
     Left = 408
     Top = 16
   end
   object SavePrjDialog: TSaveDialog
     DefaultExt = 'psm'
-    Filter = #12503#12525#12472#12455#12463#12488#12501#12449#12452#12523'(*.psm)|*.psm|'#20840#12390#12398#12501#12449#12452#12523'(*.*)|*.*'
+    Filter = 'Project files (*.psm)|*.psm|All files (*.*)|*.*'
     Left = 440
     Top = 24
   end
