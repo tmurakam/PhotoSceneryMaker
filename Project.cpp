@@ -53,6 +53,9 @@ void PSMProject::LoadFromFile(AnsiString prjfile)
 
 	}
 
+	trans.Width  = ini->ReadInteger("Source", "Width",  -1);
+	trans.Height = ini->ReadInteger("Source", "Height", -1);
+
 	LatLon base;
 	base.lat.deg = ini->ReadFloat("Source", "Latitude", 0);
 	base.lon.deg = ini->ReadFloat("Source", "Longitude", 0);
@@ -83,6 +86,9 @@ void PSMProject::SaveToFile(AnsiString prjfile)
 	for (int i = 0; i < BM_MAX; i++) {
 		ini->WriteString("Source", BmpKey[i], BmpFiles[i]);
 	}
+
+	ini->WriteInteger("Source", "Width", trans.Width);
+	ini->WriteInteger("Source", "Height", trans.Height);
 
 	LatLon base = trans.Base;
 	ini->WriteFloat("Source", "Latitude", base.lat.deg);
