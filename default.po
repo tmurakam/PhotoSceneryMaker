@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-08-22 01:46+0900\n"
+"POT-Creation-Date: 2003-08-23 03:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,7 +136,7 @@ msgstr ""
 #. OptionDlg..ButtonOK..Caption
 #. PrjForm..Panel1..Button1..Caption
 #: LLDlg.dfm:52 
- OptDlg.dfm:45 PJForm.dfm:394
+ OptDlg.dfm:45 PJForm.dfm:395
 msgid "OK"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr ""
 #. OptionDlg..Button2..Caption
 #. PrjForm..Panel1..Button2..Caption
 #: OptDlg.dfm:55 
- PJForm.dfm:403
+ PJForm.dfm:404
 msgid "Cancel"
 msgstr ""
 
@@ -341,9 +341,14 @@ msgstr ""
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:71 
- OptDlg.dfm:87 PJForm.dfm:141 PJForm.dfm:150 PJForm.dfm:159
-#: PJForm.dfm:168 PJForm.dfm:177 PJForm.dfm:186 PJForm.dfm:195 PJForm.dfm:376
+ OptDlg.dfm:87 PJForm.dfm:142 PJForm.dfm:151 PJForm.dfm:160
+#: PJForm.dfm:169 PJForm.dfm:178 PJForm.dfm:187 PJForm.dfm:196 PJForm.dfm:377
 msgid "..."
+msgstr ""
+
+#. OptionDlg..OpenDialog..DefaultExt
+#: OptDlg.dfm:101 
+msgid "exe"
 msgstr ""
 
 #. PrjForm..Caption
@@ -372,77 +377,77 @@ msgid "Support Seasons"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..Caption
-#: PJForm.dfm:201 
+#: PJForm.dfm:202 
 msgid "Coordinates"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#: PJForm.dfm:208 
+#: PJForm.dfm:209 
 msgid "Bitmap Boundary"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
-#: PJForm.dfm:215 
+#: PJForm.dfm:216 
 msgid "North"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
-#: PJForm.dfm:222 
+#: PJForm.dfm:223 
 msgid "South"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
-#: PJForm.dfm:229 
+#: PJForm.dfm:230 
 msgid "West"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
-#: PJForm.dfm:236 
+#: PJForm.dfm:237 
 msgid "East"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
-#: PJForm.dfm:276 
+#: PJForm.dfm:277 
 msgid "Resolution"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
-#: PJForm.dfm:283 
+#: PJForm.dfm:284 
 msgid "CellXDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
-#: PJForm.dfm:290 
+#: PJForm.dfm:291 
 msgid "CellYDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label16..Caption
-#: PJForm.dfm:297 
+#: PJForm.dfm:298 
 msgid "Bitmap Width"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label17..Caption
-#: PJForm.dfm:304 
+#: PJForm.dfm:305 
 msgid "Bitmap Height"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:341 
+#: PJForm.dfm:342 
 msgid "Output"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:348 
+#: PJForm.dfm:349 
 msgid "Output Directory"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:355 
+#: PJForm.dfm:356 
 msgid "Base File Name"
 msgstr ""
 
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:409 
+#: PJForm.dfm:410 
 msgid "bmp"
 msgstr ""
 
@@ -509,35 +514,48 @@ msgstr ""
 msgid "You can resize the bitmap with some image editing tools."
 msgstr ""
 
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
+msgid "Can't open bitmap file."
+msgstr ""
+
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:86
 msgid "Done"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:95
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:84
+msgid "Interrupted"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:106
 msgid "Creating inf files..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:217
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:214
+msgid "Command Execution Error"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:250
 #, c-format
 msgid "Resampling : %s..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:233
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:266
 msgid "Error"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:234
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:267
 msgid "Some errors occured."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:256
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:289
 msgid "Merging Alpha Textures..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:312
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:345
 msgid "Converting Textures..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:328
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:361
 msgid "Generating BGL files..."
 msgstr ""
