@@ -31,6 +31,7 @@ USEFORM("OptDlg.cpp", OptionDlg);
 USEFORM("AboutDlg.cpp", AboutDialog);
 USEFORM("SCGenFrm.cpp", SCGenForm);
 USEFORM("PJForm.cpp", PrjForm);
+USEFORM("Exec.cpp", ExecDlg);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -44,6 +45,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		Application->CreateForm(__classid(TAboutDialog), &AboutDialog);
 		Application->CreateForm(__classid(TSCGenForm), &SCGenForm);
 		Application->CreateForm(__classid(TPrjForm), &PrjForm);
+		Application->CreateForm(__classid(TExecDlg), &ExecDlg);
 		Application->Run();
         }
         catch (Exception &exception)
