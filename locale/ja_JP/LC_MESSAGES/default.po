@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-08-20 23:29+0900\n"
+"PO-Revision-Date: 2003-08-21 02:29+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -111,17 +111,6 @@ msgstr ""
 #: AboutDlg.dfm:225
 msgid "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
-
-#. ExecDlg..Caption
-#: Exec.dfm:6
-msgid "Execution"
-msgstr "ステップ実行"
-
-#. ExecDlg..StopBtn..Caption
-#. SCGenForm..ButtonStop..Caption
-#: Exec.dfm:32
-msgid "Stop"
-msgstr "中断"
 
 #. LatLonDlg..Caption
 #: LLDlg.dfm:6
@@ -479,6 +468,11 @@ msgstr "5. BGLファイル生成"
 msgid "3. Merge Alpha Texture"
 msgstr "3. アルファテクスチャのマージ"
 
+#. SCGenForm..ButtonStop..Caption
+#: SCGenFrm.dfm:95
+msgid "Stop"
+msgstr "中断"
+
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
 #, c-format
 msgid "Specify #%d correction point"
@@ -497,6 +491,19 @@ msgstr "最適なビットマップサイズは %d x %d です。\n"
 msgid "You can resize the bitmap with some image editing tools."
 msgstr "適切な画像編集ツールでリサイズすることができます。"
 
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
+msgid "Done"
+msgstr "完了"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:97
+msgid "Creating inf files..."
+msgstr "inf ファイル生成中..."
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:219
+#, c-format
+msgid "Resampling : %s..."
+msgstr "Resample 実行中 : %s..."
+
 # D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:121
 msgid "Error"
 msgstr "エラー"
@@ -504,4 +511,13 @@ msgstr "エラー"
 # D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:122
 msgid "Some errors occured."
 msgstr "エラーが発生しました"
+
+msgid "Merging Alpha Textures..."
+msgstr "アルファテクスチャのマージ中..."
+
+msgid "Converting Textures..."
+msgstr "テクスチャ変換中..."
+
+msgid "Generating BGL files..."
+msgstr "BGL ファイル生成中..."
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-08-20 23:28+0900\n"
+"POT-Creation-Date: 2003-08-21 02:27+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,18 +115,6 @@ msgstr ""
 #: AboutDlg.dfm:225 
 msgid ""
 "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-
-#. ExecDlg..Caption
-#: Exec.dfm:6 
-msgid "Execution"
-msgstr ""
-
-#. ExecDlg..StopBtn..Caption
-#. SCGenForm..ButtonStop..Caption
-#: Exec.dfm:32 
- SCGenFrm.dfm:95
-msgid "Stop"
 msgstr ""
 
 #. LatLonDlg..Caption
@@ -493,6 +481,11 @@ msgstr ""
 msgid "3. Merge Alpha Texture"
 msgstr ""
 
+#. SCGenForm..ButtonStop..Caption
+#: SCGenFrm.dfm:95 
+msgid "Stop"
+msgstr ""
+
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:172
 #, c-format
 msgid "Specify #%d correction point"
@@ -511,10 +504,35 @@ msgstr ""
 msgid "You can resize the bitmap with some image editing tools."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:193
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
+msgid "Done"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:97
+msgid "Creating inf files..."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:219
+#, c-format
+msgid "Resampling : %s..."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:235
 msgid "Error"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:194
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:236
 msgid "Some errors occured."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:258
+msgid "Merging Alpha Textures..."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:314
+msgid "Converting Textures..."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:330
+msgid "Generating BGL files..."
 msgstr ""
