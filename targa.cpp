@@ -1,4 +1,6 @@
-/* Photo Scenery Maker
+/*
+ * Photo Scenery Maker
+ *
  * Copyright (C) 2003 Takuya Murakami
  *
  * targa.c : Targa file handling
