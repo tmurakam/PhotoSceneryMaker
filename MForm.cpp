@@ -613,21 +613,21 @@ void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 	int min, max, i;
 
 	// Latitude line
-	const double latbound = 90.0 / 8196.0;	// LOD 13
-	min = (int)(se.lat.deg / latbound - 0.5);
-	max = (int)(nw.lat.deg / latbound - 0.5) + 1;
+	const double latbound = 90.0 / 8192.0;	// LOD 13
+	min = (int)(se.lat.deg / latbound);
+	max = (int)(nw.lat.deg / latbound) + 1;
 	for (i = min; i <= max; i++) {
-		int y = trans->CalcY((i + 0.5) * latbound);
+		int y = trans->CalcY(i * latbound);
 		PaintBox->Canvas->MoveTo(0, y);
 		PaintBox->Canvas->LineTo(bitmap->Width - 1, y);
 	}
 
 	// Longitude line
-	const double lonbound = 120.0 / 8196.0;	// LOD 13
+	const double lonbound = 120.0 / 8192.0;	// LOD 13
 	min = (int)(nw.lon.deg / lonbound - 0.5);
 	max = (int)(se.lon.deg / lonbound - 0.5) + 1;
 	for (i = min; i <= max; i++) {
-		int x = trans->CalcX((i + 0.5) * lonbound);
+		int x = trans->CalcX(i * lonbound);
 		PaintBox->Canvas->MoveTo(x, 0);
 		PaintBox->Canvas->LineTo(x, bitmap->Height - 1);
 	}
