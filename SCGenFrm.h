@@ -71,7 +71,7 @@ private:	// User decl.
 
 public:		// User decl.
 	__fastcall TSCGenForm(TComponent* Owner);
-	void SetParam(PSMProject *proj, int width, int height);
+	void SetParam(PSMProject *proj);
 	void WriteIni(TIniFile * ini);
 	void ReadIni(TIniFile * ini);
 };

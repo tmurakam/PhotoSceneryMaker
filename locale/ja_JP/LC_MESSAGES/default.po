@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-08-20 01:15+0900\n"
+"PO-Revision-Date: 2003-08-20 23:29+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,6 @@ msgstr ""
 
 #. ExecDlg..Caption
 #: Exec.dfm:6
-#, fuzzy
 msgid "Execution"
 msgstr "ステップ実行"
 
@@ -180,9 +179,11 @@ msgstr "名前をつけて保存(&A)..."
 
 #. MainForm..MainMenu..F1..N1..Caption
 #. MainForm..MainMenu..F1..N5..Caption
+#. MainForm..MainMenu..H1..N2..Caption
 #. MainForm..MainMenu1..F1..N2..Caption
 #. MainForm..MainMenu1..F1..N4..Caption
 #: MForm.dfm:80
+#: bak/MainFrm.dfm:37
 msgid "-"
 msgstr ""
 
@@ -271,31 +272,35 @@ msgstr "オプション(&O)"
 msgid "Help(&H)"
 msgstr "ヘルプ(&H)"
 
-#. MainForm..MainMenu..H1..MenuManual..Caption
+#. MainForm..MainMenu..H1..MenuTutorial..Caption
 #: MForm.dfm:148
+msgid "Tutorial(&T)..."
+msgstr "チュートリアル(&T)..."
+
+#. MainForm..MainMenu..H1..MenuManual..Caption
+#: MForm.dfm:152
 msgid "Manual(&M)..."
 msgstr "マニュアル(&M)..."
 
 #. MainForm..MainMenu..H1..MenuAbout..Caption
-#: MForm.dfm:152
+#: MForm.dfm:159
 msgid "About(&A)..."
 msgstr "バージョン情報(&A)..."
 
 #. MainForm..OpenPrjDialog..DefaultExt
 #. MainForm..SavePrjDialog..DefaultExt
-#: MForm.dfm:158
+#: MForm.dfm:165
 msgid "psm"
 msgstr ""
 
 #. MainForm..OpenPrjDialog..Filter
 #. MainForm..SavePrjDialog..Filter
-#: MForm.dfm:159
+#: MForm.dfm:166
 msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
 msgstr ""
 
 #. OptionDlg..Caption
 #: OptDlg.dfm:5
-#, fuzzy
 msgid "Options"
 msgstr "オプション(&O)"
 

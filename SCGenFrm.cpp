@@ -35,7 +35,6 @@
 #include "SCGenFrm.h"
 #include "Util.h"
 #include "OptDlg.h"
-#include "Exec.h"
 #include "targa.h"
 
 //---------------------------------------------------------------------------
@@ -60,12 +59,9 @@ void __fastcall TSCGenForm::FormCreate(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-void TSCGenForm::SetParam(PSMProject *prj, int width, int height)
+void TSCGenForm::SetParam(PSMProject *prj)
 {
 	proj = prj;
-	
-	Width = width;
-	Height = height;
 }
 
 //---------------------------------------------------------------------------
@@ -133,8 +129,8 @@ void TSCGenForm::MakeInf(int season)
 	fprintf(fp, "\tSourceFile = \"%s\"\n", ExtractFileName(BmpFile).c_str());
 	fprintf(fp, "\tLat = %.24f\n", trans->Base.lat.deg);
 	fprintf(fp, "\tLon = %.24f\n", trans->Base.lon.deg);
-	fprintf(fp, "\tNumOfCellsPerLine = %d\n", Width);
-	fprintf(fp, "\tNumOfLines = %d\n", Height);
+	fprintf(fp, "\tNumOfCellsPerLine = %d\n", trans->Width);
+	fprintf(fp, "\tNumOfLines = %d\n", trans->Height);
 	fprintf(fp, "\tCellXdimensionDeg = %.24f\n", trans->Resolution.x);
 	fprintf(fp, "\tCellYdimensionDeg = %.24f\n", trans->Resolution.y);
 

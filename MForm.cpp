@@ -320,7 +320,7 @@ void __fastcall TMainForm::MenuOptionClick(TObject *Sender)
 // Show scenery generation dialog
 void __fastcall TMainForm::MenuSCGenClick(TObject *Sender)
 {
-	SCGenForm->SetParam(proj, bitmap->Width, bitmap->Height);
+	SCGenForm->SetParam(proj);
 	SCGenForm->ShowModal();
 }
 //---------------------------------------------------------------------------
@@ -452,7 +452,18 @@ void __fastcall TMainForm::MenuManualClick(TObject *Sender)
 	AnsiString man;
 
 	man = ExtractFilePath(Application->ExeName);
-	man += "doc\\manual.html";
+	man += "doc\\manual.en.html";
+	ShellExecute(this->Handle, "open", man.c_str(),
+		NULL, NULL, SW_SHOW);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainForm::MenuTutorialClick(TObject *Sender)
+{
+	AnsiString man;
+
+	man = ExtractFilePath(Application->ExeName);
+	man += "doc\\tutorial.en.html";
 	ShellExecute(this->Handle, "open", man.c_str(),
 		NULL, NULL, SW_SHOW);
 }

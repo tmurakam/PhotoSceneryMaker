@@ -144,9 +144,16 @@ object MainForm: TMainForm
     end
     object H1: TMenuItem
       Caption = 'Help(&H)'
+      object MenuTutorial: TMenuItem
+        Caption = 'Tutorial(&T)...'
+        OnClick = MenuTutorialClick
+      end
       object MenuManual: TMenuItem
         Caption = 'Manual(&M)...'
         OnClick = MenuManualClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
       end
       object MenuAbout: TMenuItem
         Caption = 'About(&A)...'
