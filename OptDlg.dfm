@@ -1,10 +1,10 @@
 object OptionDlg: TOptionDlg
-  Left = 409
-  Top = 299
+  Left = 302
+  Top = 252
   BorderStyle = bsDialog
   Caption = 'Options'
-  ClientHeight = 168
-  ClientWidth = 421
+  ClientHeight = 141
+  ClientWidth = 516
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -19,27 +19,27 @@ object OptionDlg: TOptionDlg
   object Label1: TLabel
     Left = 12
     Top = 16
-    Width = 88
+    Width = 95
     Height = 12
-    Caption = 'Terrain SDK path'
+    Caption = 'Terrain SDK folder'
   end
   object Label2: TLabel
     Left = 12
     Top = 48
-    Width = 75
+    Width = 82
     Height = 12
-    Caption = 'Imagetool path'
+    Caption = 'Imagetool folder'
   end
   object Label3: TLabel
     Left = 12
-    Top = 88
+    Top = 80
     Width = 48
     Height = 12
     Caption = 'Language'
   end
   object ButtonOK: TButton
-    Left = 120
-    Top = 128
+    Left = 160
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -48,8 +48,8 @@ object OptionDlg: TOptionDlg
     OnClick = ButtonOKClick
   end
   object Button2: TButton
-    Left = 216
-    Top = 128
+    Left = 256
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -59,12 +59,12 @@ object OptionDlg: TOptionDlg
   object EditSDKPath: TEdit
     Left = 128
     Top = 12
-    Width = 209
+    Width = 281
     Height = 20
     TabOrder = 2
   end
   object ButtonBrowseSDK: TButton
-    Left = 352
+    Left = 424
     Top = 10
     Width = 25
     Height = 25
@@ -75,12 +75,12 @@ object OptionDlg: TOptionDlg
   object EditImagetoolPath: TEdit
     Left = 128
     Top = 44
-    Width = 209
+    Width = 281
     Height = 20
     TabOrder = 4
   end
   object ButtonBrowserImagetool: TButton
-    Left = 352
+    Left = 424
     Top = 42
     Width = 25
     Height = 25
@@ -90,7 +90,7 @@ object OptionDlg: TOptionDlg
   end
   object ListLang: TComboBox
     Left = 128
-    Top = 84
+    Top = 76
     Width = 129
     Height = 20
     Style = csDropDownList

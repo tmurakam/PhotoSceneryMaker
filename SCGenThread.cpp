@@ -155,6 +155,12 @@ void SCGenThread::MakeInf(int season)
 	// inf ファイルを作成
 	FILE *fp;
 	fp = fopen(inf.c_str(), "w");
+	if (!fp) {
+		AnsiString msg, fmt;
+		fmt = _("Can't open inf file : %s");
+		msg.sprintf(fmt.c_str(), inf.c_str());
+		throw Exception(msg);
+	}
 
 	Transform *trans = Proj->Trans;
 
@@ -184,7 +190,7 @@ void SCGenThread::MakeInf(int season)
 }
 //---------------------------------------------------------------------------
 // Execute generic commands
-int SCGenThread::ExecCmd(AnsiString cmdline)
+int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 {
 	PROCESS_INFORMATION pi;
 	STARTUPINFO si;
@@ -210,11 +216,8 @@ int SCGenThread::ExecCmd(AnsiString cmdline)
 			0,
 			NULL );
 
-		AnsiString msg, desc;
-		msg = _("Command Execution Error");
-		msg += " : ";
-		msg += buf;
-		msg += cmdline;
+		AnsiString msg; 
+		msg.sprintf("%s : %s", desc, buf);
 		LocalFree(buf);
 
 		throw Exception(msg);
@@ -242,8 +245,10 @@ void SCGenThread::Resample(void)
 	for (int i = 0; i < BM_MAX; i++) {
 		if (Terminated) return;
 
-		if (!Proj->HasSeason &&
-		    i != BM_SUMMER && i != BM_ALPHA) {
+		if (i != BM_SUMMER && i != BM_ALPHA && !Proj->HasSeason) {
+			continue;
+		}
+		if (i == BM_ALPHA && !Proj->HasAlpha) {
 			continue;
 		}
 
@@ -262,7 +267,7 @@ void SCGenThread::Resample(void)
 		AnsiString cmdline;
 		cmdline.sprintf("%s\\resample.exe %s",
 				OptionDlg->GetSDKPath(), inf);
-		if (ExecCmd(cmdline) != 0) {
+		if (ExecCmd(cmdline, "resample.exe") != 0) {
 			AnsiString title = _("Error");
 			AnsiString mes = _("Some errors occured.");
 			Application->MessageBox(mes.c_str(), title.c_str(), MB_OK);
@@ -303,27 +308,27 @@ void SCGenThread::MergeAlpha(void)
 
 	AnsiString alphafile, bmpfiles[BM_MAX], tgafiles[BM_MAX], pre;
 
+	alphafile = "";
+	
 	TSearchRec rec;
 	int ret = FindFirst(searchfile, faAnyFile & ~faDirectory, rec);
 	int count = 1;
 	while (ret == 0) {
 		if (Terminated) return;
 
-#if 1
-		// TBD: メインスレッドに進捗報告
-#else
+		// Show current status
 		AnsiString st;
 		st.sprintf("Merging textures : %d", count++);
-		StatusBar->SimpleText = st;
-		Application->ProcessMessages();
-#endif
+		SetStatusMsg(st);
 
 		// ファイル名の最初の部分
 		int len = rec.Name.Length();
 		pre = rec.Name.SubString(1, len - 6);
 
 		// alpha テクスチャ名
-		alphafile.sprintf("%s\\%ssu.bmp", alphadir, pre);
+		if (Proj->HasAlpha) {
+			alphafile.sprintf("%s\\%ssu.bmp", alphadir, pre);
+		}
 
 		// bmp ファイル名
 		for (int i = 0; i < BM_MAX; i++) {
@@ -331,7 +336,8 @@ void SCGenThread::MergeAlpha(void)
 			bmpfiles[i].sprintf("%s\\%s%s.bmp", bmpdir, pre, SeasonSuffix[i]);
 			tgafiles[i].sprintf("%s\\%s%s.tga", texdir, pre, SeasonSuffix[i]);
 		}
-		MergeAlphaTextures(bmpfiles, alphafile, tgafiles);
+
+		MergeAlphaTextures(bmpfiles, alphafile, tgafiles, Proj->HasSeason);
 
 		ret = FindNext(rec);
 	}
@@ -352,7 +358,7 @@ void SCGenThread::ConvTex(void)
 	cmdline.sprintf("\"%s\" -DXT1 -e bmp -terrainphoto \"%s\\texture\\*.tga\"",
 		Imagetool, Proj->OutDir);
 
-	ExecCmd(cmdline);
+	ExecCmd(cmdline, "imagetool.exe");
 }
 //---------------------------------------------------------------------------
 // BGL 生成
@@ -384,12 +390,12 @@ void SCGenThread::GenBgl(void)
 	// compress する
 	AnsiString cmdline;
 	cmdline.sprintf("%s\\tmfcompress.exe %s %s", sdkpath, tmf, tmfc);
-	ExecCmd(cmdline);
+	ExecCmd(cmdline, "tmfcompress.exe");
 	if (Terminated) return;
 
 	// BGL に変換する
 	cmdline.sprintf("%s\\tmf2bgl.exe %s %s", sdkpath, tmfc, bgl);
-	ExecCmd(cmdline);
+	ExecCmd(cmdline, "tmf2bgl.exe");
 }
 
 //---------------------------------------------------------------------------

@@ -36,7 +36,8 @@ static int WriteMergedTGA(Graphics::TBitmap *bmp, Graphics::TBitmap *alpha,
 
 //---------------------------------------------------------------------------
 //
-void MergeAlphaTextures(AnsiString bmpfiles[], AnsiString alphafile, AnsiString tgafiles[])
+void MergeAlphaTextures(AnsiString bmpfiles[], AnsiString alphafile,
+	AnsiString tgafiles[], bool HasSeason)
 {
 	Graphics::TBitmap *bmp, *alpha;
 
@@ -51,6 +52,7 @@ void MergeAlphaTextures(AnsiString bmpfiles[], AnsiString alphafile, AnsiString 
 
 	for (int i = 0; i < BM_MAX; i++) {
 		if (i == BM_ALPHA) continue;
+		if (i != BM_SUMMER && !HasSeason) continue;
 
 		bmp->LoadFromFile(bmpfiles[i]);
 		WriteMergedTGA(bmp, alpha, tgafiles[i]);
@@ -97,7 +99,8 @@ static int WriteMergedTGA(Graphics::TBitmap *bmp, Graphics::TBitmap *alpha,
 
 	unsigned char *p = datap;
 
-	if (bmp->PixelFormat == pf24bit && alpha->PixelFormat == pf24bit) {
+	if (bmp->PixelFormat == pf24bit &&
+		(!alpha || alpha->PixelFormat == pf24bit)) {
 		// Fast copy...
 		for (int y = 0; y < 256; y++) {
 			unsigned char *bline, *aline;

@@ -74,6 +74,8 @@ private:
 	void writeOutDir(AnsiString d)		{ outdir = d; modified = true; }
 	void writeBaseFile(AnsiString b)	{ basefile = b; modified = true; }
 
+	bool hasAlpha(void)		{ return !BmpFiles[BM_ALPHA].IsEmpty(); }
+
 public:
 	PSMProject();
 
@@ -87,6 +89,7 @@ public:
 	__property Transform * Trans = {read=readTransform};
 
 	__property bool HasSeason = {read=hasSeason, write=writeHasSeason};
+	__property bool HasAlpha = {read=hasAlpha};
 	__property AnsiString OutDir = {read=outdir, write=writeOutDir};
 	__property AnsiString BaseFile = {read=basefile, write=writeBaseFile};
 };

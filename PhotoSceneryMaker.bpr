@@ -101,6 +101,8 @@ ProductVersion=1.0.0 beta 1
 Comments=
 
 [Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\dclact60.bpl=Borland ActionBar Components
+c:\program files\borland\cbuilder6\Bin\dclnet60.bpl=Borland Internet Components
 C:\Program Files\Borland\CBuilder6\Bin\dcldb60.bpl=Borland Database Components
 c:\program files\borland\cbuilder6\Bin\dclbde60.bpl=Borland BDE DB Components
 C:\Program Files\Borland\CBuilder6\Bin\dbx60.bpl=Borland SQL Explorer UI Package

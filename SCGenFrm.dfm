@@ -1,6 +1,6 @@
 object SCGenForm: TSCGenForm
-  Left = 370
-  Top = 276
+  Left = 354
+  Top = 265
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Scenery Generation'
@@ -22,6 +22,12 @@ object SCGenForm: TSCGenForm
     Width = 161
     Height = 73
     Caption = 'Run whole process'
+    Font.Charset = SHIFTJIS_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 0
     OnClick = ButtonDoAllClick
   end
@@ -35,16 +41,16 @@ object SCGenForm: TSCGenForm
     TabOrder = 2
   end
   object GroupBox1: TGroupBox
-    Left = 248
+    Left = 232
     Top = 24
-    Width = 177
+    Width = 193
     Height = 193
     Caption = 'Step execution'
     TabOrder = 3
     object ButtonMakeInf: TButton
       Left = 16
       Top = 24
-      Width = 145
+      Width = 161
       Height = 25
       Caption = '1. Generate inf file'
       TabOrder = 0
@@ -53,7 +59,7 @@ object SCGenForm: TSCGenForm
     object ButtonResample: TButton
       Left = 16
       Top = 56
-      Width = 145
+      Width = 161
       Height = 25
       Caption = '2. Resample'
       TabOrder = 1
@@ -62,7 +68,7 @@ object SCGenForm: TSCGenForm
     object ButtonConvertTexture: TButton
       Left = 16
       Top = 120
-      Width = 145
+      Width = 161
       Height = 25
       Caption = '4. Convert Texture'
       TabOrder = 3
@@ -71,7 +77,7 @@ object SCGenForm: TSCGenForm
     object ButtonGenBGL: TButton
       Left = 16
       Top = 152
-      Width = 145
+      Width = 161
       Height = 25
       Caption = '5. Generate BGL'
       TabOrder = 4
@@ -80,7 +86,7 @@ object SCGenForm: TSCGenForm
     object ButtonMergeAlpha: TButton
       Left = 16
       Top = 88
-      Width = 145
+      Width = 161
       Height = 25
       Caption = '3. Merge Alpha Texture'
       TabOrder = 2

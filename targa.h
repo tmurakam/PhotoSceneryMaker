@@ -49,6 +49,7 @@ typedef struct {
 
 /* external function */
 void MergeAlphaTextures(AnsiString bmpfiles[],
-	AnsiString alphafile, AnsiString tgafiles[]);
+	AnsiString alphafile, AnsiString tgafiles[],
+	bool HasSeason);
 
 #endif

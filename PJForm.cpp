@@ -24,6 +24,7 @@
 
 #include <vcl.h>
 #pragma hdrstop
+#include <math.h>
 
 #include "gnugettext.hpp"
 
@@ -187,6 +188,11 @@ void __fastcall TPrjForm::OnCoordEditExit(TObject *Sender)
 
         EditXres->Text = xres;
 	EditYres->Text = yres;
+
+	xres = 10000 * 1000 * xres / 90.0 * cos(nw.lat.deg / 180.0 * M_PI);
+	yres = 10000 * 1000 * yres / 90.0;
+	EditXres2->Text = xres;
+	EditYres2->Text = yres;
 }
 //---------------------------------------------------------------------------
 void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
@@ -206,10 +212,15 @@ void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
 	nw.lon.SetStr(EditW->Text);
 
 	se.lat.deg = nw.lat.deg - height * yres;
-        se.lon.deg = nw.lon.deg + width * xres;
+	se.lon.deg = nw.lon.deg + width * xres;
 
-        EditS->Text = se.lat.GetStr();
-        EditE->Text = se.lon.GetStr();
+	EditS->Text = se.lat.GetStr();
+	EditE->Text = se.lon.GetStr();
+
+	xres = 10000 * 1000 * xres / 90.0 * cos(nw.lat.deg / 180.0 * M_PI);
+	yres = 10000 * 1000 * yres / 90.0;
+	EditXres2->Text = xres;
+	EditYres2->Text = yres;
 }
 //---------------------------------------------------------------------------
 void __fastcall TPrjForm::CheckSeasonClick(TObject *Sender)
@@ -230,4 +241,6 @@ void __fastcall TPrjForm::CheckSeasonClick(TObject *Sender)
 	
 }
 //---------------------------------------------------------------------------
+
+
 

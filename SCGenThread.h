@@ -28,7 +28,7 @@ protected:
 	AnsiString BmpPath(int season);
 	void MakeInf(int season);
 
-	int ExecCmd(AnsiString cmdline);
+	int ExecCmd(AnsiString cmdline, AnsiString desc);
 
 	void Resample(void);
 	void MergeAlpha(void);

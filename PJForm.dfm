@@ -4,7 +4,7 @@ object PrjForm: TPrjForm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Project Property'
-  ClientHeight = 410
+  ClientHeight = 441
   ClientWidth = 472
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
@@ -20,7 +20,7 @@ object PrjForm: TPrjForm
     Left = 0
     Top = 0
     Width = 472
-    Height = 374
+    Height = 405
     ActivePage = TabSheet1
     Align = alClient
     TabIndex = 0
@@ -271,42 +271,28 @@ object PrjForm: TPrjForm
       end
       object GroupBox2: TGroupBox
         Left = 8
-        Top = 168
+        Top = 152
         Width = 449
-        Height = 145
+        Height = 73
         Caption = 'Resolution'
         TabOrder = 1
         object Label14: TLabel
           Left = 16
-          Top = 28
+          Top = 20
           Width = 160
           Height = 12
           Caption = 'CellXDimensionDeg (deg/pixel)'
         end
         object Label15: TLabel
           Left = 16
-          Top = 52
+          Top = 44
           Width = 160
           Height = 12
           Caption = 'CellYDimensionDeg (deg/pixel)'
         end
-        object Label16: TLabel
-          Left = 48
-          Top = 93
-          Width = 68
-          Height = 12
-          Caption = 'Bitmap Width'
-        end
-        object Label17: TLabel
-          Left = 216
-          Top = 93
-          Width = 73
-          Height = 12
-          Caption = 'Bitmap Height'
-        end
         object EditXres: TEdit
           Left = 216
-          Top = 24
+          Top = 16
           Width = 209
           Height = 20
           TabOrder = 0
@@ -314,23 +300,75 @@ object PrjForm: TPrjForm
         end
         object EditYres: TEdit
           Left = 216
-          Top = 48
+          Top = 40
           Width = 209
           Height = 20
           TabOrder = 1
           OnExit = OnResEditExit
         end
+      end
+      object GroupBoxInfo: TGroupBox
+        Left = 8
+        Top = 240
+        Width = 449
+        Height = 129
+        Caption = 'Info'
+        TabOrder = 2
+        object Label16: TLabel
+          Left = 16
+          Top = 77
+          Width = 68
+          Height = 12
+          Caption = 'Bitmap Width'
+        end
+        object Label17: TLabel
+          Left = 16
+          Top = 101
+          Width = 73
+          Height = 12
+          Caption = 'Bitmap Height'
+        end
+        object Label18: TLabel
+          Left = 16
+          Top = 21
+          Width = 112
+          Height = 12
+          Caption = 'X resolution (m/pixel)'
+        end
+        object Label19: TLabel
+          Left = 16
+          Top = 45
+          Width = 112
+          Height = 12
+          Caption = 'Y resolution (m/pixel)'
+        end
+        object EditYres2: TEdit
+          Left = 144
+          Top = 41
+          Width = 121
+          Height = 20
+          Enabled = False
+          TabOrder = 0
+        end
+        object EditXres2: TEdit
+          Left = 144
+          Top = 17
+          Width = 121
+          Height = 20
+          Enabled = False
+          TabOrder = 1
+        end
         object EditWidth: TEdit
           Left = 120
-          Top = 89
-          Width = 73
+          Top = 73
+          Width = 89
           Height = 20
           Enabled = False
           TabOrder = 2
         end
         object EditHeight: TEdit
-          Left = 296
-          Top = 89
+          Left = 120
+          Top = 97
           Width = 89
           Height = 20
           Enabled = False
@@ -344,9 +382,9 @@ object PrjForm: TPrjForm
       object Label8: TLabel
         Left = 16
         Top = 30
-        Width = 85
+        Width = 70
         Height = 12
-        Caption = 'Output Directory'
+        Caption = 'Output Folder'
       end
       object Label9: TLabel
         Left = 16
@@ -382,7 +420,7 @@ object PrjForm: TPrjForm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 374
+    Top = 405
     Width = 472
     Height = 36
     Align = alBottom
@@ -408,7 +446,7 @@ object PrjForm: TPrjForm
   end
   object OpenDialog: TOpenDialog
     DefaultExt = 'bmp'
-    Left = 16
-    Top = 376
+    Left = 8
+    Top = 408
   end
 end

@@ -92,6 +92,11 @@ __published:	// IDE managed components
 	TEdit *EditHeight;
 	TLabel *Label16;
 	TLabel *Label17;
+	TEdit *EditXres2;
+	TEdit *EditYres2;
+	TLabel *Label18;
+	TLabel *Label19;
+	TGroupBox *GroupBoxInfo;
 	void __fastcall ButtonRefOutDirClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSummerClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSpringClick(TObject *Sender);
