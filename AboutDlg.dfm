@@ -10,61 +10,62 @@ object AboutDialog: TAboutDialog
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
-  Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 12
+  TextHeight = 14
   object Label1: TLabel
     Left = 120
     Top = 24
-    Width = 181
-    Height = 22
+    Width = 177
+    Height = 23
     Caption = 'Photo Scenery Maker'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
-    Font.Name = 'Arial'
+    Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
     Left = 168
     Top = 56
-    Width = 93
-    Height = 18
+    Width = 95
+    Height = 19
     Caption = 'Version 1.2.1'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Arial'
+    Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Label3: TLabel
     Left = 88
     Top = 96
-    Width = 219
+    Width = 217
     Height = 16
     Caption = 'Copyright (C) 2003, Takuya Murakami'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
-    Font.Name = 'Arial'
+    Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object LabelURL: TLabel
     Left = 104
     Top = 120
-    Width = 191
-    Height = 15
+    Width = 203
+    Height = 14
     Cursor = crHandPoint
     Caption = 'http://scenerytools.sourceforge.net/'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlue
     Font.Height = -12
-    Font.Name = 'Arial'
+    Font.Name = 'Tahoma'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = LabelURLClick
@@ -196,7 +197,7 @@ object AboutDialog: TAboutDialog
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'Arial'
+    Font.Name = 'Tahoma'
     Font.Style = []
     Lines.Strings = (
       

@@ -10,37 +10,38 @@ object LatLonDlg: TLatLonDlg
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
-  Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 12
+  TextHeight = 14
   object Label1: TLabel
     Left = 16
-    Top = 24
-    Width = 41
-    Height = 12
+    Top = 20
+    Width = 45
+    Height = 14
     Caption = 'Latitude'
   end
   object Label2: TLabel
     Left = 16
-    Top = 56
-    Width = 49
-    Height = 12
+    Top = 52
+    Width = 55
+    Height = 14
     Caption = 'Longitude'
   end
   object LatEdit: TEdit
-    Left = 72
+    Left = 80
     Top = 16
     Width = 121
-    Height = 20
+    Height = 22
     TabOrder = 0
   end
   object LonEdit: TEdit
-    Left = 72
+    Left = 80
     Top = 48
     Width = 121
-    Height = 20
+    Height = 22
     TabOrder = 1
   end
   object Button1: TButton

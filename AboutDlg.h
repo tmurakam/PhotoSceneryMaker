@@ -44,6 +44,7 @@ __published:	// IDE managed components
 	TImage *Image1;
 	TMemo *Memo1;
 	void __fastcall LabelURLClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
 private:	// user decl
 public:		// user decl
 	__fastcall TAboutDialog(TComponent* Owner);

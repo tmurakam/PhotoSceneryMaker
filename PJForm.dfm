@@ -1,6 +1,6 @@
 object PrjForm: TPrjForm
-  Left = 321
-  Top = 190
+  Left = 327
+  Top = 178
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Project Property'
@@ -10,11 +10,12 @@ object PrjForm: TPrjForm
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
-  Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 12
+  TextHeight = 14
   object PageControl1: TPageControl
     Left = 0
     Top = 0
@@ -29,70 +30,70 @@ object PrjForm: TPrjForm
       object Label1: TLabel
         Left = 16
         Top = 36
-        Width = 41
-        Height = 12
+        Width = 45
+        Height = 14
         Caption = 'Summer'
       end
       object Label2: TLabel
         Left = 16
         Top = 68
-        Width = 32
-        Height = 12
+        Width = 34
+        Height = 14
         Caption = 'Spring'
       end
       object Label3: TLabel
         Left = 16
         Top = 100
-        Width = 19
-        Height = 12
+        Width = 16
+        Height = 14
         Caption = 'Fall'
       end
       object Label4: TLabel
         Left = 16
         Top = 132
-        Width = 32
-        Height = 12
+        Width = 37
+        Height = 14
         Caption = 'Winter'
       end
       object Label5: TLabel
         Left = 16
         Top = 164
-        Width = 66
-        Height = 12
+        Width = 71
+        Height = 14
         Caption = 'Harsh Winter'
       end
       object Label6: TLabel
         Left = 16
         Top = 196
-        Width = 46
-        Height = 12
+        Width = 50
+        Height = 14
         Caption = 'Lightmap'
       end
       object Label7: TLabel
         Left = 16
         Top = 228
-        Width = 64
-        Height = 12
+        Width = 72
+        Height = 14
         Caption = 'Water(alpha)'
       end
       object EditBmpSummer: TEdit
         Left = 88
         Top = 32
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 1
       end
       object EditBmpSpring: TEdit
         Left = 88
         Top = 64
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 3
       end
       object CheckSeason: TCheckBox
         Left = 16
         Top = 8
-        Width = 97
+        Width = 121
         Height = 17
         Caption = 'Support Seasons'
         TabOrder = 0
@@ -102,35 +103,35 @@ object PrjForm: TPrjForm
         Left = 88
         Top = 96
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 5
       end
       object EditBmpWinter: TEdit
         Left = 88
         Top = 128
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 7
       end
       object EditBmpHSWinter: TEdit
         Left = 88
         Top = 160
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 9
       end
       object EditBmpLightmap: TEdit
         Left = 88
         Top = 192
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 11
       end
       object EditBmpAlpha: TEdit
         Left = 88
         Top = 224
         Width = 329
-        Height = 20
+        Height = 22
         TabOrder = 13
       end
       object ButtonRefBmpSummer: TButton
@@ -210,36 +211,36 @@ object PrjForm: TPrjForm
         object Label10: TLabel
           Left = 152
           Top = 16
-          Width = 28
-          Height = 12
+          Width = 31
+          Height = 14
           Caption = 'North'
         end
         object Label11: TLabel
           Left = 152
-          Top = 88
-          Width = 29
-          Height = 12
+          Top = 84
+          Width = 33
+          Height = 14
           Caption = 'South'
         end
         object Label12: TLabel
-          Left = 24
-          Top = 56
-          Width = 25
-          Height = 12
+          Left = 16
+          Top = 52
+          Width = 29
+          Height = 14
           Caption = 'West'
         end
         object Label13: TLabel
           Left = 280
-          Top = 56
+          Top = 52
           Width = 23
-          Height = 12
+          Height = 14
           Caption = 'East'
         end
         object EditN: TEdit
           Left = 152
           Top = 32
           Width = 121
-          Height = 20
+          Height = 22
           TabOrder = 0
           OnExit = OnCoordEditExit
         end
@@ -247,7 +248,7 @@ object PrjForm: TPrjForm
           Left = 152
           Top = 101
           Width = 121
-          Height = 20
+          Height = 22
           TabOrder = 3
           OnExit = OnCoordEditExit
         end
@@ -255,7 +256,7 @@ object PrjForm: TPrjForm
           Left = 16
           Top = 69
           Width = 121
-          Height = 20
+          Height = 22
           TabOrder = 1
           OnExit = OnCoordEditExit
         end
@@ -263,7 +264,7 @@ object PrjForm: TPrjForm
           Left = 280
           Top = 69
           Width = 121
-          Height = 20
+          Height = 22
           TabOrder = 2
           OnExit = OnCoordEditExit
         end
@@ -278,22 +279,22 @@ object PrjForm: TPrjForm
         object Label14: TLabel
           Left = 16
           Top = 20
-          Width = 160
-          Height = 12
+          Width = 166
+          Height = 14
           Caption = 'CellXDimensionDeg (deg/pixel)'
         end
         object Label15: TLabel
           Left = 16
           Top = 44
-          Width = 160
-          Height = 12
+          Width = 167
+          Height = 14
           Caption = 'CellYDimensionDeg (deg/pixel)'
         end
         object EditXres: TEdit
           Left = 216
           Top = 16
           Width = 209
-          Height = 20
+          Height = 22
           TabOrder = 0
           OnExit = OnResEditExit
         end
@@ -301,7 +302,7 @@ object PrjForm: TPrjForm
           Left = 216
           Top = 40
           Width = 209
-          Height = 20
+          Height = 22
           TabOrder = 1
           OnExit = OnResEditExit
         end
@@ -316,36 +317,36 @@ object PrjForm: TPrjForm
         object Label16: TLabel
           Left = 16
           Top = 77
-          Width = 68
-          Height = 12
+          Width = 74
+          Height = 14
           Caption = 'Bitmap Width'
         end
         object Label17: TLabel
           Left = 16
           Top = 101
-          Width = 73
-          Height = 12
+          Width = 77
+          Height = 14
           Caption = 'Bitmap Height'
         end
         object Label18: TLabel
           Left = 16
           Top = 21
-          Width = 112
-          Height = 12
+          Width = 117
+          Height = 14
           Caption = 'X resolution (m/pixel)'
         end
         object Label19: TLabel
           Left = 16
           Top = 45
-          Width = 112
-          Height = 12
+          Width = 118
+          Height = 14
           Caption = 'Y resolution (m/pixel)'
         end
         object EditYres2: TEdit
           Left = 144
           Top = 41
           Width = 121
-          Height = 20
+          Height = 22
           Enabled = False
           TabOrder = 0
         end
@@ -353,7 +354,7 @@ object PrjForm: TPrjForm
           Left = 144
           Top = 17
           Width = 121
-          Height = 20
+          Height = 22
           Enabled = False
           TabOrder = 1
         end
@@ -361,7 +362,7 @@ object PrjForm: TPrjForm
           Left = 120
           Top = 73
           Width = 89
-          Height = 20
+          Height = 22
           Enabled = False
           TabOrder = 2
         end
@@ -369,7 +370,7 @@ object PrjForm: TPrjForm
           Left = 120
           Top = 97
           Width = 89
-          Height = 20
+          Height = 22
           Enabled = False
           TabOrder = 3
         end
@@ -388,15 +389,15 @@ object PrjForm: TPrjForm
         object Label9: TLabel
           Left = 16
           Top = 68
-          Width = 82
-          Height = 12
+          Width = 81
+          Height = 14
           Caption = 'Base File Name'
         end
         object Label8: TLabel
           Left = 16
           Top = 30
-          Width = 70
-          Height = 12
+          Width = 77
+          Height = 14
           Caption = 'Output Folder'
         end
         object ButtonRefOutDir: TButton
@@ -412,14 +413,14 @@ object PrjForm: TPrjForm
           Left = 120
           Top = 64
           Width = 121
-          Height = 20
+          Height = 22
           TabOrder = 2
         end
         object EditOutDir: TEdit
           Left = 120
           Top = 26
           Width = 281
-          Height = 20
+          Height = 22
           TabOrder = 0
         end
       end
@@ -433,29 +434,29 @@ object PrjForm: TPrjForm
         object Label20: TLabel
           Left = 120
           Top = 40
-          Width = 19
-          Height = 12
+          Width = 22
+          Height = 14
           Caption = 'Top'
         end
         object Label21: TLabel
           Left = 24
           Top = 72
-          Width = 20
-          Height = 12
+          Width = 22
+          Height = 14
           Caption = 'Left'
         end
         object Label22: TLabel
           Left = 208
           Top = 72
-          Width = 27
-          Height = 12
+          Width = 28
+          Height = 14
           Caption = 'Right'
         end
         object Label23: TLabel
           Left = 112
           Top = 104
-          Width = 37
-          Height = 12
+          Width = 41
+          Height = 14
           Caption = 'Bottom'
         end
         object CheckUseWhole: TCheckBox
@@ -470,28 +471,28 @@ object PrjForm: TPrjForm
           Left = 112
           Top = 56
           Width = 81
-          Height = 20
+          Height = 22
           TabOrder = 1
         end
         object EditBoundLeft: TEdit
           Left = 24
           Top = 88
           Width = 81
-          Height = 20
+          Height = 22
           TabOrder = 2
         end
         object EditBoundRight: TEdit
           Left = 200
           Top = 88
           Width = 81
-          Height = 20
+          Height = 22
           TabOrder = 3
         end
         object EditBoundBottom: TEdit
           Left = 112
           Top = 120
           Width = 81
-          Height = 20
+          Height = 22
           TabOrder = 4
         end
       end

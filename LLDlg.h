@@ -39,6 +39,7 @@ __published:	// IDE managed components
 	TEdit *LonEdit;
 	TButton *Button1;
 	TButton *Button2;
+	void __fastcall FormCreate(TObject *Sender);
 private:	// User decl.
 public:		// User decl.
 	__fastcall TLatLonDlg(TComponent* Owner);

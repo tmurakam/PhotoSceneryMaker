@@ -55,6 +55,7 @@ __published:	// IDE managed components
 	void __fastcall ButtonDoAllClick(TObject *Sender);
 	void __fastcall ButtonMergeAlphaClick(TObject *Sender);
 	void __fastcall ButtonStopClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
 private:	// User decl.
 	PSMProject *proj;
 

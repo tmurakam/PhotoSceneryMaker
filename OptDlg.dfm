@@ -9,32 +9,32 @@ object OptionDlg: TOptionDlg
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
-  Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 12
+  TextHeight = 14
   object Label1: TLabel
     Left = 12
     Top = 16
-    Width = 95
-    Height = 12
+    Width = 99
+    Height = 14
     Caption = 'Terrain SDK folder'
   end
   object Label2: TLabel
     Left = 12
     Top = 48
-    Width = 82
-    Height = 12
+    Width = 90
+    Height = 14
     Caption = 'Imagetool folder'
   end
   object Label3: TLabel
     Left = 12
     Top = 80
-    Width = 48
-    Height = 12
+    Width = 53
+    Height = 14
     Caption = 'Language'
   end
   object ButtonOK: TButton
@@ -60,7 +60,7 @@ object OptionDlg: TOptionDlg
     Left = 128
     Top = 12
     Width = 281
-    Height = 20
+    Height = 22
     TabOrder = 2
   end
   object ButtonBrowseSDK: TButton
@@ -76,7 +76,7 @@ object OptionDlg: TOptionDlg
     Left = 128
     Top = 44
     Width = 281
-    Height = 20
+    Height = 22
     TabOrder = 4
   end
   object ButtonBrowserImagetool: TButton
@@ -92,9 +92,9 @@ object OptionDlg: TOptionDlg
     Left = 128
     Top = 76
     Width = 129
-    Height = 20
+    Height = 22
     Style = csDropDownList
-    ItemHeight = 12
+    ItemHeight = 14
     TabOrder = 6
   end
   object OpenDialog: TOpenDialog
