@@ -468,22 +468,27 @@ void __fastcall TMainForm::MenuViewAlphaClick(TObject *Sender)
 
 void __fastcall TMainForm::MenuManualClick(TObject *Sender)
 {
-	AnsiString man;
-
-	man = ExtractFilePath(Application->ExeName);
-	man += "doc\\manual.en.html";
-	ShellExecute(this->Handle, "open", man.c_str(),
-		NULL, NULL, SW_SHOW);
+	ShowHtml("manual");
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMainForm::MenuTutorialClick(TObject *Sender)
 {
-	AnsiString man;
+	ShowHtml("tutorial");
+}
 
-	man = ExtractFilePath(Application->ExeName);
-	man += "doc\\tutorial.en.html";
-	ShellExecute(this->Handle, "open", man.c_str(),
+void TMainForm::ShowHtml(AnsiString prefix)
+{
+	AnsiString html;
+
+	html = ExtractFilePath(Application->ExeName);
+	html += "doc\\";
+	html += prefix;
+	html += ".";
+	html += OptionDlg->GetLangCode();
+	html += ".html";
+
+	ShellExecute(this->Handle, "open", html.c_str(),
 		NULL, NULL, SW_SHOW);
 }
 

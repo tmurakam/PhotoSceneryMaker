@@ -14,10 +14,11 @@
 
 struct _lang {
 	char *code;
+	char *locale;
 	char *desc;
-} lang[] = {
-	{ "en", "English" },
-	{ "ja_JP", "Japanese" },
+} Lang[] = {
+	{ "en", "en", "English" },
+	{ "ja", "ja_JP", "Japanese" },
 	{ NULL, NULL }
 };
 
@@ -36,7 +37,12 @@ __fastcall TOptionDlg::TOptionDlg(TComponent* Owner)
 // Change Languages
 void TOptionDlg::ChangeLang(void)
 {
-	UseLanguage(lang[curLangIdx].code);
+	UseLanguage(Lang[curLangIdx].locale);
+}
+
+AnsiString TOptionDlg::GetLangCode(void)
+{
+	return Lang[curLangIdx].code;
 }
 
 //---------------------------------------------------------------------------
@@ -59,8 +65,8 @@ void TOptionDlg::LoadReg(void)
 
 	// set language index
 	for (int i = 0; ; i++) {
-		if (lang[i].code == NULL) break;
-		if (lng == lang[i].code) {
+		if (Lang[i].code == NULL) break;
+		if (lng == Lang[i].code) {
 			curLangIdx = i;
 			break;
 		}
@@ -77,8 +83,8 @@ void __fastcall TOptionDlg::FormCreate(TObject *Sender)
 {
 	// Setup Language Selection
 	for (int i = 0; ; i++) {
-		if (lang[i].code == NULL) break;
-		ListLang->Items->Add(lang[i].desc);
+		if (Lang[i].code == NULL) break;
+		ListLang->Items->Add(Lang[i].desc);
 	}
 
 	LoadReg();
@@ -103,7 +109,7 @@ void __fastcall TOptionDlg::ButtonOKClick(TObject *Sender)
 	curLangIdx = ListLang->ItemIndex;
 	ChangeLang();
 
-	reg->WriteString("Language", lang[curLangIdx].code);
+	reg->WriteString("Language", Lang[curLangIdx].code);
 
 	reg->CloseKey();
 	delete reg;

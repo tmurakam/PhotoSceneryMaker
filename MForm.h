@@ -124,6 +124,8 @@ private:	// ƒ†[ƒU[éŒ¾
 	void CalcParameters(void);
 //	void Gauss(double k[3][4]);
 
+	void ShowHtml(AnsiString prefix);
+
 public:		// User decl.
         __fastcall TMainForm(TComponent* Owner);
 	void UpdateMenu(void);

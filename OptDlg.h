@@ -50,14 +50,15 @@ __published:	// IDE managed components
 	void __fastcall ButtonBrowserImagetoolClick(TObject *Sender);
 
 private:	// User decl
+	void LoadReg(void);
 	void ChangeLang(void);
 	int curLangIdx;
 
 public:		// User decl
 	__fastcall TOptionDlg(TComponent* Owner);
-	void LoadReg(void);
 	inline AnsiString GetSDKPath(void) { return EditSDKPath->Text; }
 	inline AnsiString GetImagetoolPath(void) { return EditImagetoolPath->Text; }
+	AnsiString GetLangCode(void);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TOptionDlg *OptionDlg;
