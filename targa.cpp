@@ -99,16 +99,21 @@ static int WriteMergedTGA(Graphics::TBitmap *bmp, Graphics::TBitmap *alpha,
 
 	unsigned char *p = datap;
 
+	unsigned char transbits = 0x0;
+	if (!alpha) transbits = 0xff;
+
 	if (bmp->PixelFormat == pf24bit &&
 		(!alpha || alpha->PixelFormat == pf24bit)) {
 		// Fast copy...
-		for (int y = 0; y < 256; y++) {
-			unsigned char *bline, *aline;
+		unsigned char *bline, *aline;
 
+		for (int y = 0; y < 256; y++) {
 			bline = (unsigned char *)bmp->ScanLine[255-y];
 			aline = (unsigned char *)(alpha ? alpha->ScanLine[255-y] : NULL);
 
 			if (alpha) {
+				transbits |= *aline;
+
 				for (int x = 0; x < 256; x++) {
 					*p++ = *bline++;
 					*p++ = *bline++;
@@ -133,15 +138,23 @@ static int WriteMergedTGA(Graphics::TBitmap *bmp, Graphics::TBitmap *alpha,
 				*p++ = c & 0xff;		// R
 				*p++ = (c >> 8) & 0xff;		// G
 				*p++ = (c >> 16) & 0xff;	// B
-		
+
 				if (!alpha) {
 					*p++ = 0;
 				} else {
 					c = alpha->Canvas->Pixels[x][255 - y];
-					*p++ = c & 0xff;		// alpha (R)
+					c &= 0xff;
+					transbits |= c;
+					*p++ = c;		// alpha (R)
 				}
 			}
 		}
+	}
+
+	// dirty hack...
+	// Imagetool.exe can't handle completely transparent bitmap.
+	if (transbits == 0x0) {
+		*(p - 1) = 0x1;
 	}
 
 	// write targa file
