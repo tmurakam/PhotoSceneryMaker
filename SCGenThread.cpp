@@ -162,12 +162,24 @@ void SCGenThread::MakeInf(int season)
 	fprintf(fp, "\n[Destination]\n");
 	fprintf(fp, "\tDestDir = \"%s\"\n", BmpPath(season).c_str());
 	fprintf(fp, "\tDestBaseFileName = \"%s\"\n", Proj->BaseFile.c_str());
-	fprintf(fp, "\tUseSourceDimensions = 1\n");
 	if (Proj->HasSeason) {
 		fprintf(fp, "\twithseasons = 1\n");
 		fprintf(fp, "\tseason = %s\n", SeasonName[season]);
 	}
+	
+	if (trans->Boundary.useWhole) {
+		fprintf(fp, "\tUseSourceDimensions = 1\n");
+	} else {
+		fprintf(fp, "\tUseSourceDimensions = 0\n");
+
+		LatLon nw = trans->CalcLatLon(trans->Boundary.left, trans->Boundary.top);
+		LatLon se = trans->CalcLatLon(trans->Boundary.right, trans->Boundary.bottom);
 		
+		fprintf(fp, "\tNorthLat = %.24f\n", nw.lat.deg);
+		fprintf(fp, "\tWestLong = %.24f\n", nw.lon.deg);
+		fprintf(fp, "\tSouthLat = %.24f\n", se.lat.deg);
+		fprintf(fp, "\tEastLong = %.24f\n", se.lon.deg);
+	}
 	fclose(fp);
 }
 //---------------------------------------------------------------------------

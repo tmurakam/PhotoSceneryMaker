@@ -56,6 +56,12 @@ void PSMProject::LoadFromFile(AnsiString prjfile)
 	trans.Width  = ini->ReadInteger("Source", "Width",  -1);
 	trans.Height = ini->ReadInteger("Source", "Height", -1);
 
+	trans.Boundary.useWhole = ini->ReadBool("Source", "UseWhole", true);
+	trans.Boundary.top = ini->ReadInteger("Source", "Top", 0);
+	trans.Boundary.left = ini->ReadInteger("Source", "Left", 0);
+	trans.Boundary.right = ini->ReadInteger("Source", "Right", trans.Width - 1);
+	trans.Boundary.bottom = ini->ReadInteger("Source", "Bottom", trans.Height - 1);
+
 	LatLon base;
 	base.lat.deg = ini->ReadFloat("Source", "Latitude", 0);
 	base.lon.deg = ini->ReadFloat("Source", "Longitude", 0);
@@ -89,6 +95,12 @@ void PSMProject::SaveToFile(AnsiString prjfile)
 
 	ini->WriteInteger("Source", "Width", trans.Width);
 	ini->WriteInteger("Source", "Height", trans.Height);
+
+	ini->WriteBool("Source", "UseWhole", trans.Boundary.useWhole);
+	ini->WriteInteger("Source", "Top", trans.Boundary.top);
+	ini->WriteInteger("Source", "Left", trans.Boundary.left);
+	ini->WriteInteger("Source", "Right", trans.Boundary.right);
+	ini->WriteInteger("Source", "Bottom", trans.Boundary.bottom);
 
 	LatLon base = trans.Base;
 	ini->WriteFloat("Source", "Latitude", base.lat.deg);

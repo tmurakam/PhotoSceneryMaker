@@ -378,42 +378,122 @@ object PrjForm: TPrjForm
     object TabSheet3: TTabSheet
       Caption = 'Output'
       ImageIndex = 2
-      object Label8: TLabel
-        Left = 16
-        Top = 30
-        Width = 70
-        Height = 12
-        Caption = 'Output Folder'
-      end
-      object Label9: TLabel
-        Left = 16
-        Top = 68
-        Width = 82
-        Height = 12
-        Caption = 'Base File Name'
-      end
-      object EditOutDir: TEdit
-        Left = 120
-        Top = 26
-        Width = 281
-        Height = 20
+      object GroupBox3: TGroupBox
+        Left = 8
+        Top = 8
+        Width = 457
+        Height = 105
+        Caption = 'File output'
         TabOrder = 0
+        object Label9: TLabel
+          Left = 16
+          Top = 68
+          Width = 82
+          Height = 12
+          Caption = 'Base File Name'
+        end
+        object Label8: TLabel
+          Left = 16
+          Top = 30
+          Width = 70
+          Height = 12
+          Caption = 'Output Folder'
+        end
+        object ButtonRefOutDir: TButton
+          Left = 416
+          Top = 24
+          Width = 25
+          Height = 25
+          Caption = '...'
+          TabOrder = 0
+          OnClick = ButtonRefOutDirClick
+        end
+        object EditBaseFile: TEdit
+          Left = 120
+          Top = 64
+          Width = 121
+          Height = 20
+          TabOrder = 1
+        end
+        object EditOutDir: TEdit
+          Left = 120
+          Top = 26
+          Width = 281
+          Height = 20
+          TabOrder = 2
+        end
       end
-      object EditBaseFile: TEdit
-        Left = 120
-        Top = 64
-        Width = 121
-        Height = 20
+      object GroupBox4: TGroupBox
+        Left = 8
+        Top = 128
+        Width = 321
+        Height = 161
+        Caption = 'Bitmap boundary'
         TabOrder = 1
-      end
-      object ButtonRefOutDir: TButton
-        Left = 416
-        Top = 24
-        Width = 25
-        Height = 25
-        Caption = '...'
-        TabOrder = 2
-        OnClick = ButtonRefOutDirClick
+        object Label20: TLabel
+          Left = 120
+          Top = 40
+          Width = 19
+          Height = 12
+          Caption = 'Top'
+        end
+        object Label21: TLabel
+          Left = 24
+          Top = 72
+          Width = 20
+          Height = 12
+          Caption = 'Left'
+        end
+        object Label22: TLabel
+          Left = 208
+          Top = 72
+          Width = 27
+          Height = 12
+          Caption = 'Right'
+        end
+        object Label23: TLabel
+          Left = 112
+          Top = 104
+          Width = 37
+          Height = 12
+          Caption = 'Bottom'
+        end
+        object CheckUseWhole: TCheckBox
+          Left = 16
+          Top = 16
+          Width = 153
+          Height = 17
+          Caption = 'Use whole bitmap'
+          TabOrder = 0
+        end
+        object EditBoundTop: TEdit
+          Left = 112
+          Top = 56
+          Width = 81
+          Height = 20
+          TabOrder = 1
+        end
+        object EditBoundLeft: TEdit
+          Left = 24
+          Top = 88
+          Width = 81
+          Height = 20
+          TabOrder = 2
+        end
+        object EditBoundRight: TEdit
+          Left = 200
+          Top = 88
+          Width = 81
+          Height = 20
+          TabOrder = 3
+        end
+        object EditBoundBottom: TEdit
+          Left = 112
+          Top = 120
+          Width = 81
+          Height = 20
+          TabOrder = 4
+        end
       end
     end
   end
@@ -445,6 +525,7 @@ object PrjForm: TPrjForm
   end
   object OpenDialog: TOpenDialog
     DefaultExt = 'bmp'
+    Filter = 'Bitmap File (*.bmp)|*.bmp|All Files (*.*)|*.*'
     Left = 8
     Top = 408
   end

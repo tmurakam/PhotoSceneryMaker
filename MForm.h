@@ -45,7 +45,7 @@ __published:	// IDE managed components
         TMenuItem *F1;
 	TMenuItem *MenuQuit;
         TStatusBar *StatusBar;
-        TMenuItem *C1;
+	TMenuItem *MenuCalibration;
         TMenuItem *SetCPoint;
 	TScrollBox *ScrollBox;
 	TMenuItem *ExecCorrection;
@@ -62,7 +62,7 @@ __published:	// IDE managed components
 	TMenuItem *MenuPrjProperty;
 	TMenuItem *N1;
 	TMenuItem *MenuNewPrj;
-	TMenuItem *V1;
+	TMenuItem *MenuView;
 	TMenuItem *MenuViewSummer;
 	TMenuItem *MenuViewSpring;
 	TMenuItem *MenuViewFall;
@@ -75,6 +75,11 @@ __published:	// IDE managed components
 	TMenuItem *MenuManual;
 	TMenuItem *MenuTutorial;
 	TMenuItem *N2;
+	TMenuItem *MenuBitmapBoundary;
+	TMenuItem *MenuTop;
+	TMenuItem *MenuBottom;
+	TMenuItem *MenuRight;
+	TMenuItem *MenuLeft;
 
 	void __fastcall SetCPointClick(TObject *Sender);
 	void __fastcall OnMouseDown(TObject *Sender, TMouseButton Button,
@@ -108,9 +113,21 @@ __published:	// IDE managed components
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall FormCloseQuery(TObject *Sender, bool &CanClose);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall MenuTopClick(TObject *Sender);
+	void __fastcall MenuBottomClick(TObject *Sender);
+	void __fastcall MenuRightClick(TObject *Sender);
+	void __fastcall MenuLeftClick(TObject *Sender);
+
 private:	// User decl.
 	bool isCpSpecifing;
         int CpSpecifing;
+#define	CP_0		0
+#define	CP_1		1
+#define	CP_BOUND_TOP	2	
+#define	CP_BOUND_BOTTOM	3
+#define	CP_BOUND_LEFT	4
+#define	CP_BOUND_RIGHT	5
+
         ControlPoint cp[2];
 
 	PSMProject	*proj;
@@ -136,7 +153,7 @@ public:		// User decl.
 	void TranslateAllForms(void);
 
 protected:
-	void StartCpSpecify(void);
+	void StartCpSpecify(int cp);
 	void ChangeBmp(int bmpidx, bool reload = false);
 };
 //---------------------------------------------------------------------------

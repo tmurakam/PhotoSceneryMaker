@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 219
-  Top = 107
+  Left = 232
+  Top = 111
   Width = 644
   Height = 519
   Caption = 'Photo Scenery Maker'
@@ -97,7 +97,7 @@ object MainForm: TMainForm
         OnClick = MenuQuitClick
       end
     end
-    object V1: TMenuItem
+    object MenuView: TMenuItem
       Caption = 'Vew(&V)'
       object MenuViewSummer: TMenuItem
         Caption = 'Summer'
@@ -129,11 +129,30 @@ object MainForm: TMainForm
         OnClick = MenuViewAlphaClick
       end
     end
-    object C1: TMenuItem
+    object MenuCalibration: TMenuItem
       Caption = 'Calibration(&C)'
       object SetCPoint: TMenuItem
         Caption = '2 Point Calibration(&P)...'
         OnClick = SetCPointClick
+      end
+      object MenuBitmapBoundary: TMenuItem
+        Caption = 'Bitmap Boundary'
+        object MenuTop: TMenuItem
+          Caption = 'Top(&T)'
+          OnClick = MenuTopClick
+        end
+        object MenuBottom: TMenuItem
+          Caption = 'Bottom(&B)'
+          OnClick = MenuBottomClick
+        end
+        object MenuLeft: TMenuItem
+          Caption = 'Left(&L)'
+          OnClick = MenuLeftClick
+        end
+        object MenuRight: TMenuItem
+          Caption = 'Right(&R)'
+          OnClick = MenuRightClick
+        end
       end
       object ExecCorrection: TMenuItem
         Caption = 'Calculate optimal bitmap size (&O)'

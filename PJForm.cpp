@@ -68,6 +68,12 @@ void TPrjForm::LoadData(PSMProject *proj)
 
 	EditOutDir->Text = proj->OutDir;
 	EditBaseFile->Text = proj->BaseFile;
+
+	CheckUseWhole->Checked = proj->Trans->Boundary.useWhole;
+	EditBoundTop->Text = proj->Trans->Boundary.top;
+	EditBoundLeft->Text = proj->Trans->Boundary.left;
+	EditBoundRight->Text = proj->Trans->Boundary.right;
+	EditBoundBottom->Text = proj->Trans->Boundary.bottom;
 }
 
 void TPrjForm::UpdateData(PSMProject *proj)
@@ -92,6 +98,13 @@ void TPrjForm::UpdateData(PSMProject *proj)
 
 	proj->OutDir = EditOutDir->Text;
 	proj->BaseFile = EditBaseFile->Text;
+	
+	proj->Trans->Boundary.useWhole = CheckUseWhole->Checked;
+	proj->Trans->Boundary.top = EditBoundTop->Text.ToInt();
+	proj->Trans->Boundary.left = EditBoundLeft->Text.ToInt();
+	proj->Trans->Boundary.right = EditBoundRight->Text.ToInt();
+	proj->Trans->Boundary.bottom = EditBoundBottom->Text.ToInt();
+
 }
 
 //---------------------------------------------------------------------------

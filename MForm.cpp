@@ -48,7 +48,7 @@ const crMove = 5;
 __fastcall TMainForm::TMainForm(TComponent* Owner)
 	: TForm(Owner)
 {
-	proj = new PSMProject;
+	proj = NULL;
 
 	isCpSpecifing = false;
 	isDragging = false;
@@ -151,9 +151,11 @@ void __fastcall TMainForm::FormClose(TObject *Sender, TCloseAction &Action)
 // Create new project
 void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 {
-	if (!CheckSave()) return;
-	
-	delete proj;
+	if (proj) {
+		if (!CheckSave()) return;
+		delete proj;
+	}
+
 	proj = new PSMProject;
 	MenuPrjPropertyClick(Sender);
 }
@@ -161,7 +163,7 @@ void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 // Open project
 void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 {
-	if (!CheckSave()) return;
+	if (proj && !CheckSave()) return;
 	if (!OpenPrjDialog->Execute()) return;
 
 	PSMProject *newproj = new PSMProject;
@@ -170,11 +172,11 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 	}
 	catch (Exception &e) {
 		AnsiString msg = _("Can't load project file.");
-		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);	
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
 		return;	// abort
 	}
 
-	delete proj;
+	if (proj) delete proj;
 	proj = newproj;
 
 	// Reload BMP file
@@ -200,7 +202,7 @@ void __fastcall TMainForm::MenuPrjSaveAsClick(TObject *Sender)
 // Check save
 bool TMainForm::CheckSave(void)
 {
-	if (proj->Modified) {
+	if (proj && proj->Modified) {
 		int res;
 		AnsiString title = _("Confirmation");
 		AnsiString msg = _("Project is modified. Do you want to save?");
@@ -234,18 +236,15 @@ void TMainForm::UpdateMenu(void)
 {
 	MenuPrjSave->Enabled = false;
 	MenuPrjSaveAs->Enabled = false;
-	SetCPoint->Enabled = false;
-	ExecCorrection->Enabled = false;
 	MenuSCGen->Enabled = false;
+	MenuPrjProperty->Enabled = false;
+	MenuView->Enabled = false;
+	MenuCalibration->Enabled = false;
 
-	if (bitmap && !isCpSpecifing) {
-		SetCPoint->Enabled = true;
-		ExecCorrection->Enabled = true;
-		MenuPrjSave->Enabled = proj->Modified;
-		MenuPrjSaveAs->Enabled = true;
-		MenuSCGen->Enabled = true;
-	}
+	if (!proj) return;
 
+	MenuPrjProperty->Enabled = true;
+	MenuView->Enabled = true;
 	MenuViewSummer->Checked   = (curBmpIdx == BM_SUMMER);
 	MenuViewSpring->Checked   = (curBmpIdx == BM_SPRING);
 	MenuViewFall->Checked     = (curBmpIdx == BM_FALL);
@@ -253,27 +252,77 @@ void TMainForm::UpdateMenu(void)
 	MenuViewHSWinter->Checked = (curBmpIdx == BM_HSWINTER);
 	MenuViewLightmap->Checked = (curBmpIdx == BM_LIGHTMAP);
 	MenuViewAlpha->Checked    = (curBmpIdx == BM_ALPHA);
+
+	if (!isCpSpecifing) {
+		MenuCalibration->Enabled = true;
+		MenuPrjSave->Enabled = proj->Modified;
+		MenuPrjSaveAs->Enabled = true;
+		MenuSCGen->Enabled = true;
+	}
 }
 
 //---------------------------------------------------------------------------
 // Start specify control points for calibration
 void __fastcall TMainForm::SetCPointClick(TObject *Sender)
 {
-	isCpSpecifing = true;
-	
-	CpSpecifing = 0;
-	StartCpSpecify();
-
-	PaintBox->Cursor = crCross;
+	StartCpSpecify(CP_0);
 }
+
+//---------------------------------------------------------------------------
+// specify bitmap boundary
+void __fastcall TMainForm::MenuTopClick(TObject *Sender)
+{
+	StartCpSpecify(CP_BOUND_TOP);
+}
+
+void __fastcall TMainForm::MenuBottomClick(TObject *Sender)
+{
+	StartCpSpecify(CP_BOUND_BOTTOM);
+}
+
+void __fastcall TMainForm::MenuLeftClick(TObject *Sender)
+{
+	StartCpSpecify(CP_BOUND_LEFT);
+}
+
+void __fastcall TMainForm::MenuRightClick(TObject *Sender)
+{
+	StartCpSpecify(CP_BOUND_RIGHT);
+}
+
 //---------------------------------------------------------------------------
 // Start specify control points for calibration
-void TMainForm::StartCpSpecify(void)
+void TMainForm::StartCpSpecify(int cp)
 {
+	isCpSpecifing = true;
+	CpSpecifing = cp;
+
 	AnsiString tmp;
-	AnsiString fmt = _("Specify #%d correction point");
-	tmp.sprintf(fmt.c_str(), CpSpecifing + 1);
+	
+	switch (CpSpecifing) {
+	case CP_0:
+		tmp = _("Specify #1 correction point");
+		break;
+	case CP_1:
+		tmp = _("Specify #2 correction point");
+		break;
+	case CP_BOUND_TOP:
+		tmp = _("Specify bitmap top boundary");
+		break;
+	case CP_BOUND_BOTTOM:
+		tmp = _("Specify bitmap bottom boundary");
+		break;
+	case CP_BOUND_LEFT:
+		tmp = _("Specify bitmap left boundary");
+		break;
+	case CP_BOUND_RIGHT:
+		tmp = _("Specify bitmap right boundary");
+		break;
+	}
+
 	StatusBar->Panels->Items[0]->Text = tmp;
+
+	PaintBox->Cursor = crCross;
 }
 
 //---------------------------------------------------------------------------
@@ -301,49 +350,77 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 		return;
 	}
 
-	// Specify new control point.
+	// Specify control point.
+	ControlPoint *c;
 
-	ControlPoint *c = &cp[CpSpecifing];
+	switch (CpSpecifing) {
+	case CP_0:
+	case CP_1:
+		c = &cp[CpSpecifing];
+		c->v.x = X;
+		c->v.y = Y;
 
-	c->v.x = X;
-	c->v.y = Y;
+		// Input lat/lon with dialog
+		if (LatLonDlg->ShowModal() == mrCancel) {
+			StatusBar->Panels->Items[0]->Text = _("Ready");
+			isCpSpecifing = false;
+			UpdateMenu();
+			PaintBox->Cursor = crDefault;
+			return;
+		}
 
-	// Show lat/lon
-	if (LatLonDlg->ShowModal() == mrCancel) {
-		StatusBar->Panels->Items[0]->Text = _("Ready");
-		isCpSpecifing = false;
-		UpdateMenu();
-		PaintBox->Cursor = crDefault;
-		return;
-	}
+		c->p.lat.SetStr(LatLonDlg->LatEdit->Text);
+		c->p.lon.SetStr(LatLonDlg->LonEdit->Text);
 
-	c->p.lat.SetStr(LatLonDlg->LatEdit->Text);
-	c->p.lon.SetStr(LatLonDlg->LonEdit->Text);
-
-	CpSpecifing ++;
-	if (CpSpecifing < 2) {
-		StartCpSpecify();
-	} else {
-		StatusBar->Panels->Items[0]->Text = _("All control points specified");
-		isCpSpecifing = false;
-		UpdateMenu();
-
-		PaintBox->Cursor = crDefault;
+		if (CpSpecifing == CP_0) {
+			StartCpSpecify(CP_1);
+			return;
+		}
 
 		// Calculate calibration parameters
 		proj->Trans->CalcParameters(cp);
 		proj->Modified = true;
+		break;
 
-		PaintBox->Invalidate();
-		UpdateMenu();
+		// Specify bitmap boundary
+	case CP_BOUND_TOP:
+		proj->Trans->Boundary.useWhole = false;
+		proj->Trans->Boundary.top = Y;
+		break;
+
+	case CP_BOUND_BOTTOM:
+		proj->Trans->Boundary.useWhole = false;
+		proj->Trans->Boundary.bottom = Y;
+		break;
+
+	case CP_BOUND_LEFT:
+		proj->Trans->Boundary.useWhole = false;
+		proj->Trans->Boundary.left = X;
+		break;
+
+	case CP_BOUND_RIGHT:
+		proj->Trans->Boundary.useWhole = false;
+		proj->Trans->Boundary.right = X;
+		break;
 	}
 
+	StatusBar->Panels->Items[0]->Text = _("Ready");
+	proj->Modified = true;
+
+	PaintBox->Invalidate();
+
+	isCpSpecifing = false;
+	UpdateMenu();
+
+	PaintBox->Cursor = crDefault;
 }
 //---------------------------------------------------------------------------
 // Mouse Event : Move
 void __fastcall TMainForm::OnMouseMove(TObject *Sender,
       TShiftState Shift, int X, int Y)
 {
+	if (!proj) return;
+	
 	AnsiString tmp;
         tmp.sprintf("(%d,%d)", X, Y);
 	StatusBar->Panels->Items[1]->Text = tmp;
@@ -454,6 +531,14 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 		bitmap = NULL;
 	}
 
+	// fix boundary (ad hoc...)
+	if (proj->Trans->Boundary.right <= 0) {
+		proj->Trans->Boundary.right = proj->Trans->Width - 1;
+	}
+	if (proj->Trans->Boundary.bottom <= 0) {
+		proj->Trans->Boundary.bottom = proj->Trans->Height - 1;
+	}
+	
 	UpdateMenu();
 }
 //---------------------------------------------------------------------------
@@ -496,7 +581,22 @@ void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 		PaintBox->Canvas->MoveTo(x, 0);
 		PaintBox->Canvas->LineTo(x, bitmap->Height - 1);
 	}
-}
+
+	// Bitmap Boundary
+	if (!proj->Trans->Boundary.useWhole) {
+		PaintBox->Canvas->Pen->Color = clYellow;
+		int x1 = proj->Trans->Boundary.left;
+		int x2 = proj->Trans->Boundary.right;
+		int y1 = proj->Trans->Boundary.top;
+		int y2 = proj->Trans->Boundary.bottom;
+
+		PaintBox->Canvas->MoveTo(x1, y1);
+		PaintBox->Canvas->LineTo(x2, y1);
+		PaintBox->Canvas->LineTo(x2, y2);
+		PaintBox->Canvas->LineTo(x1, y2);
+		PaintBox->Canvas->LineTo(x1, y1);
+	}
+}	
 
 //---------------------------------------------------------------------------
 void __fastcall TMainForm::MenuViewSummerClick(TObject *Sender)
@@ -572,4 +672,3 @@ void TMainForm::ShowHtml(AnsiString prefix)
 
 
 //---------------------------------------------------------------------------
-

@@ -97,6 +97,17 @@ __published:	// IDE managed components
 	TLabel *Label18;
 	TLabel *Label19;
 	TGroupBox *GroupBoxInfo;
+	TGroupBox *GroupBox3;
+	TGroupBox *GroupBox4;
+	TCheckBox *CheckUseWhole;
+	TLabel *Label20;
+	TLabel *Label21;
+	TLabel *Label22;
+	TLabel *Label23;
+	TEdit *EditBoundTop;
+	TEdit *EditBoundLeft;
+	TEdit *EditBoundRight;
+	TEdit *EditBoundBottom;
 	void __fastcall ButtonRefOutDirClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSummerClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSpringClick(TObject *Sender);

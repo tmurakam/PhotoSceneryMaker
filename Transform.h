@@ -48,6 +48,16 @@ public:
 	double	y;
 };
 
+class BitmapBoundary {
+public:
+	bool	useWhole;
+	int	top;
+	int	left;
+	int	right;
+	int	bottom;
+
+	BitmapBoundary(void) { useWhole = true; top = left = right = bottom = 0; }
+};
 
 //
 // Transformation class
@@ -56,6 +66,8 @@ class Transform {
 private:
 	int	width;			// bitmap width
 	int	height;			// bitmap height
+	BitmapBoundary boundary;
+
 	LatLon	base;			// Upper-Left(North-West) Latitude/Longitude
 	XYparam	res;			// Resolution (degree/pixel)
 	XYparam optres;		       	// Optimal Resolution (degree/pixel)	
@@ -76,6 +88,7 @@ public:
 
 	__property int Width = { read=width, write=width };
 	__property int Height = { read=height, write=height };
+	__property BitmapBoundary Boundary = { read=boundary, write=boundary };
 	__property LatLon Base = { read=base, write=base};
 	__property XYparam Resolution = { read=res, write=writeResolution};
 };
