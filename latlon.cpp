@@ -55,15 +55,26 @@ void Angle::SetStr(AnsiString s)
 		}
 	}
 
-        deg = dd + mm / 60.0 + ss / 3600.0;
+	if (dd >= 0) {
+		deg = dd + mm / 60.0 + ss / 3600.0;
+	} else {
+		deg = -dd + mm / 60.0 + ss / 3600.0;
+		deg = -deg;
+	}
+		
 }
 
 AnsiString Angle::GetStr(void)
 {
 	int dd, mm;
         double ss, t;
+	int sign = 1;
 
 	t = deg;
+	if (t < 0) {
+		t = -t;
+		sign = -1;
+	}
         dd = (int)t;
 	t = (t - dd) * 60.0;
         mm = (int)t;
@@ -71,7 +82,7 @@ AnsiString Angle::GetStr(void)
         ss = t;
 
         AnsiString s;
-        s.sprintf("%d:%02d:%2.2f", dd, mm, ss);
+        s.sprintf("%d:%02d:%2.2f", dd * sign, mm, ss);
         return s;
 }
 
