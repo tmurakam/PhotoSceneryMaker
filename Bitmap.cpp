@@ -1,3 +1,25 @@
+/*
+ * Photo Scenery Maker
+ *
+ * Copyright (C) 2003 Takuya Murakami
+ *
+ * Bitmap.cpp : Alternate bitmap class
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ *
+ */
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
@@ -19,21 +41,24 @@ __fastcall TBitmap2::~TBitmap2()
 	if (hBitmap) DeleteObject(hBitmap);
 }
 
-bool __fastcall TBitmap2::GetEmpty(void) { return hBitmap == NULL ? true : false; };
-int __fastcall TBitmap2::GetHeight(void) { return height; };
-int __fastcall TBitmap2::GetWidth(void) { return width; };
+bool __fastcall TBitmap2::GetEmpty(void)
+{
+	return hBitmap == NULL ? true : false;
+}
 
-// dummy funcs...
-void __fastcall TBitmap2::SetHeight(int Height) {};
-void __fastcall TBitmap2::SetWidth(int Width) {};
-void __fastcall TBitmap2::LoadFromStream(TStream *stream) {};
-void __fastcall TBitmap2::SaveToStream(TStream *stream) {};
-void __fastcall TBitmap2::LoadFromClipboardFormat(Word AFormat, unsigned AData,
-		HPALETTE APalette) {};
-void __fastcall TBitmap2::SaveToClipboardFormat(Word &AFormat, unsigned &AData,
-		HPALETTE &APalette) {};
+int __fastcall TBitmap2::GetHeight(void)
+{
+	return height;
+}
 
+int __fastcall TBitmap2::GetWidth(void)
+{
+	return width;
+}
 
+//
+// Load bitmap from file
+//
 void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 {
 	if (hBitmap) DeleteObject(hBitmap);
@@ -42,38 +67,16 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 	TFileStream *stream = new TFileStream(FileName,
 		fmOpenRead | fmShareDenyWrite);
 
-#if 0
-	// Load to memory
-	__int64 sz = stream->Size;
-	char *dib = new char[sz];
-	stream->ReadBuffer(dib, sz);
-	delete stream;
-
-	BITMAPFILEHEADER *bf = (BITMAPFILEHEADER *)dib;
-	BITMAPINFOHEADER *bi = (BITMAPINFOHEADER *)(bf + 1);
-	width = bi->biWidth;
-	height = bi->biHeight;
-
-	char *bits = dib + bf->bfOffBits;
-
-	// Create DDB
-	HDC hDC = GetDC(0);
-	HDC MemDC = CreateCompatibleDC(hDC);
-	hBitmap = CreateDIBitmap(MemDC, bi, CBM_INIT, bits,
-		(BITMAPINFO *)bi, DIB_RGB_COLORS);
-	DeleteDC(MemDC);
-	ReleaseDC(0, hDC);
-	
-	delete dib;
-#else
 	BITMAPFILEHEADER 	bf;
 	BITMAPINFOHEADER	bi;
 
 	stream->ReadBuffer(&bf, sizeof(bf));
 	stream->ReadBuffer(&bi, sizeof(bi));
 
-	if (bi.biBitCount != 24) {
-		// oops
+	if (bf.bfType != 'B' | ('M' << 8) || bi.biBitCount != 24) {
+		delete stream;
+		AnsiString msg = _("Bitmap must be 24bit bmp file.");
+		throw Exception(msg);
 	}
 	width = bi.biWidth;
 	height = bi.biHeight;
@@ -87,16 +90,15 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 	DWORD size = ((bi.biWidth * bi.biBitCount + 31) / 32)
 	  * 4 * bi.biHeight;
 
-	//fseek(fp, bf.bfOffBits, SEEK_SET);
 	stream->Seek(bf.bfOffBits,soFromBeginning);
-	//int len = fread(bits, 1, size, fp);
 	stream->ReadBuffer(bits, size);
 
-	//fclose(fp);
 	delete stream;
-#endif
 }
 
+//
+// Draw function to TCanvas
+//
 void __fastcall TBitmap2::Draw(TCanvas *canvas, const TRect &rect)
 {
 	HDC hDC = CreateCompatibleDC(canvas->Handle);
@@ -109,3 +111,17 @@ void __fastcall TBitmap2::Draw(TCanvas *canvas, const TRect &rect)
 		canvas->CopyMode);
 	DeleteDC(hDC);
 }
+
+
+//
+// Not implemented...
+//
+void __fastcall TBitmap2::SetHeight(int Height) {};
+void __fastcall TBitmap2::SetWidth(int Width) {};
+void __fastcall TBitmap2::LoadFromStream(TStream *stream) {};
+void __fastcall TBitmap2::SaveToStream(TStream *stream) {};
+void __fastcall TBitmap2::LoadFromClipboardFormat(Word AFormat, unsigned AData,
+		HPALETTE APalette) {};
+void __fastcall TBitmap2::SaveToClipboardFormat(Word &AFormat, unsigned &AData,
+		HPALETTE &APalette) {};
+
