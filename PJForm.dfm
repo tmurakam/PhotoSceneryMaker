@@ -5,7 +5,7 @@ object PrjForm: TPrjForm
   BorderStyle = bsDialog
   Caption = 'Project Property'
   ClientHeight = 441
-  ClientWidth = 472
+  ClientWidth = 492
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object PrjForm: TPrjForm
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 472
+    Width = 492
     Height = 405
     ActivePage = TabSheet1
     Align = alClient
@@ -30,61 +30,61 @@ object PrjForm: TPrjForm
       object Label1: TLabel
         Left = 16
         Top = 36
-        Width = 45
+        Width = 65
         Height = 14
         Caption = 'Summer'
       end
       object Label2: TLabel
         Left = 16
         Top = 68
-        Width = 34
+        Width = 57
         Height = 14
         Caption = 'Spring'
       end
       object Label3: TLabel
         Left = 16
         Top = 100
-        Width = 16
+        Width = 41
         Height = 14
         Caption = 'Fall'
       end
       object Label4: TLabel
         Left = 16
         Top = 132
-        Width = 37
+        Width = 65
         Height = 14
         Caption = 'Winter'
       end
       object Label5: TLabel
         Left = 16
         Top = 164
-        Width = 71
+        Width = 81
         Height = 14
         Caption = 'Harsh Winter'
       end
       object Label6: TLabel
         Left = 16
         Top = 196
-        Width = 50
+        Width = 73
         Height = 14
         Caption = 'Lightmap'
       end
       object Label7: TLabel
         Left = 16
         Top = 228
-        Width = 72
+        Width = 81
         Height = 14
         Caption = 'Water(alpha)'
       end
       object EditBmpSummer: TEdit
-        Left = 88
+        Left = 104
         Top = 32
         Width = 329
         Height = 22
         TabOrder = 1
       end
       object EditBmpSpring: TEdit
-        Left = 88
+        Left = 104
         Top = 64
         Width = 329
         Height = 22
@@ -100,42 +100,42 @@ object PrjForm: TPrjForm
         OnClick = CheckSeasonClick
       end
       object EditBmpFall: TEdit
-        Left = 88
+        Left = 104
         Top = 96
         Width = 329
         Height = 22
         TabOrder = 5
       end
       object EditBmpWinter: TEdit
-        Left = 88
+        Left = 104
         Top = 128
         Width = 329
         Height = 22
         TabOrder = 7
       end
       object EditBmpHSWinter: TEdit
-        Left = 88
+        Left = 104
         Top = 160
         Width = 329
         Height = 22
         TabOrder = 9
       end
       object EditBmpLightmap: TEdit
-        Left = 88
+        Left = 104
         Top = 192
         Width = 329
         Height = 22
         TabOrder = 11
       end
       object EditBmpAlpha: TEdit
-        Left = 88
+        Left = 104
         Top = 224
         Width = 329
         Height = 22
         TabOrder = 13
       end
       object ButtonRefBmpSummer: TButton
-        Left = 424
+        Left = 440
         Top = 32
         Width = 25
         Height = 25
@@ -144,7 +144,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpSummerClick
       end
       object ButtonRefBmpSpring: TButton
-        Left = 424
+        Left = 440
         Top = 64
         Width = 25
         Height = 25
@@ -153,7 +153,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpSpringClick
       end
       object ButtonRefBmpFall: TButton
-        Left = 424
+        Left = 440
         Top = 96
         Width = 25
         Height = 25
@@ -162,7 +162,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpFallClick
       end
       object ButtonRefBmpWinter: TButton
-        Left = 424
+        Left = 440
         Top = 128
         Width = 25
         Height = 25
@@ -171,7 +171,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpWinterClick
       end
       object ButtonRefBmpHSWinter: TButton
-        Left = 424
+        Left = 440
         Top = 160
         Width = 25
         Height = 25
@@ -180,7 +180,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpHSWinterClick
       end
       object ButtonRefBmpLightmap: TButton
-        Left = 424
+        Left = 440
         Top = 192
         Width = 25
         Height = 25
@@ -189,7 +189,7 @@ object PrjForm: TPrjForm
         OnClick = ButtonRefBmpLightmapClick
       end
       object ButtonRefBmpAlpha: TButton
-        Left = 424
+        Left = 440
         Top = 224
         Width = 25
         Height = 25
@@ -501,7 +501,7 @@ object PrjForm: TPrjForm
   object Panel1: TPanel
     Left = 0
     Top = 405
-    Width = 472
+    Width = 492
     Height = 36
     Align = alBottom
     TabOrder = 1
