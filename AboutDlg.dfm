@@ -3,7 +3,7 @@ object AboutDialog: TAboutDialog
   Top = 265
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = #12496#12540#12472#12519#12531#24773#22577
+  Caption = 'About'
   ClientHeight = 403
   ClientWidth = 413
   Color = clBtnFace
