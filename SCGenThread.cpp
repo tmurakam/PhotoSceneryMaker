@@ -74,16 +74,16 @@ __fastcall SCGenThread::SCGenThread(PSMProject *proj, int sw)
 void __fastcall SCGenThread::Execute()
 {
 	if (Sw & EX_MAKEINF) MakeInf();
-	if (Terminate) return;
+	if (Terminated) return;
 
 	if (Sw & EX_RESAMPLE) Resample();
-	if (Terminate) return;
+	if (Terminated) return;
 
 	if (Sw & EX_MRGALPHA) MergeAlpha();
-	if (Terminate) return;
+	if (Terminated) return;
 
 	if (Sw & EX_CONVTEX) ConvTex();
-	if (Terminate) return;
+	if (Terminated) return;
 
 	if (Sw & EX_GENBGL) GenBgl();
 }

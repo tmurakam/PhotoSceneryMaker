@@ -6,10 +6,20 @@
 
 #include "gnugettext.hpp"
 
+#include "MForm.h"
 #include "OptDlg.h"
 #include "Util.h"
 
 #define	REG_KEY		"\\Software\\Takuya Murakami\\Photo Scenery Maker"
+
+struct _lang {
+	char *code;
+	char *desc;
+} lang[] = {
+	{ "en", "English" },
+	{ "ja_JP", "Japanese" },
+	{ NULL, NULL }
+};
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -19,6 +29,14 @@ TOptionDlg *OptionDlg;
 __fastcall TOptionDlg::TOptionDlg(TComponent* Owner)
 	: TForm(Owner)
 {
+	curLangIdx = 0;
+}
+
+//---------------------------------------------------------------------------
+// Change Languages
+void TOptionDlg::ChangeLang(void)
+{
+	UseLanguage(lang[curLangIdx].code);
 }
 
 //---------------------------------------------------------------------------
@@ -29,15 +47,27 @@ void TOptionDlg::LoadReg(void)
 	reg->RootKey = HKEY_CURRENT_USER;
 	reg->OpenKey(REG_KEY, true);
 
-	AnsiString sdkpath;
+	AnsiString sdkpath, lng;
 	try {
 		EditSDKPath->Text = reg->ReadString("TerrainSDKPath");
 		EditImagetoolPath->Text = reg->ReadString("ImagetoolPath");
+		lng = reg->ReadString("Language");
 	}
 	catch (const Exception &e) {
 		// do nothing
 	}
 
+	// set language index
+	for (int i = 0; ; i++) {
+		if (lang[i].code == NULL) break;
+		if (lng == lang[i].code) {
+			curLangIdx = i;
+			break;
+		}
+	}
+	ListLang->ItemIndex = curLangIdx;
+	ChangeLang();
+	
 	reg->CloseKey();
 	delete reg;
 }
@@ -45,7 +75,12 @@ void TOptionDlg::LoadReg(void)
 //---------------------------------------------------------------------------
 void __fastcall TOptionDlg::FormCreate(TObject *Sender)
 {
-	TranslateComponent(this);
+	// Setup Language Selection
+	for (int i = 0; ; i++) {
+		if (lang[i].code == NULL) break;
+		ListLang->Items->Add(lang[i].desc);
+	}
+
 	LoadReg();
 }
 
@@ -64,9 +99,16 @@ void __fastcall TOptionDlg::ButtonOKClick(TObject *Sender)
 	reg->WriteString("TerrainSDKPath", EditSDKPath->Text);
 	reg->WriteString("ImagetoolPath", EditImagetoolPath->Text);
 
+	// Change Language
+	curLangIdx = ListLang->ItemIndex;
+	ChangeLang();
+
+	reg->WriteString("Language", lang[curLangIdx].code);
+
 	reg->CloseKey();
 	delete reg;
 }
+
 //---------------------------------------------------------------------------
 
 void __fastcall TOptionDlg::ButtonBrowseSDKClick(TObject *Sender)

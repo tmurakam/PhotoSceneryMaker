@@ -106,6 +106,7 @@ __published:	// IDE managed components
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall MenuManualClick(TObject *Sender);
 	void __fastcall MenuTutorialClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
 private:	// ÉÜÅ[ÉUÅ[êÈåæ
 	bool isCpSpecifing;
         int CpSpecifing;
@@ -127,6 +128,7 @@ public:		// User decl.
         __fastcall TMainForm(TComponent* Owner);
 	void UpdateMenu(void);
 	void SetProgress(int perc);
+	void TranslateAllForms(void);
 
 protected:
 	void StartCpSpecify(void);

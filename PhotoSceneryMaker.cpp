@@ -24,6 +24,9 @@
 
 #include <vcl.h>
 #pragma hdrstop
+
+#include "gnugettext.hpp"
+
 //---------------------------------------------------------------------------
 USEFORM("MForm.cpp", MainForm);
 USEFORM("LLDlg.cpp", LatLonDlg);
@@ -36,7 +39,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
         try
         {
-                 Application->Initialize();
+		 Application->Initialize();
                  Application->Title = "Photo Scenery Maker";
 		Application->CreateForm(__classid(TMainForm), &MainForm);
 		Application->CreateForm(__classid(TLatLonDlg), &LatLonDlg);

@@ -41,15 +41,21 @@ __published:	// IDE managed components
 	TLabel *Label2;
 	TEdit *EditImagetoolPath;
 	TButton *ButtonBrowserImagetool;
+	TComboBox *ListLang;
+	TLabel *Label3;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall ButtonOKClick(TObject *Sender);
 	void __fastcall ButtonBrowseSDKClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ButtonBrowserImagetoolClick(TObject *Sender);
+
 private:	// User decl
-	void LoadReg(void);
+	void ChangeLang(void);
+	int curLangIdx;
+
 public:		// User decl
 	__fastcall TOptionDlg(TComponent* Owner);
+	void LoadReg(void);
 	inline AnsiString GetSDKPath(void) { return EditSDKPath->Text; }
 	inline AnsiString GetImagetoolPath(void) { return EditImagetoolPath->Text; }
 };

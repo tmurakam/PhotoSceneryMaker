@@ -13,6 +13,7 @@ object MainForm: TMainForm
   Menu = MainMenu
   OldCreateOrder = False
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 12
   object StatusBar: TStatusBar

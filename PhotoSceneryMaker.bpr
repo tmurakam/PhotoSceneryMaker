@@ -12,8 +12,14 @@
     <RESDEPEN value="$(RESFILES) MForm.dfm LLDlg.dfm OptDlg.dfm AboutDlg.dfm SCGenFrm.dfm 
       PJForm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="xmlrtl.lib vcl.lib rtl.lib"/>
-    <SPARELIBS value="rtl.lib vcl.lib xmlrtl.lib"/>
+    <LIBRARIES value="SMLPack.lib bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib 
+      bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib 
+      inetdbbde.lib inet.lib cds.lib dsnap.lib vcldbx.lib bdertl.lib dbrtl.lib 
+      vcldb.lib xmlrtl.lib vcl.lib rtl.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib xmlrtl.lib vcldb.lib dbrtl.lib bdertl.lib vcldbx.lib 
+      dsnap.lib cds.lib inet.lib inetdbbde.lib inetdb.lib inetdbxpress.lib 
+      dbexpress.lib nmfast.lib bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib 
+      indy.lib bcb2kaxserver.lib SMLPack.lib"/>
     <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi ibsmp.bpi bcb97axserver.bpi"/>
     <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
@@ -26,7 +32,7 @@
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="PhotoSceneryMaker.cpp"/>
     <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
@@ -116,9 +122,10 @@ Item0=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(
 Item1=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=2
-Item0=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
-Item1=$(BCB)\lib\obj;$(BCB)\lib
+Count=3
+Item0=$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
+Item2=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

@@ -69,6 +69,24 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
+
+void __fastcall TMainForm::FormShow(TObject *Sender)
+{
+	TranslateAllForms();
+}
+
+//---------------------------------------------------------------------------
+void TMainForm::TranslateAllForms(void)
+{
+	TranslateComponent(this);
+	TranslateComponent(LatLonDlg);
+	TranslateComponent(OptionDlg);
+	TranslateComponent(AboutDialog);
+	TranslateComponent(SCGenForm);
+	TranslateComponent(PrjForm);
+}
+
+//---------------------------------------------------------------------------
 //
 // Quit
 //
@@ -315,6 +333,7 @@ void __fastcall TMainForm::ExecCorrectionClick(TObject *Sender)
 void __fastcall TMainForm::MenuOptionClick(TObject *Sender)
 {
 	if (OptionDlg->ShowModal() != mrOk) return;
+	TranslateAllForms();
 }
 //---------------------------------------------------------------------------
 // Show scenery generation dialog
@@ -467,5 +486,6 @@ void __fastcall TMainForm::MenuTutorialClick(TObject *Sender)
 	ShellExecute(this->Handle, "open", man.c_str(),
 		NULL, NULL, SW_SHOW);
 }
+
 //---------------------------------------------------------------------------
 

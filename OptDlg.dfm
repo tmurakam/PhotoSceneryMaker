@@ -1,9 +1,9 @@
 object OptionDlg: TOptionDlg
-  Left = 498
-  Top = 374
+  Left = 444
+  Top = 335
   BorderStyle = bsDialog
   Caption = 'Options'
-  ClientHeight = 120
+  ClientHeight = 168
   ClientWidth = 421
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
@@ -17,22 +17,29 @@ object OptionDlg: TOptionDlg
   PixelsPerInch = 96
   TextHeight = 12
   object Label1: TLabel
-    Left = 8
+    Left = 12
     Top = 16
     Width = 88
     Height = 12
     Caption = 'Terrain SDK path'
   end
   object Label2: TLabel
-    Left = 8
+    Left = 12
     Top = 48
     Width = 75
     Height = 12
     Caption = 'Imagetool path'
   end
+  object Label3: TLabel
+    Left = 12
+    Top = 88
+    Width = 48
+    Height = 12
+    Caption = 'Language'
+  end
   object ButtonOK: TButton
     Left = 120
-    Top = 80
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -42,7 +49,7 @@ object OptionDlg: TOptionDlg
   end
   object Button2: TButton
     Left = 216
-    Top = 80
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -80,5 +87,14 @@ object OptionDlg: TOptionDlg
     Caption = '...'
     TabOrder = 5
     OnClick = ButtonBrowserImagetoolClick
+  end
+  object ListLang: TComboBox
+    Left = 128
+    Top = 84
+    Width = 129
+    Height = 20
+    Style = csDropDownList
+    ItemHeight = 12
+    TabOrder = 6
   end
 end

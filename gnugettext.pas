@@ -31,8 +31,56 @@ unit gnugettext;
 
 interface
 
+{$ifdef VER100}
+  // Delphi 3
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+{$endif}
+{$ifdef VER110}
+  // C++ Builder 3
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+{$endif}
+{$ifdef VER120}
+  // Delphi 4
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+{$endif}
+{$ifdef VER125}
+  // C++ Builder 4
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+{$endif}
+{$ifdef VER130}
+  // Delphi 5
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+  {$ifdef WIN32}
+  {$DEFINE MSWINDOWS}
+  {$endif}
+{$endif}
+{$ifdef VER135}
+  // C++ Builder 5
+  {$DEFINE DELPHI5OROLDER}
+  {$DEFINE DELPHI6OROLDER}
+  {$ifdef WIN32}
+  {$DEFINE MSWINDOWS}
+  {$endif}
+{$endif}
+{$ifdef VER140}
+  // Delphi 6
+{$ifdef MSWINDOWS}
+  {$DEFINE DELPHI6OROLDER}
+{$endif}
+{$endif}
+{$ifdef VER150}
+  // Delphi 7
+{$endif}
 
 uses
+{$ifdef DELPHI5OROLDER}
+  gnugettextD5,
+{$endif}
   Classes, SysUtils, TypInfo;
 
 (*****************************************************************************)
@@ -111,11 +159,15 @@ procedure TP_GlobalHandleClass (HClass:TClass;Handler:TTranslator);
 
 // Deprecated!! Use TranslateComponent() or DefaultInstance.TranslateProperties() instead.
 procedure TranslateProperties(AnObject: TObject; TextDomain:string='');
+{$ifndef DELPHI5OROLDER}
   deprecated;
+{$endif}
 
 // This function is deprecated. Please stop using the gnu_gettext.dll.
 function LoadDLLifPossible (dllname:string='gnu_gettext.dll'):boolean;
+{$ifndef DELPHI5OROLDER}
   deprecated;
+{$endif}
 
 function GetCurrentLanguage:string;
 
@@ -221,16 +273,8 @@ var
 
 implementation
 
-{$ifndef MSWINDOWS}
-{$ifndef LINUX}
-  'This version of gnugettext.pas is only meant to be compiled with Kylix 3,'
-  'Delphi 6, Delphi 7 and later versions. If you use other versions, please'
-  'get the gnugettext.pas version from the Delphi 5 directory.'
-{$endif}
-{$endif}
-
 {$ifdef MSWINDOWS}
-{$ifndef VER140}
+{$ifndef DELPHI6OROLDER}
 {$WARN UNSAFE_TYPE OFF}
 {$WARN UNSAFE_CODE OFF}
 {$WARN UNSAFE_CAST OFF}
@@ -247,6 +291,9 @@ implementation
 (**************************************************************************)
 
 uses
+  {$ifdef DELPHI5OROLDER}
+  FileCtrl,
+  {$endif}
   {$ifdef MSWINDOWS}
   Windows;
   {$endif}
@@ -430,8 +477,22 @@ begin
 end;
 
 function GGGetEnvironmentVariable (name:string):string;
+{$ifdef DELPHI5OROLDER}
+var
+  len:DWORD;
+{$endif}
 begin
+  {$ifdef DELPHI5OROLDER}
+  SetLength (Result, 1000);
+  len:=Windows.GetEnvironmentVariable (PChar(name),PChar(Result),900);
+  SetLength (Result,len);
+  if len>900 then
+    if Windows.GetEnvironmentVariable (PChar(name),PChar(Result),len)<>len then
+      Result:='ERROR: Windows environment changes concurrently with this application';
+  {$endif}
+  {$ifndef DELPHI5OROLDER}
   Result:=SysUtils.GetEnvironmentVariable(name);
+  {$endif}
 end;
 
 function LF2LineBreakA (s:string):string;
@@ -1850,7 +1911,7 @@ begin
       AnObject:=TodoList.Objects[0];
       Name:=TodoList.Strings[0];
       TodoList.Delete(0);
-      if AnObject<>nil then begin
+      if (AnObject<>nil) and (AnObject is TPersistent) then begin
         // Make sure each object is only translated once
         Assert (sizeof(integer)=sizeof(TObject));
         objid:=IntToHex(integer(AnObject),8);
