@@ -34,6 +34,7 @@
 #include "AboutDlg.h"
 #include "SCGenFrm.h"
 #include "PJForm.h"
+#include "Bitmap.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -88,6 +89,7 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 
 	// Load initial file
 	if (ParamCount() > 0) {
+		proj = new PSMProject;
 		proj->LoadFromFile(ParamStr(1));
 		ChangeBmp(curBmpIdx, true);
 	}
@@ -511,7 +513,9 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 	if (bitmap) {
 		delete bitmap;
 	}
-	bitmap = new Graphics::TBitmap;
+	bitmap = //new Graphics::TBitmap;
+		//new TMyBitmap;
+		new TBitmap2;
 	try {
 		bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
 
@@ -525,6 +529,7 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 	}
 	catch (Exception &e) {
 		AnsiString msg = _("Can't open bitmap file.");
+		msg = e.Message; //###
 		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);	
 
 		delete bitmap;

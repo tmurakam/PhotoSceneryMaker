@@ -6,20 +6,20 @@
     <PROJECT value="PhotoSceneryMaker.exe"/>
     <OBJFILES value="PhotoSceneryMaker.obj MForm.obj latlon.obj LLDlg.obj Transform.obj 
       OptDlg.obj AboutDlg.obj SCGenFrm.obj Util.obj Project.obj PJForm.obj 
-      gnugettext.obj targa.obj SCGenThread.obj"/>
+      gnugettext.obj targa.obj SCGenThread.obj Bitmap.obj"/>
     <RESFILES value="PhotoSceneryMaker.res cursor.res"/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) MForm.dfm LLDlg.dfm OptDlg.dfm AboutDlg.dfm SCGenFrm.dfm 
       PJForm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib bcbie.lib 
-      nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib inetdbbde.lib 
-      inet.lib cds.lib dsnap.lib vcldbx.lib bdertl.lib dbrtl.lib vcldb.lib 
-      xmlrtl.lib"/>
+    <LIBRARIES value="SMLPack.lib bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib 
+      bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib 
+      inetdbbde.lib inet.lib cds.lib dsnap.lib vcldbx.lib bdertl.lib dbrtl.lib 
+      vcldb.lib xmlrtl.lib"/>
     <SPARELIBS value="rtl.lib vcl.lib xmlrtl.lib vcldb.lib dbrtl.lib bdertl.lib vcldbx.lib 
       dsnap.lib cds.lib inet.lib inetdbbde.lib inetdb.lib inetdbxpress.lib 
       dbexpress.lib nmfast.lib bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib 
-      indy.lib bcb2kaxserver.lib"/>
+      indy.lib bcb2kaxserver.lib SMLPack.lib"/>
     <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi ibsmp.bpi bcb97axserver.bpi"/>
     <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
@@ -28,21 +28,21 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value=""/>
+    <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="PhotoSceneryMaker.cpp"/>
-    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="$(BCB)\Projects\Lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="&quot;c:\program files\borland\cbuilder6\source\vcl&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;c:\program files\borland\cbuilder6\source\vcl&quot;;$(BCB)\Projects\Lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- 
-      -k- -vi -c -tW -tWM"/>
-    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <CFLAG1 value="-Od -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w2 /zn"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -Gn"/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -Gn -v"/>
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
@@ -68,6 +68,7 @@
       <FILE FILENAME="targa.cpp" FORMNAME="" UNITNAME="targa" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="cursor.res" FORMNAME="" UNITNAME="cursor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="SCGenThread.cpp" FORMNAME="" UNITNAME="SCGenThread" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bitmap.cpp" FORMNAME="" UNITNAME="Bitmap" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -77,7 +78,7 @@
 IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
-MinorVer=1
+MinorVer=2
 Release=0
 Build=0
 Debug=0
@@ -91,13 +92,13 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Takuya Murakami
 FileDescription=Photo Scenery Maker
-FileVersion=1.1.0.0
+FileVersion=1.2.0.0
 InternalName=
 LegalCopyright=Copyright (c) 2003, Takuya Murakami
 LegalTrademarks=
 OriginalFilename=PhotoSceneryMaker.exe
 ProductName=Photo Scenery Maker
-ProductVersion=1.1
+ProductVersion=1.2
 Comments=
 
 [Excluded Packages]
@@ -133,15 +134,17 @@ c:\program files\borland\cbuilder6\Bin\dclmlwiz60.bpl=Borland Markup Language Wi
 c:\program files\borland\cbuilder6\Bin\dclsmpedit60.bpl=Borland Editor Script Enhancements
 
 [HistoryLists\hlIncludePath]
-Count=2
-Item0=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl
-Item1=$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=c:\program files\borland\cbuilder6\source\vcl;C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=3
-Item0=$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
-Item1=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
-Item2=$(BCB)\lib\obj;$(BCB)\lib
+Count=4
+Item0=c:\program files\borland\cbuilder6\source\vcl;$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
+Item1=$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
+Item2=C:\Program Files\Borland\CBuilder6\Projects;D:\USR\FS\PhotoSceneryMaker;$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

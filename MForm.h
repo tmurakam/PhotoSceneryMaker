@@ -35,6 +35,7 @@
 #include <Dialogs.hpp>
 
 #include "Project.h"
+#include "bitmap2.h"
 #include <ToolWin.hpp>
 
 //---------------------------------------------------------------------------
@@ -136,7 +137,8 @@ private:	// User decl.
 	int DragX, DragY;
 	int MoveX, MoveY;
 
-	Graphics::TBitmap	*bitmap;
+	//Graphics::TBitmap	*bitmap;
+	TBitmap2	*bitmap;	
 	int curBmpIdx;
 
 	bool CheckSave(void);
