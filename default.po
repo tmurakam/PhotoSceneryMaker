@@ -7,13 +7,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-07-30 03:12+0900\n"
+"POT-Creation-Date: 2003-08-20 01:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#. AboutDialog..Caption
+#: AboutDlg.dfm:6 
+msgid "About"
+msgstr ""
 
 #. AboutDialog..Label1..Caption
 #. MainForm..Caption
@@ -36,7 +41,7 @@ msgstr ""
 
 #. AboutDialog..Label2..Caption
 #: AboutDlg.dfm:37 
-msgid "Version 1.0"
+msgid "Version 1.0.0 beta 1"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
@@ -46,7 +51,7 @@ msgstr ""
 
 #. AboutDialog..LabelURL..Caption
 #: AboutDlg.dfm:64 
-msgid "http://flightinfo.ens.ne.jp/tmurakam/"
+msgid "http://scenerytools.sourceforge.net/"
 msgstr ""
 
 #. AboutDialog..Button1..Caption
@@ -112,9 +117,21 @@ msgid ""
 "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
 
+#. ExecDlg..Caption
+#: Exec.dfm:6 
+msgid "Execution"
+msgstr ""
+
+#. ExecDlg..StopBtn..Caption
+#. SCGenForm..ButtonStop..Caption
+#: Exec.dfm:32 
+ SCGenFrm.dfm:95
+msgid "Stop"
+msgstr ""
+
 #. LatLonDlg..Caption
 #: LLDlg.dfm:6 
-msgid "LatLonDlg"
+msgid "Lat/Lon"
 msgstr ""
 
 #. LatLonDlg..Label1..Caption
@@ -131,7 +148,7 @@ msgstr ""
 #. OptionDlg..ButtonOK..Caption
 #. PrjForm..Panel1..Button1..Caption
 #: LLDlg.dfm:52 
- OptDlg.dfm:38 PJForm.dfm:265
+ OptDlg.dfm:38 PJForm.dfm:394
 msgid "OK"
 msgstr ""
 
@@ -249,7 +266,7 @@ msgstr ""
 
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
 #: MForm.dfm:133 
-msgid "Optimize Photo(&O)"
+msgid "Calculate optimal bitmap size (&O)"
 msgstr ""
 
 #. MainForm..MainMenu..MenuSCGen..Caption
@@ -279,6 +296,18 @@ msgstr ""
 msgid "psm"
 msgstr ""
 
+#. MainForm..OpenPrjDialog..Filter
+#. MainForm..SavePrjDialog..Filter
+#: MForm.dfm:155 
+ MForm.dfm:161
+msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
+msgstr ""
+
+#. OptionDlg..Caption
+#: OptDlg.dfm:5 
+msgid "Options"
+msgstr ""
+
 #. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24 
 msgid "Terrain SDK path"
@@ -292,7 +321,7 @@ msgstr ""
 #. OptionDlg..Button2..Caption
 #. PrjForm..Panel1..Button2..Caption
 #: OptDlg.dfm:48 
- PJForm.dfm:274
+ PJForm.dfm:403
 msgid "Cancel"
 msgstr ""
 
@@ -308,7 +337,7 @@ msgstr ""
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:64 
  OptDlg.dfm:80 PJForm.dfm:141 PJForm.dfm:150 PJForm.dfm:159
-#: PJForm.dfm:168 PJForm.dfm:177 PJForm.dfm:186 PJForm.dfm:195 PJForm.dfm:247
+#: PJForm.dfm:168 PJForm.dfm:177 PJForm.dfm:186 PJForm.dfm:195 PJForm.dfm:376
 msgid "..."
 msgstr ""
 
@@ -342,28 +371,73 @@ msgstr ""
 msgid "Coordinates"
 msgstr ""
 
-#. PrjForm..PageControl1..TabSheet2..Label10..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
 #: PJForm.dfm:208 
-msgid "*** NOT YET ***"
+msgid "Bitmap Boundary"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
+#: PJForm.dfm:215 
+msgid "North"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
+#: PJForm.dfm:222 
+msgid "South"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
+#: PJForm.dfm:229 
+msgid "West"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
+#: PJForm.dfm:236 
+msgid "East"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
+#: PJForm.dfm:276 
+msgid "Resolution"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
+#: PJForm.dfm:283 
+msgid "CellXDimensionDeg (deg/pixel)"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
+#: PJForm.dfm:290 
+msgid "CellYDimensionDeg (deg/pixel)"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label16..Caption
+#: PJForm.dfm:297 
+msgid "Bitmap Width"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label17..Caption
+#: PJForm.dfm:304 
+msgid "Bitmap Height"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:212 
+#: PJForm.dfm:341 
 msgid "Output"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:219 
+#: PJForm.dfm:348 
 msgid "Output Directory"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:226 
+#: PJForm.dfm:355 
 msgid "Base File Name"
 msgstr ""
 
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:280 
+#: PJForm.dfm:409 
 msgid "bmp"
 msgstr ""
 
@@ -407,24 +481,28 @@ msgstr ""
 msgid "3. Merge Alpha Texture"
 msgstr ""
 
-#. SCGenForm..ButtonStop..Caption
-#: SCGenFrm.dfm:95 
-msgid "Stop"
-msgstr ""
-
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:169
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:172
 #, c-format
 msgid "Specify #%d correction point"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:213
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:216
 msgid "All control points specified"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:164
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:282
+#, c-format
+msgid "Optimal bitmap size is %d x %d.\n"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:284
+msgid "You can resize the bitmap with some image editing tools."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:193
 msgid "Error"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:165
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:194
 msgid "Some errors occured."
 msgstr ""

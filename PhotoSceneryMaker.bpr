@@ -67,14 +67,14 @@
 
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
 MinorVer=0
 Release=0
 Build=0
 Debug=0
-PreRelease=0
+PreRelease=1
 Special=0
 Private=0
 DLL=0
@@ -82,15 +82,15 @@ Locale=1041
 CodePage=932
 
 [Version Info Keys]
-CompanyName=
-FileDescription=
+CompanyName=Takuya Murakami
+FileDescription=Photo Scenery Maker
 FileVersion=1.0.0.0
 InternalName=
-LegalCopyright=
+LegalCopyright=Copyright (c) 2003, Takuya Murakami
 LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=1.0.0.0
+OriginalFilename=PhotoSceneryMaker.exe
+ProductName=Photo Scenery Maker
+ProductVersion=1.0.0 beta 1
 Comments=
 
 [Excluded Packages]

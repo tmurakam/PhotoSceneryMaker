@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 283
-  Top = 111
+  Left = 194
+  Top = 107
   Width = 637
   Height = 481
   Caption = 'Photo Scenery Maker'
@@ -12,12 +12,13 @@ object MainForm: TMainForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  WindowState = wsMaximized
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 12
   object StatusBar: TStatusBar
     Left = 0
-    Top = 408
+    Top = 413
     Width = 629
     Height = 19
     Panels = <
@@ -38,7 +39,7 @@ object MainForm: TMainForm
     Left = 0
     Top = 0
     Width = 629
-    Height = 408
+    Height = 413
     HorzScrollBar.Tracking = True
     VertScrollBar.Tracking = True
     Align = alClient
@@ -130,7 +131,7 @@ object MainForm: TMainForm
         OnClick = SetCPointClick
       end
       object ExecCorrection: TMenuItem
-        Caption = 'Optimize Photo(&O)'
+        Caption = 'Calculate optimal bitmap size (&O)'
         OnClick = ExecCorrectionClick
       end
     end

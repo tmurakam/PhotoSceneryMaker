@@ -7,12 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-07-30 03:15+0900\n"
+"PO-Revision-Date: 2003-08-20 01:05+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#. AboutDialog..Caption
+#: AboutDlg.dfm:6
+msgid "About"
+msgstr "バージョン情報"
 
 #. AboutDialog..Label1..Caption
 #. MainForm..Caption
@@ -33,7 +38,7 @@ msgstr ""
 
 #. AboutDialog..Label2..Caption
 #: AboutDlg.dfm:37
-msgid "Version 1.0"
+msgid "Version 1.0.0 beta 1"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
@@ -43,7 +48,7 @@ msgstr ""
 
 #. AboutDialog..LabelURL..Caption
 #: AboutDlg.dfm:64
-msgid "http://flightinfo.ens.ne.jp/tmurakam/"
+msgid "http://scenerytools.sourceforge.net/"
 msgstr ""
 
 #. AboutDialog..Button1..Caption
@@ -107,10 +112,22 @@ msgstr ""
 msgid "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
 
+#. ExecDlg..Caption
+#: Exec.dfm:6
+#, fuzzy
+msgid "Execution"
+msgstr "ステップ実行"
+
+#. ExecDlg..StopBtn..Caption
+#. SCGenForm..ButtonStop..Caption
+#: Exec.dfm:32
+msgid "Stop"
+msgstr "中断"
+
 #. LatLonDlg..Caption
 #: LLDlg.dfm:6
-msgid "LatLonDlg"
-msgstr ""
+msgid "Lat/Lon"
+msgstr "緯度/経度"
 
 #. LatLonDlg..Label1..Caption
 #: LLDlg.dfm:24
@@ -236,8 +253,8 @@ msgstr "２点補正(&P)..."
 
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
 #: MForm.dfm:133
-msgid "Optimize Photo(&O)"
-msgstr "画像最適化(&O)"
+msgid "Calculate optimal bitmap size (&O)"
+msgstr "最適ビットマップサイズ計算 (&P)"
 
 #. MainForm..MainMenu..MenuSCGen..Caption
 #: MForm.dfm:138
@@ -264,6 +281,18 @@ msgstr "バージョン情報(&A)..."
 #: MForm.dfm:154
 msgid "psm"
 msgstr ""
+
+#. MainForm..OpenPrjDialog..Filter
+#. MainForm..SavePrjDialog..Filter
+#: MForm.dfm:155
+msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
+msgstr ""
+
+#. OptionDlg..Caption
+#: OptDlg.dfm:5
+#, fuzzy
+msgid "Options"
+msgstr "オプション(&O)"
 
 #. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24
@@ -296,7 +325,7 @@ msgstr "キャンセル"
 #: PJForm.dfm:177
 #: PJForm.dfm:186
 #: PJForm.dfm:195
-#: PJForm.dfm:247
+#: PJForm.dfm:376
 msgid "..."
 msgstr ""
 
@@ -330,28 +359,73 @@ msgstr "季節のサポート"
 msgid "Coordinates"
 msgstr "座標"
 
-#. PrjForm..PageControl1..TabSheet2..Label10..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
 #: PJForm.dfm:208
-msgid "*** NOT YET ***"
-msgstr "*** 未実装 ***"
+msgid "Bitmap Boundary"
+msgstr "ビットマップ範囲"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
+#: PJForm.dfm:215
+msgid "North"
+msgstr "北"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
+#: PJForm.dfm:222
+msgid "South"
+msgstr "南"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
+#: PJForm.dfm:229
+msgid "West"
+msgstr "西"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
+#: PJForm.dfm:236
+msgid "East"
+msgstr "東"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
+#: PJForm.dfm:276
+msgid "Resolution"
+msgstr "解像度"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
+#: PJForm.dfm:283
+msgid "CellXDimensionDeg (deg/pixel)"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
+#: PJForm.dfm:290
+msgid "CellYDimensionDeg (deg/pixel)"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label16..Caption
+#: PJForm.dfm:297
+msgid "Bitmap Width"
+msgstr "ビットマップ幅"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label17..Caption
+#: PJForm.dfm:304
+msgid "Bitmap Height"
+msgstr "ビットマップ高"
 
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:212
+#: PJForm.dfm:341
 msgid "Output"
 msgstr "出力"
 
 #. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:219
+#: PJForm.dfm:348
 msgid "Output Directory"
 msgstr "出力ディレクトリ"
 
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:226
+#: PJForm.dfm:355
 msgid "Base File Name"
 msgstr "ベースファイル名"
 
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:280
+#: PJForm.dfm:409
 msgid "bmp"
 msgstr ""
 
@@ -395,11 +469,6 @@ msgstr "5. BGLファイル生成"
 msgid "3. Merge Alpha Texture"
 msgstr "3. アルファテクスチャのマージ"
 
-#. SCGenForm..ButtonStop..Caption
-#: SCGenFrm.dfm:95
-msgid "Stop"
-msgstr "中断"
-
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
 #, c-format
 msgid "Specify #%d correction point"
@@ -408,6 +477,15 @@ msgstr "%d番目のコントロールポイントを指定してください"
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:193
 msgid "All control points specified"
 msgstr "コントロールポイント指定完了"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:282
+#, c-format
+msgid "Optimal bitmap size is %d x %d.\n"
+msgstr "最適なビットマップサイズは %d x %d です。\n"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:284
+msgid "You can resize the bitmap with some image editing tools."
+msgstr "適切な画像編集ツールでリサイズすることができます。"
 
 # D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:121
 msgid "Error"

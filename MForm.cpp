@@ -275,6 +275,17 @@ void __fastcall TMainForm::OnTimer(TObject *Sender)
 // Texture Correction
 void __fastcall TMainForm::ExecCorrectionClick(TObject *Sender)
 {
+	int cx, cy;
+	proj->Trans->CalcOptSize(bitmap->Width, bitmap->Height, &cx, &cy);
+
+	AnsiString fmt, mes1, mes2, mes;
+	fmt = _("Optimal bitmap size is %d x %d.\n");
+	mes1.sprintf(fmt.c_str(), cx, cy);
+	mes2 = _("You can resize the bitmap with some image editing tools.");
+
+	mes = mes1 + mes2;
+	Application->MessageBox(mes.c_str(), "Info", MB_ICONINFORMATION | MB_OK);
+
 #if 0
 	// ‹«ŠE•â³
 	int cx, cy;

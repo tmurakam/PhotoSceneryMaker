@@ -30,11 +30,11 @@ object AboutDialog: TAboutDialog
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 168
+    Left = 152
     Top = 56
-    Width = 80
+    Width = 141
     Height = 18
-    Caption = 'Version 1.0'
+    Caption = 'Version 1.0.0 beta 1'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -56,12 +56,12 @@ object AboutDialog: TAboutDialog
     ParentFont = False
   end
   object LabelURL: TLabel
-    Left = 96
+    Left = 104
     Top = 120
     Width = 191
     Height = 15
     Cursor = crHandPoint
-    Caption = 'http://flightinfo.ens.ne.jp/tmurakam/'
+    Caption = 'http://scenerytools.sourceforge.net/'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlue
     Font.Height = -12
