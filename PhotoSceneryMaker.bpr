@@ -12,10 +12,10 @@
     <RESDEPEN value="$(RESFILES) MForm.dfm LLDlg.dfm OptDlg.dfm AboutDlg.dfm SCGenFrm.dfm 
       PJForm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib 
-      bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib 
-      inetdbbde.lib inet.lib cds.lib dsnap.lib vcldbx.lib bdertl.lib dbrtl.lib 
-      vcldb.lib xmlrtl.lib"/>
+    <LIBRARIES value="bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib soaprtl.lib bcbie.lib 
+      nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib inetdbbde.lib 
+      inet.lib cds.lib dsnap.lib vcldbx.lib bdertl.lib dbrtl.lib vcldb.lib 
+      xmlrtl.lib"/>
     <SPARELIBS value="rtl.lib vcl.lib xmlrtl.lib vcldb.lib dbrtl.lib bdertl.lib vcldbx.lib 
       dsnap.lib cds.lib inet.lib inetdbbde.lib inetdb.lib inetdbxpress.lib 
       dbexpress.lib nmfast.lib bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib 
@@ -28,7 +28,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value="_DEBUG"/>
+    <USERDEFINES value=""/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="PhotoSceneryMaker.cpp"/>
     <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\USR\FS\PhotoSceneryMaker;$(BCB)\include;$(BCB)\include\vcl"/>
@@ -37,12 +37,12 @@
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-Od -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
-      -b- -k -y -v -vi- -c -tW -tWM"/>
-    <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- 
+      -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w2 /zi"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -Gn -v"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -x -Gn"/>
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
@@ -77,8 +77,8 @@
 IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
-MinorVer=0
-Release=1
+MinorVer=1
+Release=0
 Build=0
 Debug=0
 PreRelease=0
@@ -91,13 +91,13 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Takuya Murakami
 FileDescription=Photo Scenery Maker
-FileVersion=1.0.1.0
+FileVersion=1.1.0.0
 InternalName=
 LegalCopyright=Copyright (c) 2003, Takuya Murakami
 LegalTrademarks=
 OriginalFilename=PhotoSceneryMaker.exe
 ProductName=Photo Scenery Maker
-ProductVersion=1.0.0 beta 2
+ProductVersion=1.1
 Comments=
 
 [Excluded Packages]
