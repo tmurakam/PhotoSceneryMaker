@@ -16,10 +16,16 @@ __fastcall TAboutDialog::TAboutDialog(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TAboutDialog::FormCreate(TObject *Sender)
+{
+	Font->Handle = GetStockObject(DEFAULT_GUI_FONT);
+}
+//---------------------------------------------------------------------------
 void __fastcall TAboutDialog::LabelURLClick(TObject *Sender)
 {
 	AnsiString url = LabelURL->Caption;
 	ShellExecute(NULL, "open", url.c_str(), NULL, NULL, SW_SHOWDEFAULT);
 }
 //---------------------------------------------------------------------------
+
 

@@ -51,7 +51,11 @@ __fastcall TSCGenForm::TSCGenForm(TComponent* Owner)
 	proj = NULL;
 	thr = NULL;
 }
-
+//---------------------------------------------------------------------------
+void __fastcall TSCGenForm::FormCreate(TObject *Sender)
+{
+	Font->Handle = GetStockObject(DEFAULT_GUI_FONT);
+}
 //---------------------------------------------------------------------------
 void TSCGenForm::SetParam(PSMProject *prj)
 {
@@ -147,3 +151,4 @@ void __fastcall TSCGenForm::ButtonStopClick(TObject *Sender)
 	}
 }
 //---------------------------------------------------------------------------
+

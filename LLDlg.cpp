@@ -16,3 +16,9 @@ __fastcall TLatLonDlg::TLatLonDlg(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TLatLonDlg::FormCreate(TObject *Sender)
+{
+	Font->Handle = GetStockObject(DEFAULT_GUI_FONT);
+}
+//---------------------------------------------------------------------------
+

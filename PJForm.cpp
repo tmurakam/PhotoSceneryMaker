@@ -42,6 +42,11 @@ __fastcall TPrjForm::TPrjForm(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TPrjForm::FormCreate(TObject *Sender)
+{
+	Font->Handle = GetStockObject(DEFAULT_GUI_FONT);
+}
+//---------------------------------------------------------------------------
 void TPrjForm::LoadData(PSMProject *proj)
 {
 	EditBmpSummer->Text   = proj->BmpFile(BM_SUMMER);
@@ -249,6 +254,7 @@ void __fastcall TPrjForm::CheckSeasonClick(TObject *Sender)
 	
 }
 //---------------------------------------------------------------------------
+
 
 
 

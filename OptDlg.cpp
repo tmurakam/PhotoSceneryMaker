@@ -121,6 +121,8 @@ void TOptionDlg::LoadReg(void)
 //---------------------------------------------------------------------------
 void __fastcall TOptionDlg::FormCreate(TObject *Sender)
 {
+	Font->Handle = GetStockObject(DEFAULT_GUI_FONT);
+
 	// Setup Language Selection
 	for (int i = 0; ; i++) {
 		if (Lang[i].code == NULL) break;
