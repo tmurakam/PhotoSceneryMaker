@@ -19,7 +19,7 @@ object SCGenForm: TSCGenForm
   object ButtonDoAll: TButton
     Left = 32
     Top = 32
-    Width = 161
+    Width = 177
     Height = 73
     Caption = 'Run whole process'
     Font.Charset = SHIFTJIS_CHARSET
