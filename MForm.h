@@ -108,6 +108,7 @@ __published:	// IDE managed components
 	void __fastcall MenuTutorialClick(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall FormCloseQuery(TObject *Sender, bool &CanClose);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// ÉÜÅ[ÉUÅ[êÈåæ
 	bool isCpSpecifing;
         int CpSpecifing;

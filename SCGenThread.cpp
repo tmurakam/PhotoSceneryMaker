@@ -194,7 +194,7 @@ int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 {
 	PROCESS_INFORMATION pi;
 	STARTUPINFO si;
-	int ret = 0;
+	int ret;
 
 	memset(&si, 0, sizeof(si));
 	si.cb=sizeof(si);
