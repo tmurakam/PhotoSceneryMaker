@@ -80,14 +80,14 @@ object PrjForm: TPrjForm
         Top = 32
         Width = 329
         Height = 20
-        TabOrder = 0
+        TabOrder = 1
       end
       object EditBmpSpring: TEdit
         Left = 88
         Top = 64
         Width = 329
         Height = 20
-        TabOrder = 1
+        TabOrder = 3
       end
       object CheckSeason: TCheckBox
         Left = 16
@@ -95,7 +95,7 @@ object PrjForm: TPrjForm
         Width = 97
         Height = 17
         Caption = 'Support Seasons'
-        TabOrder = 2
+        TabOrder = 0
         OnClick = CheckSeasonClick
       end
       object EditBmpFall: TEdit
@@ -103,35 +103,35 @@ object PrjForm: TPrjForm
         Top = 96
         Width = 329
         Height = 20
-        TabOrder = 3
+        TabOrder = 5
       end
       object EditBmpWinter: TEdit
         Left = 88
         Top = 128
         Width = 329
         Height = 20
-        TabOrder = 4
+        TabOrder = 7
       end
       object EditBmpHSWinter: TEdit
         Left = 88
         Top = 160
         Width = 329
         Height = 20
-        TabOrder = 5
+        TabOrder = 9
       end
       object EditBmpLightmap: TEdit
         Left = 88
         Top = 192
         Width = 329
         Height = 20
-        TabOrder = 6
+        TabOrder = 11
       end
       object EditBmpAlpha: TEdit
         Left = 88
         Top = 224
         Width = 329
         Height = 20
-        TabOrder = 7
+        TabOrder = 13
       end
       object ButtonRefBmpSummer: TButton
         Left = 424
@@ -139,7 +139,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 8
+        TabOrder = 2
         OnClick = ButtonRefBmpSummerClick
       end
       object ButtonRefBmpSpring: TButton
@@ -148,7 +148,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 9
+        TabOrder = 4
         OnClick = ButtonRefBmpSpringClick
       end
       object ButtonRefBmpFall: TButton
@@ -157,7 +157,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 10
+        TabOrder = 6
         OnClick = ButtonRefBmpFallClick
       end
       object ButtonRefBmpWinter: TButton
@@ -166,7 +166,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 11
+        TabOrder = 8
         OnClick = ButtonRefBmpWinterClick
       end
       object ButtonRefBmpHSWinter: TButton
@@ -175,7 +175,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 12
+        TabOrder = 10
         OnClick = ButtonRefBmpHSWinterClick
       end
       object ButtonRefBmpLightmap: TButton
@@ -184,7 +184,7 @@ object PrjForm: TPrjForm
         Width = 25
         Height = 25
         Caption = '...'
-        TabOrder = 13
+        TabOrder = 12
         OnClick = ButtonRefBmpLightmapClick
       end
       object ButtonRefBmpAlpha: TButton
@@ -378,7 +378,7 @@ object PrjForm: TPrjForm
     object TabSheet3: TTabSheet
       Caption = 'Output'
       ImageIndex = 2
-      object GroupBox3: TGroupBox
+      object GroupFileOutput: TGroupBox
         Left = 8
         Top = 8
         Width = 457
@@ -405,7 +405,7 @@ object PrjForm: TPrjForm
           Width = 25
           Height = 25
           Caption = '...'
-          TabOrder = 0
+          TabOrder = 1
           OnClick = ButtonRefOutDirClick
         end
         object EditBaseFile: TEdit
@@ -413,17 +413,17 @@ object PrjForm: TPrjForm
           Top = 64
           Width = 121
           Height = 20
-          TabOrder = 1
+          TabOrder = 2
         end
         object EditOutDir: TEdit
           Left = 120
           Top = 26
           Width = 281
           Height = 20
-          TabOrder = 2
+          TabOrder = 0
         end
       end
-      object GroupBox4: TGroupBox
+      object GroupBitmapBoundary: TGroupBox
         Left = 8
         Top = 128
         Width = 321
