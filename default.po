@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-09-28 14:37+0900\n"
+"POT-Creation-Date: 2003-11-25 17:27+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #. AboutDialog..Label2..Caption
 #: AboutDlg.dfm:37 
-msgid "Version 1.2.1"
+msgid "Version 1.2.3"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
@@ -653,29 +653,33 @@ msgstr ""
 msgid "Can't open bitmap file"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:73
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\OptDlg.cpp:226
+msgid "Resample.exe version is invalid. Please use FS2000 Terrain SDK!"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:81
 msgid "Some coordinate parameters are invalid. Please re-calibrate."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:80
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:88
 msgid ""
 "Texture resolution is too HIGH. Please check texture resolution and try "
 "again."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:94
 msgid ""
 "Texture resolution is too LOW. Please check texture resolution and try again."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:106
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:114
 #, c-format
 msgid ""
 "Total texture size becomes very big (about %d MBytes).\n"
 "Proceed?"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:136
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:144
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:66
 msgid "Done"
 msgstr ""
