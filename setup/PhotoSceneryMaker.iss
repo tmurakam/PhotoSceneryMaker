@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Photo Scenery Maker
-AppVerName=Photo Scenery Maker 1.1
+AppVerName=Photo Scenery Maker 1.2
 AppPublisher=Takuya Murakami
 AppPublisherURL=http://scenerytools.sourceforge.net
 AppSupportURL=http://scenerytools.sourceforge.net
@@ -24,7 +24,10 @@ Name: "desktopicon"; Description: "Create a &desktop icon"; GroupDescription: "A
 
 [Files]
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\PhotoSceneryMaker.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.*"; DestDir: "{app}\doc"; Flags: ignoreversion
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.html"; DestDir: "{app}\doc"; Flags: ignoreversion
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.png"; DestDir: "{app}\doc"; Flags: ignoreversion
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.gif"; DestDir: "{app}\doc"; Flags: ignoreversion
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.css"; DestDir: "{app}\doc"; Flags: ignoreversion
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\locale\ja_JP\LC_MESSAGES\default.mo"; DestDir: "{app}\locale\ja_JP\LC_MESSAGES"; Flags: ignoreversion
 
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\setup\vcl60.bpl"; DestDir: "{sys}"; Flags: restartreplace uninsneveruninstall
