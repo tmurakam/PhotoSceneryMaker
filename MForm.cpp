@@ -61,9 +61,11 @@ __fastcall TMainForm::TMainForm(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TMainForm::FormCreate(TObject *Sender)
 {
+	TRegistry *reg = NULL;
+
 	// Load window position from registry
 	try {
-		TRegistry *reg = new TRegistry;
+		reg = new TRegistry;
 		reg->RootKey = HKEY_CURRENT_USER;
 		reg->OpenKey(REG_KEY, true);
 	
@@ -81,6 +83,7 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 	catch (const Exception &e) {
 		// do nothing
 	}
+	delete reg;
 
 	UpdateMenu();
 
@@ -103,6 +106,9 @@ void __fastcall TMainForm::FormShow(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
+//
+// Translate all text using gettext
+//
 void TMainForm::TranslateAllForms(void)
 {
 	TranslateComponent(this);
@@ -143,6 +149,8 @@ void __fastcall TMainForm::FormClose(TObject *Sender, TCloseAction &Action)
 		reg->WriteInteger("WindowLeft", Left);
 		reg->WriteInteger("WindowWidth", Width);
 		reg->WriteInteger("WindowHeight", Height);
+
+		delete reg;
 	}
 	catch (Exception &e) {
 		// do nothing
@@ -191,6 +199,7 @@ void __fastcall TMainForm::MenuPrjSaveClick(TObject *Sender)
 	proj->SaveToFile();
 	UpdateMenu();
 }
+
 //---------------------------------------------------------------------------
 // Save project as new file
 void __fastcall TMainForm::MenuPrjSaveAsClick(TObject *Sender)
