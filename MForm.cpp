@@ -397,14 +397,28 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 		c->p.lat.SetStr(LatLonDlg->LatEdit->Text);
 		c->p.lon.SetStr(LatLonDlg->LonEdit->Text);
 
+		// check value
+		if (c->p.lat.deg <= -90 || c->p.lat.deg >= 90 ||
+			c->p.lon.deg <= -180 || c->p.lon.deg >= 360) {
+			AnsiString msg = _("Latitude/Longitude value out of range.");
+			Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+
+			// try again
+			return;
+		}
+
 		if (CpSpecifing == CP_0) {
 			StartCpSpecify(CP_1);
 			return;
 		}
 
 		// Calculate calibration parameters
-		proj->Trans->CalcParameters(cp);
-		proj->Modified = true;
+		if (proj->Trans->CalcParameters(cp)) {
+			proj->Modified = true;
+		} else {
+			AnsiString msg = _("Calibration parameters are invalid. Please retry.");
+			Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+		}
 		break;
 
 		// Specify bitmap boundary

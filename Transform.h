@@ -78,7 +78,7 @@ private:
 	void writeResolution(XYparam r)	{ res = r; CalcResolution(); }
 
 public:
-	void CalcParameters(ControlPoint *cp);
+	bool CalcParameters(ControlPoint *cp);
 	LatLon CalcLatLon(int x, int y);
 	int CalcX(double lon);
 	int CalcY(double lat);
@@ -91,6 +91,7 @@ public:
 	__property BitmapBoundary Boundary = { read=boundary, write=boundary };
 	__property LatLon Base = { read=base, write=base};
 	__property XYparam Resolution = { read=res, write=writeResolution};
+	__property XYparam Optres = { read=optres };
 };
 
 #endif

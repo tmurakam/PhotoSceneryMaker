@@ -63,6 +63,58 @@ void TSCGenForm::SetParam(PSMProject *prj)
 }
 
 //---------------------------------------------------------------------------
+// Sanity check
+bool TSCGenForm::SanityCheck(void)
+{
+	Transform *trans = proj->Trans;
+	AnsiString msg;
+
+	if (trans->Resolution.x < 0 || trans->Resolution.y < 0) {
+		msg = _("Some coordinate parameters are invalid. Please re-calibrate.");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+		return false;
+	}
+
+	if (trans->Resolution.x < trans->Optres.x / 100 ||
+	    trans->Resolution.y < trans->Optres.y / 100) {
+		msg = _("Texture resolution is too HIGH. Please check texture resolution and try again.");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+		return false;
+	}
+	if (trans->Resolution.x > trans->Optres.x * 100 ||
+	    trans->Resolution.y > trans->Optres.y * 100) {
+		msg = _("Texture resolution is too LOW. Please check texture resolution and try again.");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+		return false;
+	}
+
+	double dx = trans->Width * trans->Resolution.x;
+	double dy = trans->Height * trans->Resolution.y;
+
+	if (!trans->Boundary.useWhole) {
+		LatLon nw = trans->CalcLatLon(trans->Boundary.left, trans->Boundary.top);
+		LatLon se = trans->CalcLatLon(trans->Boundary.right, trans->Boundary.bottom);
+
+		dx = se.lon.deg - nw.lon.deg;
+		dy = nw.lat.deg - se.lat.deg;
+	}
+
+	int nbitmap = (int)(dx / (90.0 / 8192.0)) * (int)(dy / (120.0 / 8192.0));
+	int bmpsize = nbitmap * 43 / 1024;	/* MBytes */
+
+	if (bmpsize > 100) {
+		AnsiString fmt = _("Total texture size becomes very big (about %d MBytes).\nProceed?");
+		msg.sprintf(fmt.c_str(), bmpsize);
+
+		if (Application->MessageBox(msg.c_str(), "Warning",
+			MB_YESNO | MB_ICONQUESTION) != ID_YES) {
+			return false;
+		}
+	}
+	return true;
+}
+
+//---------------------------------------------------------------------------
 // Start Thread
 void TSCGenForm::StartThread(int sw)
 {
@@ -88,6 +140,7 @@ void __fastcall TSCGenForm::OnThreadTerminate(TObject *Sender)
 // Create inf file
 void __fastcall TSCGenForm::ButtonMakeInfClick(TObject *Sender)
 {
+	if (SanityCheck() == false) return;
 	StartThread(EX_MAKEINF);
 }
 
@@ -95,6 +148,7 @@ void __fastcall TSCGenForm::ButtonMakeInfClick(TObject *Sender)
 // Execute resample
 void __fastcall TSCGenForm::ButtonResampleClick(TObject *Sender)
 {
+	if (SanityCheck() == false) return;
 	StartThread(EX_RESAMPLE);
 }
 
@@ -121,6 +175,7 @@ void __fastcall TSCGenForm::ButtonGenBGLClick(TObject *Sender)
 // Execute all steps
 void __fastcall TSCGenForm::ButtonDoAllClick(TObject *Sender)
 {
+	if (SanityCheck() == false) return;
 	StartThread(EX_MAKEINF | EX_RESAMPLE | EX_MRGALPHA | EX_CONVTEX | EX_GENBGL);
 }
 

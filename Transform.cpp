@@ -33,22 +33,31 @@
 
 // Calculate transform parameters
 //
-void Transform::CalcParameters(ControlPoint *cp)
+bool Transform::CalcParameters(ControlPoint *cp)
 {
 	int dx, dy;
+	double rx, ry;
 
 	// Calculate degree per one pixel
 	dx = cp[1].v.x - cp[0].v.x;
 	dy = cp[1].v.y - cp[0].v.y;
 
-	res.x =  (cp[1].p.lon.deg - cp[0].p.lon.deg) / dx;
-	res.y = -(cp[1].p.lat.deg - cp[0].p.lat.deg) / dy;
+	rx =  (cp[1].p.lon.deg - cp[0].p.lon.deg) / dx;
+	ry = -(cp[1].p.lat.deg - cp[0].p.lat.deg) / dy;
+	if (rx <= 0 || ry <= 0) {
+		return false;
+	}
+
+	res.x = rx;
+	res.y = ry;
 
 	// Calculate north/west coordinates
 	base.lon.deg = cp[0].p.lon.deg - cp[0].v.x * res.x;
 	base.lat.deg = cp[0].p.lat.deg - (-cp[0].v.y) * res.y;
 
 	CalcResolution();
+
+	return true;
 }
 
 //------------------------------------------------------------------

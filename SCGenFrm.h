@@ -64,6 +64,7 @@ private:	// User decl.
 	void StartThread(int sw);
 	void __fastcall OnThreadTerminate(TObject *Sender);
 	void ProcessState(bool isStart);
+	bool SanityCheck(void);
 
 public:		// User decl.
 	__fastcall TSCGenForm(TComponent* Owner);
