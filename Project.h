@@ -80,7 +80,7 @@ public:
 	PSMProject();
 
 	void LoadFromFile(AnsiString file);
-	void SaveToFile(AnsiString file = "");
+	bool SaveToFile(AnsiString file = "");
 
 	AnsiString BmpFile(int idx = BM_SUMMER)	{ return BmpFiles[idx]; }
 	void SetBmpFile(int idx, AnsiString &b)	{ BmpFiles[idx] = b; modified = true; }

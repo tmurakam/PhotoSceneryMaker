@@ -80,10 +80,13 @@ void PSMProject::LoadFromFile(AnsiString prjfile)
 	modified = false;
 }
 
-void PSMProject::SaveToFile(AnsiString prjfile)
+bool PSMProject::SaveToFile(AnsiString prjfile)
 {
 	if (!prjfile.IsEmpty()) {
 		prjpath = prjfile;
+	}
+	if (prjpath.IsEmpty()) {
+		return false;	// filename must be specified.
 	}
 
 	TIniFile *ini = new TIniFile(prjpath);
@@ -116,6 +119,8 @@ void PSMProject::SaveToFile(AnsiString prjfile)
 	delete(ini);
 
 	modified = false;
+
+	return true;
 }
 	
 #pragma package(smart_init)

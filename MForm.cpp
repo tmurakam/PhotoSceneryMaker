@@ -196,8 +196,11 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 // Save project
 void __fastcall TMainForm::MenuPrjSaveClick(TObject *Sender)
 {
-	proj->SaveToFile();
-	UpdateMenu();
+	if (!proj->SaveToFile()) {
+		MenuPrjSaveAsClick(Sender);
+	} else {
+		UpdateMenu();
+	}
 }
 
 //---------------------------------------------------------------------------
