@@ -71,8 +71,8 @@ private:
 	Transform *readTransform(void)		{ return &trans; }
 
 	void writeHasSeason(bool s)		{ hasSeason = s; modified = true; }
-	void writeOutDir(AnsiString d)		{ outdir = d; modified = true; }
-	void writeBaseFile(AnsiString b)	{ basefile = b; modified = true; }
+	void writeOutDir(AnsiString &d)		{ outdir = d; modified = true; }
+	void writeBaseFile(AnsiString &b)	{ basefile = b; modified = true; }
 
 	bool hasAlpha(void)		{ return !BmpFiles[BM_ALPHA].IsEmpty(); }
 
@@ -83,7 +83,7 @@ public:
 	void SaveToFile(AnsiString file = "");
 
 	AnsiString BmpFile(int idx = BM_SUMMER)	{ return BmpFiles[idx]; }
-	void SetBmpFile(int idx, AnsiString b)	{ BmpFiles[idx] = b; modified = true; }
+	void SetBmpFile(int idx, AnsiString &b)	{ BmpFiles[idx] = b; modified = true; }
 
 	__property bool Modified = {read=modified, write=modified};
 	__property Transform * Trans = {read=readTransform};

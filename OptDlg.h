@@ -61,8 +61,8 @@ private:	// User decl
 
 public:		// User decl
 	__fastcall TOptionDlg(TComponent* Owner);
-	inline AnsiString GetSDKPath(void) { return EditSDKPath->Text; }
-	inline AnsiString GetImagetoolPath(void) { return EditImagetoolPath->Text; }
+	AnsiString GetSDKPath(void);
+	AnsiString GetImagetoolPath(void);
 	AnsiString GetLangCode(void);
 };
 //---------------------------------------------------------------------------

@@ -54,6 +54,16 @@ __fastcall TOptionDlg::TOptionDlg(TComponent* Owner)
 	curLangIdx = 0;
 }
 
+AnsiString TOptionDlg::GetSDKPath(void)
+{
+	return EditSDKPath->Text;
+}
+
+AnsiString TOptionDlg::GetImagetoolPath(void)
+{
+	return EditImagetoolPath->Text;
+}
+
 //---------------------------------------------------------------------------
 // Change Languages
 void TOptionDlg::ChangeLang(void)
