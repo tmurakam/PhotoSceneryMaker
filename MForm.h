@@ -1,4 +1,3 @@
-
 /*
  * Photo Scenery Maker
  *
@@ -109,7 +108,7 @@ __published:	// IDE managed components
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall FormCloseQuery(TObject *Sender, bool &CanClose);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
-private:	// ÉÜÅ[ÉUÅ[êÈåæ
+private:	// User decl.
 	bool isCpSpecifing;
         int CpSpecifing;
         ControlPoint cp[2];

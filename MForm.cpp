@@ -162,7 +162,7 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 
 	proj->LoadFromFile(OpenPrjDialog->FileName);
 
-	// BMP ƒtƒ@ƒCƒ‹“Ç‚Ý’¼‚µ
+	// Reload BMP file
 	ChangeBmp(curBmpIdx, true);
 }
 //---------------------------------------------------------------------------
