@@ -79,7 +79,7 @@ IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
 MinorVer=2
-Release=2
+Release=3
 Build=0
 Debug=0
 PreRelease=0
@@ -92,16 +92,17 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Takuya Murakami
 FileDescription=Photo Scenery Maker
-FileVersion=1.2.2.0
+FileVersion=1.2.3.0
 InternalName=Photo Scenery Maker
 LegalCopyright=Copyright (c) 2003, Takuya Murakami
 LegalTrademarks=
 OriginalFilename=PhotoSceneryMaker.exe
 ProductName=Photo Scenery Maker
-ProductVersion=1.2.2
+ProductVersion=1.2.3
 Comments=
 
 [Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\idefilters60.bpl=IDE Filters
 c:\program files\borland\cbuilder6\Bin\dclnet60.bpl=Borland Internet Components
 C:\Program Files\Borland\CBuilder6\Bin\dcldb60.bpl=Borland Database Components
 C:\Program Files\Borland\CBuilder6\Bin\dbx60.bpl=Borland SQL Explorer UI Package
