@@ -66,8 +66,8 @@ void TPrjForm::LoadData(PSMProject *proj)
 	EditN->Text = proj->Trans->Base.lat.GetStr();
 	EditW->Text = proj->Trans->Base.lon.GetStr();
 
-	EditXres->Text = proj->Trans->Resolution.x;
-	EditYres->Text = proj->Trans->Resolution.y;
+	EditXres->Text = proj->Trans->Resolution.x * 3600;
+	EditYres->Text = proj->Trans->Resolution.y * 3600;
 
 	OnResEditExit(NULL);	// ad hoc...
 
@@ -97,8 +97,8 @@ void TPrjForm::UpdateData(PSMProject *proj)
 	proj->Trans->Base.lon.SetStr(EditW->Text);
 
 	XYparam res;
-	res.x = EditXres->Text.ToDouble();
-	res.y = EditYres->Text.ToDouble();
+	res.x = EditXres->Text.ToDouble() / 3600;
+	res.y = EditYres->Text.ToDouble() / 3600;
 	proj->Trans->Resolution = res;
 
 	proj->OutDir = EditOutDir->Text;
@@ -218,8 +218,8 @@ void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
 	int height = EditHeight->Text.ToInt();
 
 	// Update boundary
-	double xres = EditXres->Text.ToDouble();
-	double yres = EditYres->Text.ToDouble();
+	double xres = EditXres->Text.ToDouble() / 3600;
+	double yres = EditYres->Text.ToDouble() / 3600;
 	LatLon nw, se;
 	nw.lat.SetStr(EditN->Text);
 	nw.lon.SetStr(EditW->Text);
@@ -230,10 +230,10 @@ void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
 	EditS->Text = se.lat.GetStr();
 	EditE->Text = se.lon.GetStr();
 
-	xres = 10000 * 1000 * xres / 90.0 * cos(nw.lat.deg / 180.0 * M_PI);
-	yres = 10000 * 1000 * yres / 90.0;
-	EditXres2->Text = xres;
-	EditYres2->Text = yres;
+	double xres2 = 10000 * 1000 * xres / 90.0 * cos(nw.lat.deg / 180.0 * M_PI);
+	double yres2 = 10000 * 1000 * yres / 90.0;
+	EditXres2->Text = xres2;
+	EditYres2->Text = yres2;
 }
 //---------------------------------------------------------------------------
 void __fastcall TPrjForm::CheckSeasonClick(TObject *Sender)

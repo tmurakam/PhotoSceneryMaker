@@ -30,49 +30,49 @@ object PrjForm: TPrjForm
       object Label1: TLabel
         Left = 16
         Top = 36
-        Width = 65
+        Width = 45
         Height = 14
         Caption = 'Summer'
       end
       object Label2: TLabel
         Left = 16
         Top = 68
-        Width = 57
+        Width = 34
         Height = 14
         Caption = 'Spring'
       end
       object Label3: TLabel
         Left = 16
         Top = 100
-        Width = 41
+        Width = 16
         Height = 14
         Caption = 'Fall'
       end
       object Label4: TLabel
         Left = 16
         Top = 132
-        Width = 65
+        Width = 37
         Height = 14
         Caption = 'Winter'
       end
       object Label5: TLabel
         Left = 16
         Top = 164
-        Width = 81
+        Width = 71
         Height = 14
         Caption = 'Harsh Winter'
       end
       object Label6: TLabel
         Left = 16
         Top = 196
-        Width = 73
+        Width = 50
         Height = 14
         Caption = 'Lightmap'
       end
       object Label7: TLabel
         Left = 16
         Top = 228
-        Width = 81
+        Width = 72
         Height = 14
         Caption = 'Water(alpha)'
       end
@@ -279,16 +279,16 @@ object PrjForm: TPrjForm
         object Label14: TLabel
           Left = 16
           Top = 20
-          Width = 166
+          Width = 184
           Height = 14
-          Caption = 'CellXDimensionDeg (deg/pixel)'
+          Caption = 'CellXDimensionDeg (second/pixel)'
         end
         object Label15: TLabel
           Left = 16
           Top = 44
-          Width = 167
+          Width = 185
           Height = 14
-          Caption = 'CellYDimensionDeg (deg/pixel)'
+          Caption = 'CellYDimensionDeg (second/pixel)'
         end
         object EditXres: TEdit
           Left = 216
