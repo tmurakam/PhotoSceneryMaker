@@ -75,6 +75,17 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 		width = reg->ReadInteger("WindowWidth");
 		height = reg->ReadInteger("WindowHeight");
 
+		if (top < 0) top = 0;
+		if (left < 0) left = 0;
+
+		if (top > Screen->Height - 50) top = Screen->Height - 50;
+		if (left > Screen->Width - 50) left = Screen->Width - 50;
+
+		if (width < 100) width = 100;
+		if (height < 100) height = 100;
+		if (width > Screen->Width) width = Screen->Width;
+		if (height > Screen->Height) height = Screen->Height;
+
 		Top = top;
 		Left = left;
 		Width = width;
