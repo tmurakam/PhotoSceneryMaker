@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-08-31 00:31+0900\n"
+"POT-Creation-Date: 2003-08-31 14:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1050,20 +1050,20 @@ msgstr ""
 msgid "Specify bitmap right boundary"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:468
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:470
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:330
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:383
 #, c-format
 msgid "Optimal bitmap size is %d x %d.\n"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:470
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:472
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:332
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:385
 msgid "You can resize the bitmap with some image editing tools."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:525
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:527
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:412
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:440
 msgid "Can't open bitmap file."
