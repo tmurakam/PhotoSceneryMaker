@@ -282,7 +282,7 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
       TMouseButton Button, TShiftState Shift, int X, int Y)
 {
 	// drag
-	if (!isCpSpecifing) {
+	if (!isCpSpecifing || Button != mbLeft) {
 		// Start dragging
 		isDragging = true;
 		POINT p;
@@ -313,6 +313,7 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 		StatusBar->Panels->Items[0]->Text = _("Ready");
 		isCpSpecifing = false;
 		UpdateMenu();
+		PaintBox->Cursor = crDefault;
 		return;
 	}
 

@@ -13,7 +13,6 @@ object PrjForm: TPrjForm
   Font.Name = #65325#65331' '#65328#12468#12471#12483#12463
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 12
   object PageControl1: TPageControl

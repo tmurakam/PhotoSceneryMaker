@@ -15,6 +15,9 @@ object MainForm: TMainForm
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
+  OnMouseDown = OnMouseDown
+  OnMouseMove = OnMouseMove
+  OnMouseUp = OnMouseUp
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 12
