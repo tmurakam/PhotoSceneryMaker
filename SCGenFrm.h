@@ -31,6 +31,7 @@
 #include <Forms.hpp>
 
 #include "Project.h"
+#include "SCGenThread.h"
 #include <ComCtrls.hpp>
 
 //---------------------------------------------------------------------------
@@ -58,15 +59,10 @@ __published:	// IDE managed components
 private:	// User decl.
 	PSMProject *proj;
 
-	int Width, Height;
+	SCGenThread *thr;
 
-	bool Processing;
-
-	int ExecCmd(AnsiString cmdline);
-	AnsiString InfFileName(int season);
-	AnsiString BmpPath(int season);
-	void MakeInf(int season);
-
+	void StartThread(int sw);
+	void __fastcall OnThreadTerminate(TObject *Sender);
 	void ProcessState(bool isStart);
 
 public:		// User decl.

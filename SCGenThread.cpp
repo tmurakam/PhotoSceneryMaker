@@ -171,11 +171,13 @@ void SCGenThread::MakeInf(int season)
 		
 	fclose(fp);
 }
-
+//---------------------------------------------------------------------------
+// Execute generic commands
 int SCGenThread::ExecCmd(AnsiString cmdline)
 {
 	PROCESS_INFORMATION pi;
 	STARTUPINFO si;
+	int ret = 0;
 
 	memset(&si, 0, sizeof(si));
 	si.cb=sizeof(si);
@@ -184,10 +186,18 @@ int SCGenThread::ExecCmd(AnsiString cmdline)
 		BELOW_NORMAL_PRIORITY_CLASS,
 		NULL,NULL,&si,&pi);
 
-	WaitForSingleObject(pi.hProcess, INFINITE);
+	for (;;) {
+		int st = WaitForSingleObject(pi.hProcess, 200);
+		if (st == WAIT_OBJECT_0) break;
+
+		if (Terminated) {
+			TerminateProcess(pi.hProcess, 0);
+		}
+	}
+		
 	CloseHandle(pi.hProcess);
 
-	return 0;
+	return ret;
 }
 
 //---------------------------------------------------------------------------
@@ -195,6 +205,8 @@ int SCGenThread::ExecCmd(AnsiString cmdline)
 void SCGenThread::Resample(void)
 {
 	for (int i = 0; i < BM_MAX; i++) {
+		if (Terminated) return;
+
 		if (!Proj->HasSeason &&
 		    i != BM_SUMMER && i != BM_ALPHA) {
 			continue;
@@ -252,6 +264,7 @@ void SCGenThread::MergeAlpha(void)
 	int ret = FindFirst(searchfile, faAnyFile & ~faDirectory, rec);
 	int count = 1;
 	while (ret == 0) {
+		if (Terminated) return;
 
 #if 1
 		// TBD: メインスレッドに進捗報告
@@ -323,6 +336,7 @@ void SCGenThread::GenBgl(void)
 	AnsiString cmdline;
 	cmdline.sprintf("%s\\tmfcompress.exe %s %s", sdkpath, tmf, tmfc);
 	ExecCmd(cmdline);
+	if (Terminated) return;
 
 	// BGL に変換する
 	cmdline.sprintf("%s\\tmf2bgl.exe %s %s", sdkpath, tmfc, bgl);

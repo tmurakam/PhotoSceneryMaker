@@ -6,7 +6,7 @@
     <PROJECT value="PhotoSceneryMaker.exe"/>
     <OBJFILES value="PhotoSceneryMaker.obj MForm.obj latlon.obj LLDlg.obj Transform.obj 
       OptDlg.obj AboutDlg.obj SCGenFrm.obj Util.obj Project.obj PJForm.obj 
-      gnugettext.obj targa.obj"/>
+      gnugettext.obj targa.obj SCGenThread.obj"/>
     <RESFILES value="PhotoSceneryMaker.res cursor.res"/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) MForm.dfm LLDlg.dfm OptDlg.dfm AboutDlg.dfm SCGenFrm.dfm 
@@ -61,6 +61,7 @@
       <FILE FILENAME="gnugettext.pas" FORMNAME="" UNITNAME="gnugettext" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="targa.cpp" FORMNAME="" UNITNAME="targa" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="cursor.res" FORMNAME="" UNITNAME="cursor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SCGenThread.cpp" FORMNAME="" UNITNAME="SCGenThread" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
