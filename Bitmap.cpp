@@ -71,6 +71,25 @@ int __fastcall TBitmap2::GetWidth(void)
 //
 void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 {
+	// Open bitmap file
+	TFileStream *stream = new TFileStream(FileName,
+		fmOpenRead | fmShareDenyWrite);
+
+	try {
+		LoadFromStream(stream);
+	}
+	__finally {
+		delete stream;
+	}
+}
+
+//
+// Load from stream
+//
+void __fastcall TBitmap2::LoadFromStream(TStream *stream)
+{
+	BITMAPFILEHEADER 	bf;
+	BITMAPINFOHEADER	bi;
 	int i;
 
 	if (nBitmap > 0) {
@@ -80,13 +99,7 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 		delete hBitmaps;
 	}
 
-	// Open bitmap file
-	TFileStream *stream = new TFileStream(FileName,
-		fmOpenRead | fmShareDenyWrite);
-
-	BITMAPFILEHEADER 	bf;
-	BITMAPINFOHEADER	bi;
-
+	stream->Seek(0, soFromBeginning);
 	stream->ReadBuffer(&bf, sizeof(bf));
 	stream->ReadBuffer(&bi, sizeof(bi));
 
@@ -94,7 +107,7 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 		|| bi.biSize != 40
 		|| bi.biCompression != BI_RGB
 		|| bi.biBitCount < 16) {
-		delete stream;
+
 		AnsiString msg = _("Bitmap must be 16/24/32bit uncompressed windows BMP file.");
 		throw Exception(msg);
 	}
@@ -103,12 +116,16 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 
 	stream->Seek(bf.bfOffBits,soFromBeginning);
 
-	nBitmap = height / height_per_bitmap + 1;
+	nBitmap = (height - 1) / height_per_bitmap + 1;
 	hBitmaps = new HBITMAP [nBitmap];
 
 	HDC dc = GetDC(NULL);
-	for (int y = 0, i = 0; y < height; y += height_per_bitmap, i++) {
-		int hh = height - y;
+
+	int BytesPerLine =((bi.biWidth * bi.biBitCount + 31) / 32) * 4;
+	int y, hh;
+
+	for (y = 0, i = 0; y < height; y += height_per_bitmap, i++) {
+		hh = height - y;
 		if (hh > height_per_bitmap) hh = height_per_bitmap;
 
 		bi.biHeight = hh;
@@ -118,21 +135,17 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 					       DIB_RGB_COLORS, &bits, 0, 0);
 
 		if (!hBitmaps[i]) {
-			delete stream;
 			AnsiString msg = _(
-					   "Could not allocate memory for bitmap. Maybe bitmap file size is too large.");
+			"Could not allocate memory for bitmap. Maybe bitmap file size is too large.");
 			throw Exception(msg);
 		}
 
-		DWORD size = ((bi.biWidth * bi.biBitCount + 31) / 32)
-		  * 4 * bi.biHeight;
+		DWORD size = BytesPerLine * bi.biHeight;
 
 		stream->ReadBuffer(bits, size);
 	}
 
 	ReleaseDC(NULL, dc);
-
-	delete stream;
 }
 
 //
@@ -170,7 +183,6 @@ void __fastcall TBitmap2::Draw(TCanvas *canvas, const TRect &rect)
 
 void __fastcall TBitmap2::SetHeight(int Height) NOIMPL
 void __fastcall TBitmap2::SetWidth(int Width) NOIMPL
-void __fastcall TBitmap2::LoadFromStream(TStream *stream) NOIMPL
 void __fastcall TBitmap2::SaveToStream(TStream *stream) NOIMPL
 void __fastcall TBitmap2::LoadFromClipboardFormat(Word AFormat, unsigned AData,
 		HPALETTE APalette) NOIMPL
