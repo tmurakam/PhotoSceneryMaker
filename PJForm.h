@@ -97,8 +97,8 @@ __published:	// IDE managed components
 	TLabel *Label18;
 	TLabel *Label19;
 	TGroupBox *GroupBoxInfo;
-	TGroupBox *GroupBox3;
-	TGroupBox *GroupBox4;
+	TGroupBox *GroupFileOutput;
+	TGroupBox *GroupBitmapBoundary;
 	TCheckBox *CheckUseWhole;
 	TLabel *Label20;
 	TLabel *Label21;
