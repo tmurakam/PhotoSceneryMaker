@@ -1,11 +1,11 @@
 object PrjForm: TPrjForm
-  Left = 351
-  Top = 465
+  Left = 485
+  Top = 263
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Project Property'
   ClientHeight = 410
-  ClientWidth = 526
+  ClientWidth = 472
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -19,72 +19,72 @@ object PrjForm: TPrjForm
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 526
+    Width = 472
     Height = 374
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     Align = alClient
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Bitmaps'
       object Label1: TLabel
         Left = 16
-        Top = 40
-        Width = 12
+        Top = 36
+        Width = 66
         Height = 12
-        Caption = #22799
+        Caption = 'Summer'
       end
       object Label2: TLabel
         Left = 16
-        Top = 72
-        Width = 12
+        Top = 68
+        Width = 66
         Height = 12
-        Caption = #26149
+        Caption = 'Spring'
       end
       object Label3: TLabel
         Left = 16
-        Top = 104
-        Width = 12
+        Top = 100
+        Width = 66
         Height = 12
-        Caption = #31179
+        Caption = 'Fall'
       end
       object Label4: TLabel
         Left = 16
-        Top = 136
-        Width = 12
+        Top = 132
+        Width = 66
         Height = 12
-        Caption = #20908
+        Caption = 'Winter'
       end
       object Label5: TLabel
         Left = 16
-        Top = 168
-        Width = 24
+        Top = 164
+        Width = 66
         Height = 12
-        Caption = #21427#20908
+        Caption = 'Harsh Winter'
       end
       object Label6: TLabel
         Left = 16
-        Top = 200
-        Width = 59
+        Top = 196
+        Width = 66
         Height = 12
-        Caption = #12521#12452#12488#12510#12483#12503
+        Caption = 'Lightmap'
       end
       object Label7: TLabel
         Left = 16
-        Top = 232
-        Width = 24
+        Top = 228
+        Width = 66
         Height = 12
-        Caption = #36879#36942
+        Caption = 'Water(alpha)'
       end
       object EditBmpSummer: TEdit
-        Left = 80
+        Left = 88
         Top = 32
         Width = 329
         Height = 20
         TabOrder = 0
       end
       object EditBmpSpring: TEdit
-        Left = 80
+        Left = 88
         Top = 64
         Width = 329
         Height = 20
@@ -99,100 +99,100 @@ object PrjForm: TPrjForm
         TabOrder = 2
       end
       object EditBmpFall: TEdit
-        Left = 80
+        Left = 88
         Top = 96
         Width = 329
         Height = 20
         TabOrder = 3
       end
       object EditBmpWinter: TEdit
-        Left = 80
+        Left = 88
         Top = 128
         Width = 329
         Height = 20
         TabOrder = 4
       end
       object EditBmpHSWinter: TEdit
-        Left = 80
+        Left = 88
         Top = 160
         Width = 329
         Height = 20
         TabOrder = 5
       end
       object EditBmpLightmap: TEdit
-        Left = 80
+        Left = 88
         Top = 192
         Width = 329
         Height = 20
         TabOrder = 6
       end
       object EditBmpAlpha: TEdit
-        Left = 80
+        Left = 88
         Top = 224
         Width = 329
         Height = 20
         TabOrder = 7
       end
       object ButtonRefBmpSummer: TButton
-        Left = 416
+        Left = 424
         Top = 32
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 8
         OnClick = ButtonRefBmpSummerClick
       end
       object ButtonRefBmpSpring: TButton
-        Left = 416
+        Left = 424
         Top = 64
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 9
         OnClick = ButtonRefBmpSpringClick
       end
       object ButtonRefBmpFall: TButton
-        Left = 416
+        Left = 424
         Top = 96
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 10
         OnClick = ButtonRefBmpFallClick
       end
       object ButtonRefBmpWinter: TButton
-        Left = 416
+        Left = 424
         Top = 128
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 11
         OnClick = ButtonRefBmpWinterClick
       end
       object ButtonRefBmpHSWinter: TButton
-        Left = 416
+        Left = 424
         Top = 160
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 12
         OnClick = ButtonRefBmpHSWinterClick
       end
       object ButtonRefBmpLightmap: TButton
-        Left = 416
+        Left = 424
         Top = 192
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 13
         OnClick = ButtonRefBmpLightmapClick
       end
       object ButtonRefBmpAlpha: TButton
-        Left = 416
+        Left = 424
         Top = 224
-        Width = 41
+        Width = 25
         Height = 25
-        Caption = #21442#29031'...'
+        Caption = '...'
         TabOrder = 14
         OnClick = ButtonRefBmpAlphaClick
       end
@@ -213,21 +213,21 @@ object PrjForm: TPrjForm
       ImageIndex = 2
       object Label8: TLabel
         Left = 16
-        Top = 32
+        Top = 30
         Width = 85
         Height = 12
         Caption = 'Output Directory'
       end
       object Label9: TLabel
         Left = 16
-        Top = 72
+        Top = 68
         Width = 82
         Height = 12
         Caption = 'Base File Name'
       end
       object EditOutDir: TEdit
         Left = 120
-        Top = 24
+        Top = 26
         Width = 281
         Height = 20
         TabOrder = 0
@@ -253,12 +253,12 @@ object PrjForm: TPrjForm
   object Panel1: TPanel
     Left = 0
     Top = 374
-    Width = 526
+    Width = 472
     Height = 36
     Align = alBottom
     TabOrder = 1
     object Button1: TButton
-      Left = 344
+      Left = 280
       Top = 8
       Width = 75
       Height = 25
@@ -267,7 +267,7 @@ object PrjForm: TPrjForm
       TabOrder = 0
     end
     object Button2: TButton
-      Left = 432
+      Left = 376
       Top = 8
       Width = 75
       Height = 25

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-07-29 01:13+0900\n"
+"PO-Revision-Date: 2003-07-30 03:15+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -185,21 +185,25 @@ msgid "Vew(&V)"
 msgstr "表示(&V)"
 
 #. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..Label1..Caption
 #: MForm.dfm:97
 msgid "Summer"
 msgstr "夏"
 
 #. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..Label2..Caption
 #: MForm.dfm:102
 msgid "Spring"
 msgstr "春"
 
 #. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. PrjForm..PageControl1..TabSheet1..Label3..Caption
 #: MForm.dfm:106
 msgid "Fall"
 msgstr "秋"
 
 #. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..Label4..Caption
 #: MForm.dfm:110
 msgid "Winter"
 msgstr "冬"
@@ -210,6 +214,7 @@ msgid "Hard Winter"
 msgstr "厳冬"
 
 #. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..Label6..Caption
 #: MForm.dfm:118
 msgid "Lightmap"
 msgstr "ライトマップ"
@@ -278,8 +283,20 @@ msgstr "キャンセル"
 
 #. OptionDlg..ButtonBrowseSDK..Caption
 #. OptionDlg..ButtonBrowserImagetool..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpFall..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpHSWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:64
+#: PJForm.dfm:168
+#: PJForm.dfm:177
+#: PJForm.dfm:186
+#: PJForm.dfm:195
+#: PJForm.dfm:247
 msgid "..."
 msgstr ""
 
@@ -292,6 +309,16 @@ msgstr "プロジェクトのプロパティ"
 #: PJForm.dfm:29
 msgid "Bitmaps"
 msgstr "ビットマップ"
+
+#. PrjForm..PageControl1..TabSheet1..Label5..Caption
+#: PJForm.dfm:63
+msgid "Harsh Winter"
+msgstr "厳冬"
+
+#. PrjForm..PageControl1..TabSheet1..Label7..Caption
+#: PJForm.dfm:77
+msgid "Water(alpha)"
+msgstr "水面（アルファ）"
 
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
 #: PJForm.dfm:98

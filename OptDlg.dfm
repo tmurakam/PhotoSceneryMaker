@@ -1,6 +1,6 @@
 object OptionDlg: TOptionDlg
-  Left = 326
-  Top = 208
+  Left = 498
+  Top = 374
   BorderStyle = bsDialog
   Caption = #12458#12503#12471#12519#12531
   ClientHeight = 120

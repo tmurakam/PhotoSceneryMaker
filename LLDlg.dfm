@@ -1,6 +1,6 @@
 object LatLonDlg: TLatLonDlg
-  Left = 337
-  Top = 224
+  Left = 574
+  Top = 372
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'LatLonDlg'

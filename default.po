@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-07-29 01:08+0900\n"
+"POT-Creation-Date: 2003-07-30 03:12+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,22 +193,30 @@ msgid "Vew(&V)"
 msgstr ""
 
 #. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..Label1..Caption
 #: MForm.dfm:97 
+ PJForm.dfm:35
 msgid "Summer"
 msgstr ""
 
 #. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..Label2..Caption
 #: MForm.dfm:102 
+ PJForm.dfm:42
 msgid "Spring"
 msgstr ""
 
 #. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. PrjForm..PageControl1..TabSheet1..Label3..Caption
 #: MForm.dfm:106 
+ PJForm.dfm:49
 msgid "Fall"
 msgstr ""
 
 #. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..Label4..Caption
 #: MForm.dfm:110 
+ PJForm.dfm:56
 msgid "Winter"
 msgstr ""
 
@@ -218,7 +226,9 @@ msgid "Hard Winter"
 msgstr ""
 
 #. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..Label6..Caption
 #: MForm.dfm:118 
+ PJForm.dfm:70
 msgid "Lightmap"
 msgstr ""
 
@@ -288,9 +298,17 @@ msgstr ""
 
 #. OptionDlg..ButtonBrowseSDK..Caption
 #. OptionDlg..ButtonBrowserImagetool..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpFall..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpHSWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:64 
- OptDlg.dfm:80 PJForm.dfm:247
+ OptDlg.dfm:80 PJForm.dfm:141 PJForm.dfm:150 PJForm.dfm:159
+#: PJForm.dfm:168 PJForm.dfm:177 PJForm.dfm:186 PJForm.dfm:195 PJForm.dfm:247
 msgid "..."
 msgstr ""
 
@@ -302,6 +320,16 @@ msgstr ""
 #. PrjForm..PageControl1..TabSheet1..Caption
 #: PJForm.dfm:29 
 msgid "Bitmaps"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet1..Label5..Caption
+#: PJForm.dfm:63 
+msgid "Harsh Winter"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet1..Label7..Caption
+#: PJForm.dfm:77 
+msgid "Water(alpha)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
@@ -384,19 +412,19 @@ msgstr ""
 msgid "Stop"
 msgstr ""
 
-#: D:\USR\FS\PhotoSceneryMaker\MForm.cpp:169
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:169
 #, c-format
 msgid "Specify #%d correction point"
 msgstr ""
 
-#: D:\USR\FS\PhotoSceneryMaker\MForm.cpp:213
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:213
 msgid "All control points specified"
 msgstr ""
 
-#: D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:164
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:164
 msgid "Error"
 msgstr ""
 
-#: D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:165
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:165
 msgid "Some errors occured."
 msgstr ""

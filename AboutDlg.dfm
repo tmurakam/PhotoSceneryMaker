@@ -1,6 +1,6 @@
 object AboutDialog: TAboutDialog
-  Left = 355
-  Top = 221
+  Left = 506
+  Top = 265
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = #12496#12540#12472#12519#12531#24773#22577
