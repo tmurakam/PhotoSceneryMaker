@@ -40,30 +40,8 @@ const char *SeasonSuffix[] = SEASON_SUFFIX;
 const char *SeasonName[] = SEASON_NAME;
 
 //---------------------------------------------------------------------------
-
-// 注意：異なるスレッドが所有する VCL のメソッド/関数/プロパティを
-//       別のスレッドの中から扱う場合，排他処理の問題が発生します。
+// Constructor
 //
-//       メインスレッドの所有するオブジェクトに対しては Synchronize
-//       メソッドを使う事ができます。他のオブジェクトを参照するため
-//       のメソッドをスレッドクラスに追加し，Synchronize メソッドの
-//       引数として渡します。
-//
-//       たとえば UpdateCaption を以下のように定義し、
-//
-//      void __fastcall SCGenThread::UpdateCaption()
-//      {
-//        Form1->Caption = "スレッドから書き換えました";
-//      }
-//
-//       Execute メソッドの中で Synchronize メソッドに渡すことでメイ
-//       ンスレッドが所有する Form1 の Caption プロパティを安全に変
-//       更できます。
-//
-//      Synchronize(UpdateCaption);
-//
-//---------------------------------------------------------------------------
-
 __fastcall SCGenThread::SCGenThread(PSMProject *proj, int sw)
 	: TThread(true)
 {
@@ -71,6 +49,8 @@ __fastcall SCGenThread::SCGenThread(PSMProject *proj, int sw)
 	Proj = proj;
 }
 //---------------------------------------------------------------------------
+// Main entry
+//
 void __fastcall SCGenThread::Execute()
 {
 	try {
@@ -94,19 +74,21 @@ void __fastcall SCGenThread::Execute()
 	Synchronize(ShowMsg);
 }
 
+// Show Messagebox
 void __fastcall SCGenThread::ShowMsg(void)
 {
 	Application->MessageBox(ResultMsg.c_str(), "Result", MB_OK);
 }
 
 //---------------------------------------------------------------------------
-// INF ファイル作成
+// Create INF file for resample.exe
+//
 void SCGenThread::MakeInf(void)
 {
 	AnsiString msg = _("Creating inf files...");
 	SetStatusMsg(msg);
 
-	// 出力ディレクトリを作成
+	// Create Output directories
 	MkDir(Proj->OutDir);
 	MkDir(Proj->OutDir + "\\TmpBmp");
 	MkDir(Proj->OutDir + "\\TmpAlpha");
@@ -121,7 +103,7 @@ void SCGenThread::MakeInf(void)
 	}
 }
 
-// INF ファイル名決定
+// Get INF file name
 AnsiString SCGenThread::InfFileName(int season)
 {
 	AnsiString path = Proj->OutDir;
@@ -130,7 +112,7 @@ AnsiString SCGenThread::InfFileName(int season)
 	return path;
 }
 
-// BMP パス決定
+// Get BMP path
 AnsiString SCGenThread::BmpPath(int season)
 {
 	AnsiString path;
@@ -142,7 +124,7 @@ AnsiString SCGenThread::BmpPath(int season)
 	return path;
 }
 
-// 一個の INF ファイルを生成する
+// Create one inf file
 void SCGenThread::MakeInf(int season)
 {
 	AnsiString inf = InfFileName(season);
@@ -152,7 +134,7 @@ void SCGenThread::MakeInf(int season)
 		return;
 	}
 
-	// inf ファイルを作成
+	// Open inf file
 	FILE *fp;
 	fp = fopen(inf.c_str(), "w");
 	if (!fp) {
@@ -164,7 +146,7 @@ void SCGenThread::MakeInf(int season)
 
 	Transform *trans = Proj->Trans;
 
-	// Source セクション
+	// Build Source section
 	fprintf(fp, "[Source]\n");
 	fprintf(fp, "\tType = CUSTOM\n");
 	fprintf(fp, "\tSourceDir = \"%s\"\n", ExtractFileDir(BmpFile).c_str());
@@ -176,7 +158,7 @@ void SCGenThread::MakeInf(int season)
 	fprintf(fp, "\tCellXdimensionDeg = %.24f\n", trans->Resolution.x);
 	fprintf(fp, "\tCellYdimensionDeg = %.24f\n", trans->Resolution.y);
 
-	// Destination
+	// Build Destination section
 	fprintf(fp, "\n[Destination]\n");
 	fprintf(fp, "\tDestDir = \"%s\"\n", BmpPath(season).c_str());
 	fprintf(fp, "\tDestBaseFileName = \"%s\"\n", Proj->BaseFile.c_str());
@@ -190,6 +172,7 @@ void SCGenThread::MakeInf(int season)
 }
 //---------------------------------------------------------------------------
 // Execute generic commands
+//
 int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 {
 	PROCESS_INFORMATION pi;
@@ -199,6 +182,7 @@ int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 	memset(&si, 0, sizeof(si));
 	si.cb=sizeof(si);
 
+	// Create process
 	ret = CreateProcess(NULL, cmdline.c_str(),NULL,NULL,FALSE,
 		BELOW_NORMAL_PRIORITY_CLASS,
 		NULL,NULL,&si,&pi);
@@ -223,7 +207,7 @@ int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 		throw Exception(msg);
 	}
 
-
+	// Wait process termination
 	for (;;) {
 		int st = WaitForSingleObject(pi.hProcess, 200);
 		if (st == WAIT_OBJECT_0) break;
@@ -239,7 +223,8 @@ int SCGenThread::ExecCmd(AnsiString cmdline, AnsiString desc)
 }
 
 //---------------------------------------------------------------------------
-// resample 実行
+// Execute resample.exe
+//
 void SCGenThread::Resample(void)
 {
 	for (int i = 0; i < BM_MAX; i++) {
@@ -257,11 +242,11 @@ void SCGenThread::Resample(void)
 		msg.sprintf(fmt.c_str(), SeasonName[i]);
 		SetStatusMsg(msg);
 
-		// 作業用ディレクトリにchdir する
+		// Change directory to working directory
 		AnsiString bmppath = BmpPath(i);
 		ChDir(bmppath);
 
-		// resample を実行する
+		// Execute resample
 		AnsiString inf = InfFileName(i);
 	
 		AnsiString cmdline;
@@ -274,7 +259,7 @@ void SCGenThread::Resample(void)
 		}
 	}
 
-	// tmf ファイルを移動する
+	// Move tmf file : Only one tmf file is needed.
 	AnsiString tmf;
 	tmf.sprintf("%s\\%s.tmf", BmpPath(BM_SUMMER), Proj->BaseFile);
 	AnsiString newtmf;
@@ -283,23 +268,25 @@ void SCGenThread::Resample(void)
 	DeleteFile(newtmf.c_str());
 	MoveFile(tmf.c_str(), newtmf.c_str());
 
-	// いらないファイルを削除
+	// Delete unused files.
 	tmf.sprintf("%s\\%s.tmf", BmpPath(BM_ALPHA), Proj->BaseFile);
 	DeleteFile(tmf.c_str());
 }
+
 //---------------------------------------------------------------------------
-// Alpha テクスチャのマージ
+// Merging Alpha textures
+//
 void SCGenThread::MergeAlpha(void)
 {
 	AnsiString msg = _("Merging Alpha Textures...");
 	SetStatusMsg(msg);
 
-	// texture ディレクトリ生成
+	// Create texture directory
 	AnsiString texdir;
 	texdir.sprintf("%s\\texture", Proj->OutDir);
 	MkDir(texdir);
 
-	// Targa ファイルを生成する
+	// Build Targa file
 	AnsiString bmpdir = BmpPath(BM_SUMMER);
 	AnsiString alphadir = BmpPath(BM_ALPHA);
 
@@ -321,22 +308,23 @@ void SCGenThread::MergeAlpha(void)
 		st.sprintf("Merging textures : %d", count++);
 		SetStatusMsg(st);
 
-		// ファイル名の最初の部分
+		// Get file name without extension.
 		int len = rec.Name.Length();
 		pre = rec.Name.SubString(1, len - 6);
 
-		// alpha テクスチャ名
+		// Get alpha texture filename
 		if (Proj->HasAlpha) {
 			alphafile.sprintf("%s\\%ssu.bmp", alphadir, pre);
 		}
 
-		// bmp ファイル名
+		// Get bmp filenames
 		for (int i = 0; i < BM_MAX; i++) {
 			if (i == BM_ALPHA) continue;
 			bmpfiles[i].sprintf("%s\\%s%s.bmp", bmpdir, pre, SeasonSuffix[i]);
 			tgafiles[i].sprintf("%s\\%s%s.tga", texdir, pre, SeasonSuffix[i]);
 		}
 
+		// Execute
 		MergeAlphaTextures(bmpfiles, alphafile, tgafiles, Proj->HasSeason);
 
 		ret = FindNext(rec);
@@ -345,7 +333,8 @@ void SCGenThread::MergeAlpha(void)
 }
 
 //---------------------------------------------------------------------------
-// テクスチャ変換
+// Convert textures
+//
 void SCGenThread::ConvTex(void)
 {
 	AnsiString msg = _("Converting Textures...");
@@ -361,7 +350,8 @@ void SCGenThread::ConvTex(void)
 	ExecCmd(cmdline, "imagetool.exe");
 }
 //---------------------------------------------------------------------------
-// BGL 生成
+// Generate BGL file
+//
 void SCGenThread::GenBgl(void)
 {
 	AnsiString msg = _("Generating BGL files...");
@@ -370,16 +360,16 @@ void SCGenThread::GenBgl(void)
 	AnsiString outdir = Proj->OutDir;
 	AnsiString basefile = Proj->BaseFile;
 
-	// BGL 出力ディレクトリ生成
+	// Create scenery directory
 	AnsiString scdir;
 	scdir.sprintf("%s\\scenery", outdir);
 	MkDir(scdir);
 
-	// BGL ファイル名生成
+	// Get BGL filename
 	AnsiString bgl;
 	bgl.sprintf("%s\\scenery\\%s.bgl", outdir, basefile);
 
-	// 中間ファイル名生成
+	// Get working filename
 	AnsiString tmf, tmfc;
 	tmf.sprintf("%s\\%s.tmf", outdir, basefile);
 	tmfc.sprintf("%s\\%s-cmp.tmf", outdir, basefile);
@@ -387,19 +377,20 @@ void SCGenThread::GenBgl(void)
 	AnsiString sdkpath;
 	sdkpath = OptionDlg->GetSDKPath();
 
-	// compress する
+	// Compress tmf file
 	AnsiString cmdline;
 	cmdline.sprintf("%s\\tmfcompress.exe %s %s", sdkpath, tmf, tmfc);
 	ExecCmd(cmdline, "tmfcompress.exe");
 	if (Terminated) return;
 
-	// BGL に変換する
+	// Convert BGL file
 	cmdline.sprintf("%s\\tmf2bgl.exe %s %s", sdkpath, tmfc, bgl);
 	ExecCmd(cmdline, "tmf2bgl.exe");
 }
 
 //---------------------------------------------------------------------------
-// BGL 生成
+// Set status message
+//
 void SCGenThread::SetStatusMsg(AnsiString msg)
 {
 	SCGenForm->StatusBar->SimpleText = msg;
