@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.2\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-11-25 17:28+0900\n"
+"PO-Revision-Date: 2003-12-01 21:41+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr ""
 
 #. AboutDialog..Label2..Caption
 #: AboutDlg.dfm:37
-msgid "Version 1.2.3"
+msgid "Version 1.2.4"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
@@ -73,57 +73,57 @@ msgstr "閉じる"
 #. AboutDialog..Memo1......Lines.Strings
 #: AboutDlg.dfm:205
 msgid "This program is free software; you can redistribute it and/or modify"
-msgstr ""
+msgstr "本プログラムはフリー・ソフトウェアです。あなたは、Free Software"
 
 #. AboutDialog..Memo1......Lines.Strings
 #: AboutDlg.dfm:208
 msgid "it under the terms of the GNU General Public License as published by"
-msgstr ""
+msgstr "Foundation が公表したGNU 一般公有使用許諾の「バージョン２」或い"
 
 #. AboutDialog..Memo1......Lines.Strings
 #: AboutDlg.dfm:211
 msgid "the Free Software Foundation; either version 2 of the License, or"
-msgstr ""
+msgstr "はそれ以降の各バージョンの中からいずれかを選択し、そのバージョン"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:212
 msgid "(at your option) any later version."
-msgstr ""
+msgstr "が定める条項に従って本プログラムを再頒布または変更することができます。"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:214
 msgid "This program is distributed in the hope that it will be useful,"
-msgstr ""
+msgstr "本プログラムは有用とは思いますが、頒布にあたっては、市場性及び特"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:215
 msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
-msgstr ""
+msgstr "定目的適合性についての暗黙の保証を含めて、いかなる保証も行ないま"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:216
 msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
-msgstr ""
+msgstr "せん。詳細についてはGNU 一般公有使用許諾書をお読みください。"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:217
 msgid "GNU General Public License for more details."
-msgstr ""
+msgstr " "
 
 #. AboutDialog..Memo1......Lines.Strings
 #: AboutDlg.dfm:221
 msgid "You should have received a copy of the GNU General Public License"
-msgstr ""
+msgstr "あなたは、本プログラムと一緒にGNU 一般公有使用許諾の写しを受け取っ"
 
 #. AboutDialog..Memo1....Lines.Strings
 #: AboutDlg.dfm:222
 msgid "along with this program; if not, write to the Free Software"
-msgstr ""
+msgstr "ているはずです。そうでない場合は、Free Software Foundation, Inc.,"
 
 #. AboutDialog..Memo1......Lines.Strings
 #: AboutDlg.dfm:225
 msgid "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
+msgstr "59 Temple Place - Suite 330, Boston, MA 02111-1307, USA へ手紙を書いてください。"
 
 #. LatLonDlg..Caption
 #: LLDlg.dfm:6
@@ -437,13 +437,13 @@ msgstr "解像度"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
 #: PJForm.dfm:284
-msgid "CellXDimensionDeg (deg/pixel)"
-msgstr ""
+msgid "CellXDimensionDeg (second/pixel)"
+msgstr "X軸セル角 (秒/ピクセル)"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
 #: PJForm.dfm:291
-msgid "CellYDimensionDeg (deg/pixel)"
-msgstr ""
+msgid "CellYDimensionDeg (second/pixel)"
+msgstr "Y軸セル角 (秒/ピクセル)"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
 #: PJForm.dfm:315
@@ -463,12 +463,12 @@ msgstr "ビットマップ高"
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
 #: PJForm.dfm:336
 msgid "X resolution (m/pixel)"
-msgstr "X解像度 (m/pixel)"
+msgstr "X軸解像度 (m/ピクセル)"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
 #: PJForm.dfm:343
 msgid "Y resolution (m/pixel)"
-msgstr "Y解像度(m/pixel)"
+msgstr "Y軸解像度(m/ピクセル)"
 
 #. PrjForm..PageControl1..TabSheet3..Caption
 #: PJForm.dfm:380
