@@ -87,6 +87,12 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 
 	HICON h = ::LoadCursor(HInstance, "MOVECURSOR");
 	Screen->Cursors[crMove] = h;
+
+	// Load initial file
+	if (ParamCount() > 0) {
+		proj->LoadFromFile(ParamStr(1));
+		ChangeBmp(curBmpIdx, true);
+	}
 }
 
 //---------------------------------------------------------------------------
