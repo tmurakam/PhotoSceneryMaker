@@ -34,19 +34,26 @@
 
 __fastcall TBitmap2::TBitmap2(void)
 {
-	hBitmap = NULL;
 	height = width = 0;
+	nBitmap = 0;
+	hBitmaps = NULL;
+	
+	height_per_bitmap = 1000;	// default
 }
 
 __fastcall TBitmap2::~TBitmap2()
 {
-	if (hBitmap) DeleteObject(hBitmap);
+	if (nBitmap > 0) {
+		for (int i = 0; i < nBitmap; i++) {
+			if (hBitmaps[i]) DeleteObject(hBitmaps[i]);
+		}
+		delete hBitmaps;
+	}
 }
 
 bool __fastcall TBitmap2::GetEmpty(void)
 {
-	return hBitmap == NULL ?
-		true : false;
+	return (nBitmap == 0) ? true : false;
 }
 
 int __fastcall TBitmap2::GetHeight(void)
@@ -64,7 +71,14 @@ int __fastcall TBitmap2::GetWidth(void)
 //
 void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 {
-	if (hBitmap) DeleteObject(hBitmap);
+	int i;
+
+	if (nBitmap > 0) {
+		for (i = 0; i < nBitmap; i++) {
+			DeleteObject(hBitmaps[i]);
+		}
+		delete hBitmaps;
+	}
 
 	// Open bitmap file
 	TFileStream *stream = new TFileStream(FileName,
@@ -87,24 +101,36 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 	width = bi.biWidth;
 	height = bi.biHeight;
 
-	HDC dc = GetDC(NULL);
-	VOID *bits;
-	hBitmap = CreateDIBSection(dc, (BITMAPINFO *)&bi,
-		DIB_RGB_COLORS, &bits, 0, 0);
-	ReleaseDC(NULL, dc);
+	stream->Seek(bf.bfOffBits,soFromBeginning);
 
-	if (!hBitmap) {
-		delete stream;
-		AnsiString msg = _(
-		"Could not allocate memory for bitmap. Maybe bitmap file size is too large.");
-		throw Exception(msg);
+	nBitmap = height / height_per_bitmap + 1;
+	hBitmaps = new HBITMAP [nBitmap];
+
+	HDC dc = GetDC(NULL);
+	for (int y = 0, i = 0; y < height; y += height_per_bitmap, i++) {
+		int hh = height - y;
+		if (hh > height_per_bitmap) hh = height_per_bitmap;
+
+		bi.biHeight = hh;
+
+		VOID *bits;
+		hBitmaps[i] = CreateDIBSection(dc, (BITMAPINFO *)&bi,
+					       DIB_RGB_COLORS, &bits, 0, 0);
+
+		if (!hBitmaps[i]) {
+			delete stream;
+			AnsiString msg = _(
+					   "Could not allocate memory for bitmap. Maybe bitmap file size is too large.");
+			throw Exception(msg);
+		}
+
+		DWORD size = ((bi.biWidth * bi.biBitCount + 31) / 32)
+		  * 4 * bi.biHeight;
+
+		stream->ReadBuffer(bits, size);
 	}
 
-	DWORD size = ((bi.biWidth * bi.biBitCount + 31) / 32)
-	  * 4 * bi.biHeight;
-
-	stream->Seek(bf.bfOffBits,soFromBeginning);
-	stream->ReadBuffer(bits, size);
+	ReleaseDC(NULL, dc);
 
 	delete stream;
 }
@@ -115,13 +141,24 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 void __fastcall TBitmap2::Draw(TCanvas *canvas, const TRect &rect)
 {
 	HDC hDC = CreateCompatibleDC(canvas->Handle);
-	SelectObject(hDC, hBitmap);
-	int ret = BitBlt(canvas->Handle,
-		rect.Left, rect.Top,
-		rect.Width(), rect.Height(),
-		hDC,
-		0, 0,
-		canvas->CopyMode);
+
+	int i, y, hh, canvas_y;
+	for (i = 0; i < nBitmap; i++) {
+		y = i * height_per_bitmap;
+		hh = height - y;
+		if (hh > height_per_bitmap) hh = height_per_bitmap;
+
+		canvas_y = height - y - hh;
+
+		SelectObject(hDC, hBitmaps[i]);
+		int ret = BitBlt(canvas->Handle,
+				 rect.Left, rect.Top + canvas_y,
+				 rect.Width(), hh,
+				 hDC,
+				 0, 0,
+				 canvas->CopyMode);
+	}
+
 	DeleteDC(hDC);
 }
 

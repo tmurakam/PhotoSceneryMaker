@@ -33,10 +33,12 @@
 class TBitmap2 : public TGraphic
 {
 private:
-	int height;
 	int width;
+	int height;
+	int height_per_bitmap;
 
-	HBITMAP hBitmap;
+	HBITMAP *hBitmaps;
+	int	nBitmap;
 
 public:
 	__fastcall TBitmap2(void);
