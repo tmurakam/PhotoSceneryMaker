@@ -87,46 +87,47 @@ void __fastcall TSCGenForm::OnThreadTerminate(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// INF ファイル作成
+// Create inf file
 void __fastcall TSCGenForm::ButtonMakeInfClick(TObject *Sender)
 {
 	StartThread(EX_MAKEINF);
 }
 
 //---------------------------------------------------------------------------
-// resample 実行
+// Execute resample
 void __fastcall TSCGenForm::ButtonResampleClick(TObject *Sender)
 {
 	StartThread(EX_RESAMPLE);
 }
 
 //---------------------------------------------------------------------------
-// Alpha テクスチャのマージ
+// Merge alpha textures
 void __fastcall TSCGenForm::ButtonMergeAlphaClick(TObject *Sender)
 {
 	StartThread(EX_MRGALPHA);
 }
 
 //---------------------------------------------------------------------------
-// テクスチャ変換
+// Convert Texture
 void __fastcall TSCGenForm::ButtonConvertTextureClick(TObject *Sender)
 {
 	StartThread(EX_CONVTEX);
 }
 //---------------------------------------------------------------------------
-// BGL 生成
+// Generate BGL
 void __fastcall TSCGenForm::ButtonGenBGLClick(TObject *Sender)
 {
 	StartThread(EX_GENBGL);
 }
 //---------------------------------------------------------------------------
-// 全プロセス実行
+// Execute all steps
 void __fastcall TSCGenForm::ButtonDoAllClick(TObject *Sender)
 {
 	StartThread(EX_MAKEINF | EX_RESAMPLE | EX_MRGALPHA | EX_CONVTEX | EX_GENBGL);
 }
 
 //---------------------------------------------------------------------------
+// Update all buttons
 void TSCGenForm::ProcessState(bool start)
 {
 	ButtonDoAll->Enabled = !start;
@@ -144,6 +145,7 @@ void TSCGenForm::ProcessState(bool start)
 	}
 }
 //---------------------------------------------------------------------------
+// Stop process
 void __fastcall TSCGenForm::ButtonStopClick(TObject *Sender)
 {
 	if (thr) {
