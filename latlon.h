@@ -25,13 +25,17 @@
 #define latlonH
 //---------------------------------------------------------------------------
 class Angle {
-    public:
+ private:
+	bool isHighPres;
+
+ public:
 	double	deg;
 
-    public:
-	Angle(void) { deg = 0.0; }
+ public:
+	Angle(void) { deg = 0.0; isHighPres = false; }
 	void SetStr(AnsiString s);
 	AnsiString GetStr(void);
+	void setHighPres(bool f) { isHighPres = f; }
 };
 
 class LatLon {

@@ -82,7 +82,11 @@ AnsiString Angle::GetStr(void)
         ss = t;
 
         AnsiString s;
-        s.sprintf("%d:%02d:%2.2f", dd * sign, mm, ss);
+	if (isHighPres) {
+		s.sprintf("%d:%02d:%2.20f", dd * sign, mm, ss);
+	} else {
+		s.sprintf("%d:%02d:%2.2f", dd * sign, mm, ss);
+	}
         return s;
 }
 

@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 232
-  Top = 111
+  Left = 253
+  Top = 122
   Width = 644
   Height = 519
   Caption = 'Photo Scenery Maker'
