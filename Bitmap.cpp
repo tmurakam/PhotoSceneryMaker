@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2003 Takuya Murakami
  *
- * Bitmap.cpp : Alternate bitmap class
+ * Bitmap.cpp : Another TBitmap class
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,6 +23,8 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
+
+#include "gnugettext.hpp"
 
 #include <stdio.h>
 #include "Bitmap.h"
@@ -73,9 +75,12 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 	stream->ReadBuffer(&bf, sizeof(bf));
 	stream->ReadBuffer(&bi, sizeof(bi));
 
-	if (bf.bfType != 'B' | ('M' << 8) || bi.biBitCount != 24) {
+	if (bf.bfType != 'B' + 'M' * 0x100
+		|| bi.biSize != 40
+		|| bi.biCompression != BI_RGB
+		|| bi.biBitCount < 16) {
 		delete stream;
-		AnsiString msg = _("Bitmap must be 24bit bmp file.");
+		AnsiString msg = _("Bitmap must be 16/24/32bit uncompressed windows BMP file.");
 		throw Exception(msg);
 	}
 	width = bi.biWidth;
@@ -116,12 +121,14 @@ void __fastcall TBitmap2::Draw(TCanvas *canvas, const TRect &rect)
 //
 // Not implemented...
 //
-void __fastcall TBitmap2::SetHeight(int Height) {};
-void __fastcall TBitmap2::SetWidth(int Width) {};
-void __fastcall TBitmap2::LoadFromStream(TStream *stream) {};
-void __fastcall TBitmap2::SaveToStream(TStream *stream) {};
+#define	NOIMPL	{ throw Exception("TBitmap2 : Not implemented"); }
+
+void __fastcall TBitmap2::SetHeight(int Height) NOIMPL
+void __fastcall TBitmap2::SetWidth(int Width) NOIMPL
+void __fastcall TBitmap2::LoadFromStream(TStream *stream) NOIMPL
+void __fastcall TBitmap2::SaveToStream(TStream *stream) NOIMPL
 void __fastcall TBitmap2::LoadFromClipboardFormat(Word AFormat, unsigned AData,
-		HPALETTE APalette) {};
+		HPALETTE APalette) NOIMPL
 void __fastcall TBitmap2::SaveToClipboardFormat(Word &AFormat, unsigned &AData,
-		HPALETTE &APalette) {};
+		HPALETTE &APalette) NOIMPL
 

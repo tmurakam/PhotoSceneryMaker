@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2003 Takuya Murakami
  *
- * Bitmap.cpp : Alternate bitmap class
+ * Bitmap.cpp : Another bitmap class
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@
 
 //---------------------------------------------------------------------------
 //
-// Graphic::TBitmap class of VCL is bit buggy...
+// Graphic::TBitmap class implementation of VCL is buggy :-(
 // TBitmap2 class is compatible class (but subset) of TBitmap.
 
 class TBitmap2 : public TGraphic
