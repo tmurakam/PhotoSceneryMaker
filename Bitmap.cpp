@@ -45,7 +45,8 @@ __fastcall TBitmap2::~TBitmap2()
 
 bool __fastcall TBitmap2::GetEmpty(void)
 {
-	return hBitmap == NULL ? true : false;
+	return hBitmap == NULL ?
+		true : false;
 }
 
 int __fastcall TBitmap2::GetHeight(void)
@@ -91,6 +92,13 @@ void __fastcall TBitmap2::LoadFromFile(const AnsiString FileName)
 	hBitmap = CreateDIBSection(dc, (BITMAPINFO *)&bi,
 		DIB_RGB_COLORS, &bits, 0, 0);
 	ReleaseDC(NULL, dc);
+
+	if (!hBitmap) {
+		delete stream;
+		AnsiString msg = _(
+		"Could not allocate memory for bitmap. Maybe bitmap file size is too large.");
+		throw Exception(msg);
+	}
 
 	DWORD size = ((bi.biWidth * bi.biBitCount + 31) / 32)
 	  * 4 * bi.biHeight;
