@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-09-03 02:02+0900\n"
+"PO-Revision-Date: 2003-09-03 23:52+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -1511,7 +1511,7 @@ msgid "You can resize the bitmap with some image editing tools."
 msgstr "適切な画像編集ツールでリサイズすることができます。"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
-msgid "Can't open bitmap file."
+msgid "Can't open bitmap file"
 msgstr "ビットマップファイルを開けません"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
@@ -1561,4 +1561,8 @@ msgstr "%d番目のコントロールポイントを指定してください"
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:193
 msgid "All control points specified"
 msgstr "コントロールポイント指定完了"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
+msgid "Can't open bitmap file."
+msgstr "ビットマップファイルを開けません"
 

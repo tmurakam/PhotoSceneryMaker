@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-09-03 02:02+0900\n"
+"POT-Creation-Date: 2003-09-03 23:52+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1401,11 +1401,11 @@ msgstr ""
 msgid "Version 1.1"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:84
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:111
 msgid "Bitmap must be 16/24/32bit uncompressed windows BMP file."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:99
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:139
 msgid ""
 "Could not allocate memory for bitmap. Maybe bitmap file size is too large."
 msgstr ""
@@ -1485,12 +1485,8 @@ msgstr ""
 msgid "You can resize the bitmap with some image editing tools."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:530
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:412
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:440
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.1\src\MForm.cpp:527
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\srctmp\MForm.cpp:527
-msgid "Can't open bitmap file."
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:534
+msgid "Can't open bitmap file"
 msgstr ""
 
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:80
@@ -1589,4 +1585,11 @@ msgstr ""
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:264
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:317
 msgid "All control points specified"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:412
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:440
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.1\src\MForm.cpp:527
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\srctmp\MForm.cpp:527
+msgid "Can't open bitmap file."
 msgstr ""
