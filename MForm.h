@@ -107,6 +107,7 @@ __published:	// IDE managed components
 	void __fastcall MenuManualClick(TObject *Sender);
 	void __fastcall MenuTutorialClick(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
+	void __fastcall FormCloseQuery(TObject *Sender, bool &CanClose);
 private:	// ユーザー宣言
 	bool isCpSpecifing;
         int CpSpecifing;
@@ -121,6 +122,8 @@ private:	// ユーザー宣言
 	Graphics::TBitmap	*bitmap;
 	int curBmpIdx;
 
+	bool CheckSave(void);
+	
 	void CalcParameters(void);
 //	void Gauss(double k[3][4]);
 

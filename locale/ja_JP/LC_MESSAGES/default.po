@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-08-23 03:37+0900\n"
+"PO-Revision-Date: 2003-08-23 18:50+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -137,32 +137,32 @@ msgstr ""
 #. MainForm..StatusBar......Text
 #. MainForm..StatusBar..SimpleText
 #. SCGenForm..StatusBar..SimpleText
-#: MForm.dfm:26
+#: MForm.dfm:27
 msgid "Ready"
 msgstr "レディ"
 
 #. MainForm..MainMenu..F1..Caption
-#: MForm.dfm:63
+#: MForm.dfm:64
 msgid "File(&F)"
 msgstr "ファイル(&F)"
 
 #. MainForm..MainMenu..F1..MenuNewPrj..Caption
-#: MForm.dfm:65
+#: MForm.dfm:66
 msgid "New(&N)..."
 msgstr "新規作成(&N)..."
 
 #. MainForm..MainMenu..F1..MenuOpenPrj..Caption
-#: MForm.dfm:69
+#: MForm.dfm:70
 msgid "Open(&O)..."
 msgstr "開く(&O)..."
 
 #. MainForm..MainMenu..F1..MenuPrjSave..Caption
-#: MForm.dfm:73
+#: MForm.dfm:74
 msgid "Save(&S)"
 msgstr "上書き保存(&S)"
 
 #. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
-#: MForm.dfm:77
+#: MForm.dfm:78
 msgid "Save As(&A)..."
 msgstr "名前をつけて保存(&A)..."
 
@@ -171,120 +171,120 @@ msgstr "名前をつけて保存(&A)..."
 #. MainForm..MainMenu..H1..N2..Caption
 #. MainForm..MainMenu1..F1..N2..Caption
 #. MainForm..MainMenu1..F1..N4..Caption
-#: MForm.dfm:81
+#: MForm.dfm:82
 #: bak/MainFrm.dfm:37
 msgid "-"
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuPrjProperty..Caption
-#: MForm.dfm:84
+#: MForm.dfm:85
 msgid "Project Property(&P)..."
 msgstr "プロジェクトのプロパティ(&P)..."
 
 #. MainForm..MainMenu..F1..MenuQuit..Caption
-#: MForm.dfm:91
+#: MForm.dfm:92
 msgid "Quit(&Q)"
 msgstr "終了(&Q)"
 
 #. MainForm..MainMenu..V1..Caption
-#: MForm.dfm:96
+#: MForm.dfm:97
 msgid "Vew(&V)"
 msgstr "表示(&V)"
 
 #. MainForm..MainMenu..V1..MenuViewSummer..Caption
 #. PrjForm..PageControl1..TabSheet1..Label1..Caption
-#: MForm.dfm:98
+#: MForm.dfm:99
 msgid "Summer"
 msgstr "夏"
 
 #. MainForm..MainMenu..V1..MenuViewSpring..Caption
 #. PrjForm..PageControl1..TabSheet1..Label2..Caption
-#: MForm.dfm:103
+#: MForm.dfm:104
 msgid "Spring"
 msgstr "春"
 
 #. MainForm..MainMenu..V1..MenuViewFall..Caption
 #. PrjForm..PageControl1..TabSheet1..Label3..Caption
-#: MForm.dfm:107
+#: MForm.dfm:108
 msgid "Fall"
 msgstr "秋"
 
 #. MainForm..MainMenu..V1..MenuViewWinter..Caption
 #. PrjForm..PageControl1..TabSheet1..Label4..Caption
-#: MForm.dfm:111
+#: MForm.dfm:112
 msgid "Winter"
 msgstr "冬"
 
 #. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
-#: MForm.dfm:115
+#: MForm.dfm:116
 msgid "Hard Winter"
 msgstr "厳冬"
 
 #. MainForm..MainMenu..V1..MenuViewLightmap..Caption
 #. PrjForm..PageControl1..TabSheet1..Label6..Caption
-#: MForm.dfm:119
+#: MForm.dfm:120
 msgid "Lightmap"
 msgstr "ライトマップ"
 
 #. MainForm..MainMenu..V1..MenuViewAlpha..Caption
-#: MForm.dfm:123
+#: MForm.dfm:124
 msgid "Water(Alpha)"
 msgstr "水面（アルファ）"
 
 #. MainForm..MainMenu..C1..Caption
-#: MForm.dfm:128
+#: MForm.dfm:129
 msgid "Calibration(&C)"
 msgstr "補正(&C)"
 
 #. MainForm..MainMenu..C1..SetCPoint..Caption
-#: MForm.dfm:130
+#: MForm.dfm:131
 msgid "2 Point Calibration(&P)..."
 msgstr "２点補正(&P)..."
 
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
-#: MForm.dfm:134
+#: MForm.dfm:135
 msgid "Calculate optimal bitmap size (&O)"
 msgstr "最適ビットマップサイズ計算 (&P)"
 
 #. MainForm..MainMenu..MenuSCGen..Caption
-#: MForm.dfm:139
+#: MForm.dfm:140
 msgid "Scenery Generation(&S)"
 msgstr "シーナリ生成(&S)"
 
 #. MainForm..MainMenu..MenuOption..Caption
-#: MForm.dfm:143
+#: MForm.dfm:144
 msgid "Option (&O)"
 msgstr "オプション(&O)"
 
 #. MainForm..MainMenu..H1..Caption
-#: MForm.dfm:147
+#: MForm.dfm:148
 msgid "Help(&H)"
 msgstr "ヘルプ(&H)"
 
 #. MainForm..MainMenu..H1..MenuTutorial..Caption
-#: MForm.dfm:149
+#: MForm.dfm:150
 msgid "Tutorial(&T)..."
 msgstr "チュートリアル(&T)..."
 
 #. MainForm..MainMenu..H1..MenuManual..Caption
-#: MForm.dfm:153
+#: MForm.dfm:154
 msgid "Manual(&M)..."
 msgstr "マニュアル(&M)..."
 
 #. MainForm..MainMenu..H1..MenuAbout..Caption
-#: MForm.dfm:160
+#: MForm.dfm:161
 msgid "About(&A)..."
 msgstr "バージョン情報(&A)..."
 
 #. MainForm..OpenPrjDialog..DefaultExt
 #. MainForm..SavePrjDialog..DefaultExt
-#: MForm.dfm:166
+#: MForm.dfm:167
 msgid "psm"
 msgstr ""
 
 #. MainForm..OpenPrjDialog..Filter
 #. MainForm..SavePrjDialog..Filter
-#: MForm.dfm:167
+#: MForm.dfm:168
 msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
 msgstr ""
 
@@ -295,13 +295,13 @@ msgstr "オプション"
 
 #. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24
-msgid "Terrain SDK path"
-msgstr "Terrain SDK のパス"
+msgid "Terrain SDK folder"
+msgstr "Terrain SDK フォルダ"
 
 #. OptionDlg..Label2..Caption
 #: OptDlg.dfm:31
-msgid "Imagetool path"
-msgstr "Imagetool のパス"
+msgid "Imagetool folder"
+msgstr "Imagetool フォルダ"
 
 #. OptionDlg..Label3..Caption
 #: OptDlg.dfm:38
@@ -329,7 +329,7 @@ msgstr "キャンセル"
 #: PJForm.dfm:178
 #: PJForm.dfm:187
 #: PJForm.dfm:196
-#: PJForm.dfm:377
+#: PJForm.dfm:415
 msgid "..."
 msgstr ""
 
@@ -408,33 +408,48 @@ msgstr ""
 msgid "CellYDimensionDeg (deg/pixel)"
 msgstr ""
 
-#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label16..Caption
-#: PJForm.dfm:298
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
+#: PJForm.dfm:315
+msgid "Info"
+msgstr "情報"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
+#: PJForm.dfm:322
 msgid "Bitmap Width"
 msgstr "ビットマップ幅"
 
-#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label17..Caption
-#: PJForm.dfm:305
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
+#: PJForm.dfm:329
 msgid "Bitmap Height"
 msgstr "ビットマップ高"
 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
+#: PJForm.dfm:336
+msgid "X resolution (m/pixel)"
+msgstr "X解像度 (m/pixel)"
+
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
+#: PJForm.dfm:343
+msgid "Y resolution (m/pixel)"
+msgstr "Y解像度(m/pixel)"
+
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:342
+#: PJForm.dfm:380
 msgid "Output"
 msgstr "出力"
 
 #. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:349
-msgid "Output Directory"
-msgstr "出力ディレクトリ"
+#: PJForm.dfm:387
+msgid "Output Folder"
+msgstr "出力フォルダ"
 
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:356
+#: PJForm.dfm:394
 msgid "Base File Name"
 msgstr "ベースファイル名"
 
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:410
+#: PJForm.dfm:448
 msgid "bmp"
 msgstr ""
 
@@ -449,39 +464,47 @@ msgid "Run whole process"
 msgstr "全実行"
 
 #. SCGenForm..GroupBox1..Caption
-#: SCGenFrm.dfm:42
+#: SCGenFrm.dfm:48
 msgid "Step execution"
 msgstr "ステップ実行"
 
 #. SCGenForm..GroupBox1..ButtonMakeInf..Caption
-#: SCGenFrm.dfm:49
+#: SCGenFrm.dfm:55
 msgid "1. Generate inf file"
 msgstr "1. inf ファイル生成"
 
 #. SCGenForm..GroupBox1..ButtonResample..Caption
-#: SCGenFrm.dfm:58
+#: SCGenFrm.dfm:64
 msgid "2. Resample"
 msgstr "2. Resample実行"
 
 #. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
-#: SCGenFrm.dfm:67
+#: SCGenFrm.dfm:73
 msgid "4. Convert Texture"
 msgstr "4. テクスチャ変換"
 
 #. SCGenForm..GroupBox1..ButtonGenBGL..Caption
-#: SCGenFrm.dfm:76
+#: SCGenFrm.dfm:82
 msgid "5. Generate BGL"
 msgstr "5. BGLファイル生成"
 
 #. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
-#: SCGenFrm.dfm:85
+#: SCGenFrm.dfm:91
 msgid "3. Merge Alpha Texture"
 msgstr "3. アルファテクスチャのマージ"
 
 #. SCGenForm..ButtonStop..Caption
-#: SCGenFrm.dfm:95
+#: SCGenFrm.dfm:101
 msgid "Stop"
 msgstr "中断"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:151
+msgid "Confirmation"
+msgstr "確認"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:152
+msgid "Project is modified. Do you want to save?"
+msgstr "プロジェクトが変更されています。保存しますか？"
 
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
 #, c-format
@@ -517,9 +540,10 @@ msgstr "中断されました"
 msgid "Creating inf files..."
 msgstr "inf ファイル生成中..."
 
-# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:214
-msgid "Command Execution Error"
-msgstr "コマンド実行エラー"
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
+#, c-format
+msgid "Can't open inf file : %s"
+msgstr "inf ファイルを開けません : %s"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:219
 #, c-format

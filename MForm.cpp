@@ -92,14 +92,24 @@ void TMainForm::TranslateAllForms(void)
 //
 void __fastcall TMainForm::MenuQuitClick(TObject *Sender)
 {
+	if (!CheckSave()) return;
+
 	delete(proj);
 	Application->Terminate();
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::FormCloseQuery(TObject *Sender, bool &CanClose)
+{
+	CanClose = CheckSave();
 }
 
 //---------------------------------------------------------------------------
 // Create new project
 void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 {
+	if (!CheckSave()) return;
+	
 	delete proj;
 	proj = new PSMProject;
 	MenuPrjPropertyClick(Sender);
@@ -108,6 +118,7 @@ void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 // Open project
 void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 {
+	if (!CheckSave()) return;
 	if (!OpenPrjDialog->Execute()) return;
 
 	proj->LoadFromFile(OpenPrjDialog->FileName);
@@ -129,6 +140,25 @@ void __fastcall TMainForm::MenuPrjSaveAsClick(TObject *Sender)
 	if (!SavePrjDialog->Execute()) return;
 	proj->SaveToFile(SavePrjDialog->FileName);
 	UpdateMenu();
+}
+
+//---------------------------------------------------------------------------
+// Check save
+bool TMainForm::CheckSave(void)
+{
+	if (proj->Modified) {
+		int res;
+		AnsiString title = _("Confirmation");
+		AnsiString msg = _("Project is modified. Do you want to save?");
+		res = Application->MessageBox(msg.c_str(), title.c_str(),
+			MB_YESNOCANCEL | MB_ICONQUESTION);
+
+		if (res == IDCANCEL) return false;
+		if (res == IDYES) {
+			proj->SaveToFile();
+		}
+	}
+	return true;
 }
 
 //---------------------------------------------------------------------------
@@ -500,6 +530,7 @@ void TMainForm::ShowHtml(AnsiString prefix)
 	ShellExecute(this->Handle, "open", html.c_str(),
 		NULL, NULL, SW_SHOW);
 }
+
 
 //---------------------------------------------------------------------------
 
