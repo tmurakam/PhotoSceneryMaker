@@ -172,8 +172,15 @@ void __fastcall TOptionDlg::ButtonBrowseSDKClick(TObject *Sender)
 	OpenDialog->Filter = "Terrain SDK Resample tool|resample.exe";
 	if (!OpenDialog->Execute()) return;
 
+	//
+	// check resample version
+	//
+	AnsiString save = EditSDKPath->Text;
 	EditSDKPath->Text = ExtractFileDir(OpenDialog->FileName);
 
+	if (!CheckResampleVersion()) {
+		EditSDKPath->Text = save;
+	}
 }
 //---------------------------------------------------------------------------
 
@@ -194,4 +201,31 @@ void __fastcall TOptionDlg::ButtonBrowserImagetoolClick(TObject *Sender)
 	EditImagetoolPath->Text = ExtractFileDir(OpenDialog->FileName);
 }
 //---------------------------------------------------------------------------
+bool __fastcall TOptionDlg::CheckResampleVersion(void)
+{
+	AnsiString resample = EditSDKPath->Text + "\\resample.exe";
 
+	bool validResample = false;
+	DWORD dummy;
+	DWORD vsz = GetFileVersionInfoSize(resample.c_str(), &dummy);
+	if (vsz > 0) {
+		void *pVerInfo = new char[vsz];
+
+		if (GetFileVersionInfo(resample.c_str(), 0, vsz, pVerInfo)) {
+			char *verstr;
+			UINT len;
+			VerQueryValue(pVerInfo, "\\StringFileInfo\\040904b0\\FileVersion",
+				      (LPVOID *)&verstr, &len);
+			if (strcmp(verstr, "Version 1.0.0.1") == 0) {
+				validResample = true;
+			}
+		}
+		delete pVerInfo;
+	}
+	if (!validResample) {
+		AnsiString msg = _("Resample.exe version is invalid. Please use FS2000 Terrain SDK!");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
+		return false;
+	}
+	return true;
+}

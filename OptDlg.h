@@ -65,6 +65,8 @@ public:		// User decl
 	AnsiString GetSDKPath(void);
 	AnsiString GetImagetoolPath(void);
 	AnsiString GetLangCode(void);
+
+	__fastcall bool CheckResampleVersion(void);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TOptionDlg *OptionDlg;

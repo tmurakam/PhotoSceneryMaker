@@ -69,6 +69,14 @@ bool TSCGenForm::SanityCheck(void)
 	Transform *trans = proj->Trans;
 	AnsiString msg;
 
+	// Check resample version
+	if (!OptionDlg->CheckResampleVersion()) {
+		return false;
+	}
+
+	//
+	// check parameters
+	//
 	if (trans->Resolution.x < 0 || trans->Resolution.y < 0) {
 		msg = _("Some coordinate parameters are invalid. Please re-calibrate.");
 		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);
