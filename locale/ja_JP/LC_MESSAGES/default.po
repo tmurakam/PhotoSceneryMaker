@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-09-01 23:30+0900\n"
+"PO-Revision-Date: 2003-09-03 02:02+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -1464,6 +1464,10 @@ msgstr ""
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:83
 msgid "Bitmap must be 16/24/32bit uncompressed windows BMP file."
 msgstr "ビットマップは 16/24/32bit 無圧縮の Windows BMP ファイルでなければなりません"
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:98
+msgid "Could not allocate memory for bitmap. Maybe bitmap file size is too large."
+msgstr "ビットマップ用メモリの割り当てに失敗しました。ビットマップファイルが大きすぎる可能性があります。"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
 msgid "Can't load project file."

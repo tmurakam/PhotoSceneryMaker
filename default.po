@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-09-01 23:30+0900\n"
+"POT-Creation-Date: 2003-09-03 02:02+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1401,8 +1401,13 @@ msgstr ""
 msgid "Version 1.1"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:83
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:84
 msgid "Bitmap must be 16/24/32bit uncompressed windows BMP file."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\Bitmap.cpp:99
+msgid ""
+"Could not allocate memory for bitmap. Maybe bitmap file size is too large."
 msgstr ""
 
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:176
