@@ -508,42 +508,51 @@ void TMainForm::SetProgress(int perc)
 // Switch seasonal bitmaps
 void TMainForm::ChangeBmp(int bmpidx, bool reload)
 {
-	curBmpIdx = bmpidx;
-	
-	if (bitmap) {
-		delete bitmap;
-	}
-	bitmap = //new Graphics::TBitmap;
-		new TBitmap2;
+	TCursor saveCursor = Screen->Cursor;
+	Screen->Cursor = crHourGlass;
+
 	try {
-		bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
+		curBmpIdx = bmpidx;
 
-		proj->Trans->Width = bitmap->Width;
-		proj->Trans->Height = bitmap->Height;
+		if (bitmap) {
+			delete bitmap;
+		}
+		bitmap = //new Graphics::TBitmap;
+		  new TBitmap2;
+		try {
+			bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
 
-		PaintBox->Width = bitmap->Width;
-		PaintBox->Height = bitmap->Height;
+			proj->Trans->Width = bitmap->Width;
+			proj->Trans->Height = bitmap->Height;
 
-		PaintBox->Invalidate();
-	}
-	catch (Exception &e) {
-		AnsiString msg = _("Can't open bitmap file.");
-		msg = e.Message; //###
-		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);	
+			PaintBox->Width = bitmap->Width;
+			PaintBox->Height = bitmap->Height;
 
-		delete bitmap;
-		bitmap = NULL;
-	}
+			PaintBox->Invalidate();
+		}
+		catch (Exception &e) {
+			AnsiString title = _("Can't open bitmap file");
+			AnsiString msg = e.Message;
+			Application->MessageBox(msg.c_str(),
+						title.c_str(), MB_OK | MB_ICONERROR);
 
-	// fix boundary (ad hoc...)
-	if (proj->Trans->Boundary.right <= 0) {
-		proj->Trans->Boundary.right = proj->Trans->Width - 1;
-	}
-	if (proj->Trans->Boundary.bottom <= 0) {
-		proj->Trans->Boundary.bottom = proj->Trans->Height - 1;
-	}
+			delete bitmap;
+			bitmap = NULL;
+		}
+
+		// fix boundary (ad hoc...)
+		if (proj->Trans->Boundary.right <= 0) {
+			proj->Trans->Boundary.right = proj->Trans->Width - 1;
+		}
+		if (proj->Trans->Boundary.bottom <= 0) {
+			proj->Trans->Boundary.bottom = proj->Trans->Height - 1;
+		}
 	
-	UpdateMenu();
+		UpdateMenu();
+	}
+	__finally {
+		Screen->Cursor = saveCursor;
+	}
 }
 //---------------------------------------------------------------------------
 // Display texture
