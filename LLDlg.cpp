@@ -16,9 +16,3 @@ __fastcall TLatLonDlg::TLatLonDlg(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TLatLonDlg::FormCreate(TObject *Sender)
-{
-	TranslateComponent(this);
-}
-//---------------------------------------------------------------------------
-

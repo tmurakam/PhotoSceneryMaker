@@ -53,12 +53,6 @@ __fastcall TSCGenForm::TSCGenForm(TComponent* Owner)
 }
 
 //---------------------------------------------------------------------------
-void __fastcall TSCGenForm::FormCreate(TObject *Sender)
-{
-	TranslateComponent(this);
-}
-
-//---------------------------------------------------------------------------
 void TSCGenForm::SetParam(PSMProject *prj)
 {
 	proj = prj;

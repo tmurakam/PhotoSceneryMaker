@@ -53,7 +53,6 @@ __published:	// IDE managed components
 	void __fastcall ButtonGenBGLClick(TObject *Sender);
 	void __fastcall ButtonConvertTextureClick(TObject *Sender);
 	void __fastcall ButtonDoAllClick(TObject *Sender);
-	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ButtonMergeAlphaClick(TObject *Sender);
 	void __fastcall ButtonStopClick(TObject *Sender);
 private:	// User decl.

@@ -42,11 +42,6 @@ __fastcall TPrjForm::TPrjForm(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TPrjForm::FormCreate(TObject *Sender)
-{
-	TranslateComponent(this);
-}
-//---------------------------------------------------------------------------
 void TPrjForm::LoadData(PSMProject *proj)
 {
 	EditBmpSummer->Text   = proj->BmpFile(BM_SUMMER);

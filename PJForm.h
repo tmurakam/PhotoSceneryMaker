@@ -105,7 +105,6 @@ __published:	// IDE managed components
 	void __fastcall ButtonRefBmpHSWinterClick(TObject *Sender);
 	void __fastcall ButtonRefBmpLightmapClick(TObject *Sender);
 	void __fastcall ButtonRefBmpAlphaClick(TObject *Sender);
-	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall OnCoordEditExit(TObject *Sender);
 	void __fastcall OnResEditExit(TObject *Sender);
 	void __fastcall CheckSeasonClick(TObject *Sender);

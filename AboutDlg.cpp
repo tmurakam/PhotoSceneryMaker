@@ -22,9 +22,4 @@ void __fastcall TAboutDialog::LabelURLClick(TObject *Sender)
 	ShellExecute(NULL, "open", url.c_str(), NULL, NULL, SW_SHOWDEFAULT);
 }
 //---------------------------------------------------------------------------
-void __fastcall TAboutDialog::FormCreate(TObject *Sender)
-{
-	TranslateComponent(this);
-}
-//---------------------------------------------------------------------------
 
