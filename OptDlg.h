@@ -32,7 +32,7 @@
 //---------------------------------------------------------------------------
 class TOptionDlg : public TForm
 {
-__published:	// IDE 管理のコンポーネント
+__published:	// IDE managed components
 	TButton *ButtonOK;
 	TButton *Button2;
 	TLabel *Label1;
@@ -46,9 +46,9 @@ __published:	// IDE 管理のコンポーネント
 	void __fastcall ButtonBrowseSDKClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ButtonBrowserImagetoolClick(TObject *Sender);
-private:	// ユーザー宣言
+private:	// User decl
 	void LoadReg(void);
-public:		// ユーザー宣言
+public:		// User decl
 	__fastcall TOptionDlg(TComponent* Owner);
 	inline AnsiString GetSDKPath(void) { return EditSDKPath->Text; }
 	inline AnsiString GetImagetoolPath(void) { return EditImagetoolPath->Text; }

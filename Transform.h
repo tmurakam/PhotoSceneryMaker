@@ -35,6 +35,7 @@ public:
 	int x, y;
 };
 
+// Control point for coordinates correction
 class ControlPoint {
 public:
 	LatLon	p;
@@ -47,17 +48,20 @@ public:
 	double	y;
 };
 
+
+//
+// Transformation class
+//
 class Transform {
 private:
-	LatLon	base;			// 画像左上の緯度/経度
-	XYparam	res;			// 解像度 (degree/pixel)
-	XYparam optres;		       	// 理想解像度 (degree/pixel)	
-	XYparam	mag;			// 画像補正拡大率
+	LatLon	base;			// Upper-Left(North-West) Latitude/Longitude
+	XYparam	res;			// Resolution (degree/pixel)
+	XYparam optres;		       	// Optimal Resolution (degree/pixel)	
+	XYparam	mag;			// Magnify rate
 
 private:
 	void CalcResolution(void);
 	void writeResolution(XYparam r)	{ res = r; CalcResolution(); }
-
 
 public:
 	void CalcParameters(ControlPoint *cp);

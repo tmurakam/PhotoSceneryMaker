@@ -28,7 +28,7 @@
 #include "Transform.h"
 
 //---------------------------------------------------------------------------
-// Photo Scenery Maker プロジェクト管理クラス
+// Season def.
 
 enum {
 	BM_SUMMER = 0,
@@ -44,6 +44,9 @@ enum {
 #define	SEASON_SUFFIX	{"su", "sp", "fa", "wi", "hw", "lm", "al"}
 #define	SEASON_NAME	{"summer", "spring", "fall", \
 	"mild winter", "harsh winter", "lightmap", "summer"}
+
+//---------------------------------------------------------------------------
+// Photo Scenery Maker Project management class
 
 class PSMProject
 {

@@ -38,7 +38,7 @@
 //---------------------------------------------------------------------------
 class TPrjForm : public TForm
 {
-__published:	// IDE 管理のコンポーネント
+__published:	// IDE managed components
 	TPageControl *PageControl1;
 	TTabSheet *TabSheet1;
 	TTabSheet *TabSheet2;
@@ -84,8 +84,8 @@ __published:	// IDE 管理のコンポーネント
 	void __fastcall ButtonRefBmpLightmapClick(TObject *Sender);
 	void __fastcall ButtonRefBmpAlphaClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
-private:	// ユーザー宣言
-public:		// ユーザー宣言
+private:	// User decl.
+public:		// User decl.
 	__fastcall TPrjForm(TComponent* Owner);
 
 	void LoadData(PSMProject *proj);

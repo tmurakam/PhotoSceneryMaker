@@ -40,7 +40,7 @@
 //---------------------------------------------------------------------------
 class TMainForm : public TForm
 {
-__published:	// IDE 管理のコンポーネント
+__published:	// IDE managed components
         TMainMenu *MainMenu;
         TMenuItem *F1;
 	TMenuItem *MenuQuit;
@@ -117,7 +117,7 @@ private:	// ユーザー宣言
 	void CalcParameters(void);
 //	void Gauss(double k[3][4]);
 
-public:		// ユーザー宣言
+public:		// User decl.
         __fastcall TMainForm(TComponent* Owner);
 	void UpdateMenu(void);
 	void SetProgress(int perc);

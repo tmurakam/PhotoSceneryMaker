@@ -36,7 +36,7 @@
 //---------------------------------------------------------------------------
 class TSCGenForm : public TForm
 {
-__published:	// IDE 管理のコンポーネント
+__published:	// IDE managed components
 	TButton *ButtonDoAll;
 	TButton *ButtonClose;
 	TGroupBox *GroupBox1;
@@ -55,7 +55,7 @@ __published:	// IDE 管理のコンポーネント
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ButtonMergeAlphaClick(TObject *Sender);
 	void __fastcall ButtonStopClick(TObject *Sender);
-private:	// ユーザー宣言
+private:	// User decl.
 	PSMProject *proj;
 
 	int Width, Height;
@@ -69,7 +69,7 @@ private:	// ユーザー宣言
 
 	void ProcessState(bool isStart);
 
-public:		// ユーザー宣言
+public:		// User decl.
 	__fastcall TSCGenForm(TComponent* Owner);
 	void SetParam(PSMProject *proj, int width, int height);
 	void WriteIni(TIniFile * ini);

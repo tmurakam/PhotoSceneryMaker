@@ -32,15 +32,15 @@
 //---------------------------------------------------------------------------
 class TLatLonDlg : public TForm
 {
-__published:	// IDE 管理のコンポーネント
+__published:	// IDE managed components
 	TLabel *Label1;
 	TLabel *Label2;
 	TEdit *LatEdit;
 	TEdit *LonEdit;
 	TButton *Button1;
 	void __fastcall FormCreate(TObject *Sender);
-private:	// ユーザー宣言
-public:		// ユーザー宣言
+private:	// User decl.
+public:		// User decl.
 	__fastcall TLatLonDlg(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
