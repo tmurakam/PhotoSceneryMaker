@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-07-29 01:08+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. AboutDialog..Label1..Caption
+#. MainForm..Caption
+#. MainForm..Caption
+#: AboutDlg.dfm:24 
+ MForm.dfm:6 bak/MainFrm.dfm:6
+msgid "Photo Scenery Maker"
+msgstr ""
+
+#. AboutDialog..Label1..Font.Name
+#. AboutDialog..Label2..Font.Name
+#. AboutDialog..Label3..Font.Name
+#. AboutDialog..LabelURL..Font.Name
+#. AboutDialog..Memo1..Font.Name
+#: AboutDlg.dfm:28 
+ AboutDlg.dfm:41 AboutDlg.dfm:54 AboutDlg.dfm:68
+#: AboutDlg.dfm:200
+msgid "Arial"
+msgstr ""
+
+#. AboutDialog..Label2..Caption
+#: AboutDlg.dfm:37 
+msgid "Version 1.0"
+msgstr ""
+
+#. AboutDialog..Label3..Caption
+#: AboutDlg.dfm:50 
+msgid "Copyright (C) 2003, Takuya Murakami"
+msgstr ""
+
+#. AboutDialog..LabelURL..Caption
+#: AboutDlg.dfm:64 
+msgid "http://flightinfo.ens.ne.jp/tmurakam/"
+msgstr ""
+
+#. AboutDialog..Button1..Caption
+#. SCGenForm..ButtonClose..Caption
+#: AboutDlg.dfm:188 
+ SCGenFrm.dfm:33
+msgid "Close"
+msgstr ""
+
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:205 
+msgid "This program is free software; you can redistribute it and/or modify"
+msgstr ""
+
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:208 
+msgid "it under the terms of the GNU General Public License as published by"
+msgstr ""
+
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:211 
+msgid "the Free Software Foundation; either version 2 of the License, or"
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:212 
+msgid "(at your option) any later version."
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:214 
+msgid "This program is distributed in the hope that it will be useful,"
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:215 
+msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:216 
+msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:217 
+msgid "GNU General Public License for more details."
+msgstr ""
+
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:221 
+msgid "You should have received a copy of the GNU General Public License"
+msgstr ""
+
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:222 
+msgid "along with this program; if not, write to the Free Software"
+msgstr ""
+
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:225 
+msgid ""
+"Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+
+#. LatLonDlg..Caption
+#: LLDlg.dfm:6 
+msgid "LatLonDlg"
+msgstr ""
+
+#. LatLonDlg..Label1..Caption
+#: LLDlg.dfm:24 
+msgid "Latitude"
+msgstr ""
+
+#. LatLonDlg..Label2..Caption
+#: LLDlg.dfm:31 
+msgid "Longitude"
+msgstr ""
+
+#. LatLonDlg..Button1..Caption
+#. OptionDlg..ButtonOK..Caption
+#. PrjForm..Panel1..Button1..Caption
+#: LLDlg.dfm:52 
+ OptDlg.dfm:38 PJForm.dfm:265
+msgid "OK"
+msgstr ""
+
+#. MainForm..StatusBar......Text
+#. MainForm..StatusBar..SimpleText
+#. SCGenForm..StatusBar..SimpleText
+#: MForm.dfm:25 
+ MForm.dfm:35 SCGenFrm.dfm:107
+msgid "Ready"
+msgstr ""
+
+#. MainForm..MainMenu..F1..Caption
+#: MForm.dfm:62 
+msgid "File(&F)"
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuNewPrj..Caption
+#: MForm.dfm:64 
+msgid "New(&N)..."
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuOpenPrj..Caption
+#: MForm.dfm:68 
+msgid "Open(&O)..."
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuPrjSave..Caption
+#: MForm.dfm:72 
+msgid "Save(&S)"
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
+#: MForm.dfm:76 
+msgid "Save As(&A)..."
+msgstr ""
+
+#. MainForm..MainMenu..F1..N1..Caption
+#. MainForm..MainMenu..F1..N5..Caption
+#. MainForm..MainMenu1..F1..N2..Caption
+#. MainForm..MainMenu1..F1..N4..Caption
+#: MForm.dfm:80 
+ MForm.dfm:87 bak/MainFrm.dfm:25 bak/MainFrm.dfm:37
+msgid "-"
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuPrjProperty..Caption
+#: MForm.dfm:83 
+msgid "Project Property(&P)..."
+msgstr ""
+
+#. MainForm..MainMenu..F1..MenuQuit..Caption
+#: MForm.dfm:90 
+msgid "Quit(&Q)"
+msgstr ""
+
+#. MainForm..MainMenu..V1..Caption
+#: MForm.dfm:95 
+msgid "Vew(&V)"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#: MForm.dfm:97 
+msgid "Summer"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#: MForm.dfm:102 
+msgid "Spring"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewFall..Caption
+#: MForm.dfm:106 
+msgid "Fall"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#: MForm.dfm:110 
+msgid "Winter"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
+#: MForm.dfm:114 
+msgid "Hard Winter"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#: MForm.dfm:118 
+msgid "Lightmap"
+msgstr ""
+
+#. MainForm..MainMenu..V1..MenuViewAlpha..Caption
+#: MForm.dfm:122 
+msgid "Water(Alpha)"
+msgstr ""
+
+#. MainForm..MainMenu..C1..Caption
+#: MForm.dfm:127 
+msgid "Calibration(&C)"
+msgstr ""
+
+#. MainForm..MainMenu..C1..SetCPoint..Caption
+#: MForm.dfm:129 
+msgid "2 Point Calibration(&P)..."
+msgstr ""
+
+#. MainForm..MainMenu..C1..ExecCorrection..Caption
+#: MForm.dfm:133 
+msgid "Optimize Photo(&O)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuSCGen..Caption
+#: MForm.dfm:138 
+msgid "Scenery Generation(&S)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuOption..Caption
+#: MForm.dfm:142 
+msgid "Option (&O)"
+msgstr ""
+
+#. MainForm..MainMenu..H1..Caption
+#: MForm.dfm:146 
+msgid "Help(&H)"
+msgstr ""
+
+#. MainForm..MainMenu..H1..MenuAbout..Caption
+#: MForm.dfm:148 
+msgid "About(&A)..."
+msgstr ""
+
+#. MainForm..OpenPrjDialog..DefaultExt
+#. MainForm..SavePrjDialog..DefaultExt
+#: MForm.dfm:154 
+ MForm.dfm:160
+msgid "psm"
+msgstr ""
+
+#. OptionDlg..Label1..Caption
+#: OptDlg.dfm:24 
+msgid "Terrain SDK path"
+msgstr ""
+
+#. OptionDlg..Label2..Caption
+#: OptDlg.dfm:31 
+msgid "Imagetool path"
+msgstr ""
+
+#. OptionDlg..Button2..Caption
+#. PrjForm..Panel1..Button2..Caption
+#: OptDlg.dfm:48 
+ PJForm.dfm:274
+msgid "Cancel"
+msgstr ""
+
+#. OptionDlg..ButtonBrowseSDK..Caption
+#. OptionDlg..ButtonBrowserImagetool..Caption
+#. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
+#: OptDlg.dfm:64 
+ OptDlg.dfm:80 PJForm.dfm:247
+msgid "..."
+msgstr ""
+
+#. PrjForm..Caption
+#: PJForm.dfm:6 
+msgid "Project Property"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet1..Caption
+#: PJForm.dfm:29 
+msgid "Bitmaps"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
+#: PJForm.dfm:98 
+msgid "Support Seasons"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..Caption
+#: PJForm.dfm:201 
+msgid "Coordinates"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet2..Label10..Caption
+#: PJForm.dfm:208 
+msgid "*** NOT YET ***"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..Caption
+#: PJForm.dfm:212 
+msgid "Output"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..Label8..Caption
+#: PJForm.dfm:219 
+msgid "Output Directory"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..Label9..Caption
+#: PJForm.dfm:226 
+msgid "Base File Name"
+msgstr ""
+
+#. PrjForm..OpenDialog..DefaultExt
+#: PJForm.dfm:280 
+msgid "bmp"
+msgstr ""
+
+#. SCGenForm..Caption
+#: SCGenFrm.dfm:6 
+msgid "Scenery Generation"
+msgstr ""
+
+#. SCGenForm..ButtonDoAll..Caption
+#: SCGenFrm.dfm:24 
+msgid "Run whole process"
+msgstr ""
+
+#. SCGenForm..GroupBox1..Caption
+#: SCGenFrm.dfm:42 
+msgid "Step execution"
+msgstr ""
+
+#. SCGenForm..GroupBox1..ButtonMakeInf..Caption
+#: SCGenFrm.dfm:49 
+msgid "1. Generate inf file"
+msgstr ""
+
+#. SCGenForm..GroupBox1..ButtonResample..Caption
+#: SCGenFrm.dfm:58 
+msgid "2. Resample"
+msgstr ""
+
+#. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
+#: SCGenFrm.dfm:67 
+msgid "4. Convert Texture"
+msgstr ""
+
+#. SCGenForm..GroupBox1..ButtonGenBGL..Caption
+#: SCGenFrm.dfm:76 
+msgid "5. Generate BGL"
+msgstr ""
+
+#. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
+#: SCGenFrm.dfm:85 
+msgid "3. Merge Alpha Texture"
+msgstr ""
+
+#. SCGenForm..ButtonStop..Caption
+#: SCGenFrm.dfm:95 
+msgid "Stop"
+msgstr ""
+
+#: D:\USR\FS\PhotoSceneryMaker\MForm.cpp:169
+#, c-format
+msgid "Specify #%d correction point"
+msgstr ""
+
+#: D:\USR\FS\PhotoSceneryMaker\MForm.cpp:213
+msgid "All control points specified"
+msgstr ""
+
+#: D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:164
+msgid "Error"
+msgstr ""
+
+#: D:\USR\FS\PhotoSceneryMaker\SCGenFrm.cpp:165
+msgid "Some errors occured."
+msgstr ""
