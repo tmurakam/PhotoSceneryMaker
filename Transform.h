@@ -54,6 +54,8 @@ public:
 //
 class Transform {
 private:
+	int	width;			// bitmap width
+	int	height;			// bitmap height
 	LatLon	base;			// Upper-Left(North-West) Latitude/Longitude
 	XYparam	res;			// Resolution (degree/pixel)
 	XYparam optres;		       	// Optimal Resolution (degree/pixel)	
@@ -72,6 +74,8 @@ public:
 
         TPicture *TransImage(TPicture *pict);
 
+	__property int Width = { read=width, write=width };
+	__property int Height = { read=height, write=height };
 	__property LatLon Base = { read=base, write=base};
 	__property XYparam Resolution = { read=res, write=writeResolution};
 };
