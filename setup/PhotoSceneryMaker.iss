@@ -41,3 +41,11 @@ Name: "{userdesktop}\Photo Scenery Maker"; Filename: "{app}\PhotoSceneryMaker.ex
 ; NOTE: The following entry contains an English phrase ("Launch"). You are free to translate it into another language if required.
 Filename: "{app}\PhotoSceneryMaker.exe"; Description: "Launch Photo Scenery Maker"; Flags: nowait postinstall skipifsilent
 
+[Registry]
+Root: HKCR; Subkey: ".psm"; ValueType: string; ValueName: ""; ValueData: "PhotoSceneryMakerProject"; Flags: uninsdeletevalue 
+
+Root: HKCR; Subkey: "PhotoSceneryMakerProject"; ValueType: string; ValueName: ""; ValueData: "Photo Scenery Maker Project"; Flags: uninsdeletekey 
+
+Root: HKCR; Subkey: "PhotoSceneryMakerProject\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\PhotoSceneryMaker.exe,0" 
+
+Root: HKCR; Subkey: "PhotoSceneryMakerProject\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\PhotoSceneryMaker.exe"" ""%1"""

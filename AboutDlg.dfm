@@ -34,7 +34,7 @@ object AboutDialog: TAboutDialog
     Top = 56
     Width = 141
     Height = 18
-    Caption = 'Version 1.0.0 beta 1'
+    Caption = 'Version 1.0.0 beta 2'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
