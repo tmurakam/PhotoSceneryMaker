@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-08-22 01:47+0900\n"
+"PO-Revision-Date: 2003-08-23 03:37+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -291,7 +291,7 @@ msgstr ""
 #. OptionDlg..Caption
 #: OptDlg.dfm:5
 msgid "Options"
-msgstr "オプション(&O)"
+msgstr "オプション"
 
 #. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24
@@ -325,12 +325,17 @@ msgstr "キャンセル"
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:71
-#: PJForm.dfm:168
-#: PJForm.dfm:177
-#: PJForm.dfm:186
-#: PJForm.dfm:195
-#: PJForm.dfm:376
+#: PJForm.dfm:169
+#: PJForm.dfm:178
+#: PJForm.dfm:187
+#: PJForm.dfm:196
+#: PJForm.dfm:377
 msgid "..."
+msgstr ""
+
+#. OptionDlg..OpenDialog..DefaultExt
+#: OptDlg.dfm:101
+msgid "exe"
 msgstr ""
 
 #. PrjForm..Caption
@@ -359,77 +364,77 @@ msgid "Support Seasons"
 msgstr "季節のサポート"
 
 #. PrjForm..PageControl1..TabSheet2..Caption
-#: PJForm.dfm:201
+#: PJForm.dfm:202
 msgid "Coordinates"
 msgstr "座標"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#: PJForm.dfm:208
+#: PJForm.dfm:209
 msgid "Bitmap Boundary"
 msgstr "ビットマップ範囲"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
-#: PJForm.dfm:215
+#: PJForm.dfm:216
 msgid "North"
 msgstr "北"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
-#: PJForm.dfm:222
+#: PJForm.dfm:223
 msgid "South"
 msgstr "南"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
-#: PJForm.dfm:229
+#: PJForm.dfm:230
 msgid "West"
 msgstr "西"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
-#: PJForm.dfm:236
+#: PJForm.dfm:237
 msgid "East"
 msgstr "東"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
-#: PJForm.dfm:276
+#: PJForm.dfm:277
 msgid "Resolution"
 msgstr "解像度"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
-#: PJForm.dfm:283
+#: PJForm.dfm:284
 msgid "CellXDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
-#: PJForm.dfm:290
+#: PJForm.dfm:291
 msgid "CellYDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label16..Caption
-#: PJForm.dfm:297
+#: PJForm.dfm:298
 msgid "Bitmap Width"
 msgstr "ビットマップ幅"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label17..Caption
-#: PJForm.dfm:304
+#: PJForm.dfm:305
 msgid "Bitmap Height"
 msgstr "ビットマップ高"
 
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:341
+#: PJForm.dfm:342
 msgid "Output"
 msgstr "出力"
 
 #. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:348
+#: PJForm.dfm:349
 msgid "Output Directory"
 msgstr "出力ディレクトリ"
 
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:355
+#: PJForm.dfm:356
 msgid "Base File Name"
 msgstr "ベースファイル名"
 
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:409
+#: PJForm.dfm:410
 msgid "bmp"
 msgstr ""
 
@@ -496,13 +501,25 @@ msgstr "最適なビットマップサイズは %d x %d です。\n"
 msgid "You can resize the bitmap with some image editing tools."
 msgstr "適切な画像編集ツールでリサイズすることができます。"
 
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
+msgid "Can't open bitmap file."
+msgstr "ビットマップファイルを開けません"
+
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
 msgid "Done"
 msgstr "完了"
 
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:84
+msgid "Interrupted"
+msgstr "中断されました"
+
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:97
 msgid "Creating inf files..."
 msgstr "inf ファイル生成中..."
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:214
+msgid "Command Execution Error"
+msgstr "コマンド実行エラー"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:219
 #, c-format
