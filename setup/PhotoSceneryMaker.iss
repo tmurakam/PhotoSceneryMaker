@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Photo Scenery Maker
-AppVerName=Photo Scenery Maker 1.2.3
+AppVerName=Photo Scenery Maker 1.2.4
 AppPublisher=Takuya Murakami
 AppPublisherURL=http://scenerytools.sourceforge.net
 AppSupportURL=http://scenerytools.sourceforge.net
