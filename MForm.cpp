@@ -24,7 +24,7 @@
 
 #include <vcl.h>
 #pragma hdrstop
-#include <IniFiles.hpp>
+#include <Registry.hpp>
 
 #include "gnugettext.hpp"
 
@@ -60,6 +60,27 @@ __fastcall TMainForm::TMainForm(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TMainForm::FormCreate(TObject *Sender)
 {
+	// Load window position from registry
+	try {
+		TRegistry *reg = new TRegistry;
+		reg->RootKey = HKEY_CURRENT_USER;
+		reg->OpenKey(REG_KEY, true);
+	
+		int top, left, width, height;
+		top = reg->ReadInteger("WindowTop");
+		left = reg->ReadInteger("WindowLeft");
+		width = reg->ReadInteger("WindowWidth");
+		height = reg->ReadInteger("WindowHeight");
+
+		Top = top;
+		Left = left;
+		Width = width;
+		Height = height;
+	}
+	catch (const Exception &e) {
+		// do nothing
+	}
+
 	TranslateComponent(this);
 
 	UpdateMenu();
@@ -102,6 +123,24 @@ void __fastcall TMainForm::MenuQuitClick(TObject *Sender)
 void __fastcall TMainForm::FormCloseQuery(TObject *Sender, bool &CanClose)
 {
 	CanClose = CheckSave();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	// save windows position
+	try {
+		TRegistry *reg = new TRegistry;
+		reg->RootKey = HKEY_CURRENT_USER;
+		reg->OpenKey(REG_KEY, true);
+
+		reg->WriteInteger("WindowTop", Top);
+		reg->WriteInteger("WindowLeft", Left);
+		reg->WriteInteger("WindowWidth", Width);
+		reg->WriteInteger("WindowHeight", Height);
+	}
+	catch (Exception &e) {
+		// do nothing
+	}
 }
 
 //---------------------------------------------------------------------------
@@ -527,11 +566,10 @@ void TMainForm::ShowHtml(AnsiString prefix)
 	html += OptionDlg->GetLangCode();
 	html += ".html";
 
-	ShowMessage(html);
-	
 	ShellExecute(this->Handle, "open", html.c_str(),
 		NULL, NULL, SW_SHOW);
 }
+
 
 
 //---------------------------------------------------------------------------
