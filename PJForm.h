@@ -74,7 +74,24 @@ __published:	// IDE managed components
 	TEdit *EditBaseFile;
 	TButton *ButtonRefOutDir;
 	TOpenDialog *OpenDialog;
-	TLabel *Label10;
+        TEdit *EditN;
+        TEdit *EditS;
+        TEdit *EditW;
+        TEdit *EditE;
+        TGroupBox *GroupBox1;
+        TLabel *Label10;
+        TLabel *Label11;
+        TLabel *Label12;
+        TLabel *Label13;
+        TGroupBox *GroupBox2;
+        TLabel *Label14;
+        TLabel *Label15;
+        TEdit *EditXres;
+        TEdit *EditYres;
+	TEdit *EditWidth;
+	TEdit *EditHeight;
+	TLabel *Label16;
+	TLabel *Label17;
 	void __fastcall ButtonRefOutDirClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSummerClick(TObject *Sender);
 	void __fastcall ButtonRefBmpSpringClick(TObject *Sender);
@@ -84,6 +101,9 @@ __published:	// IDE managed components
 	void __fastcall ButtonRefBmpLightmapClick(TObject *Sender);
 	void __fastcall ButtonRefBmpAlphaClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall OnCoordEditExit(TObject *Sender);
+	void __fastcall OnResEditExit(TObject *Sender);
+
 private:	// User decl.
 public:		// User decl.
 	__fastcall TPrjForm(TComponent* Owner);

@@ -29,6 +29,7 @@
 
 #include "PJForm.h"
 #include "Util.h"
+#include "latlon.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -57,6 +58,19 @@ void TPrjForm::LoadData(PSMProject *proj)
 
 	CheckSeason->Checked = proj->HasSeason;
 
+	EditWidth->Text = proj->Trans->Width;
+	EditHeight->Text = proj->Trans->Height;
+
+	EditN->Text = proj->Trans->Base.lat.GetStr();
+	EditW->Text = proj->Trans->Base.lon.GetStr();
+
+	LatLon se = proj->Trans->CalcLatLon(proj->Trans->Width, proj->Trans->Height);
+	EditS->Text = se.lat.GetStr();
+        EditE->Text = se.lon.GetStr();
+
+        EditXres->Text = proj->Trans->Resolution.x;
+        EditYres->Text = proj->Trans->Resolution.y;
+
 	EditOutDir->Text = proj->OutDir;
 	EditBaseFile->Text = proj->BaseFile;
 }
@@ -72,6 +86,8 @@ void TPrjForm::UpdateData(PSMProject *proj)
 	proj->SetBmpFile(BM_ALPHA,    EditBmpAlpha->Text);
 
 	proj->HasSeason = CheckSeason->Checked;
+
+        // ### TODO: Update Coordinates
 
 	proj->OutDir = EditOutDir->Text;
 	proj->BaseFile = EditBaseFile->Text;
@@ -142,6 +158,53 @@ void __fastcall TPrjForm::ButtonRefBmpAlphaClick(TObject *Sender)
 {
 	RefBmpFile(EditBmpAlpha);
 }
-//---------------------------------------------------------------------------
 
+void __fastcall TPrjForm::OnCoordEditExit(TObject *Sender)
+{
+	TEdit *edit = (TEdit *)Sender;
+
+        if (!edit->Modified) return;
+
+	int width = EditWidth->Text.ToInt();
+	int height = EditHeight->Text.ToInt();
+
+	if (width <= 0 || height <= 0) return;
+			
+	// Update resolution
+	LatLon nw, se;
+	nw.lat.SetStr(EditN->Text);
+	nw.lon.SetStr(EditW->Text);
+	se.lat.SetStr(EditS->Text);
+	se.lon.SetStr(EditE->Text);
+
+	double xres = (se.lon.deg - nw.lon.deg) / width;
+	double yres = (nw.lat.deg - se.lat.deg) / height;
+
+        EditXres->Text = xres;
+	EditYres->Text = yres;
+}
+//---------------------------------------------------------------------------
+void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
+{
+	TEdit *edit = (TEdit *)Sender;
+
+        if (!edit->Modified) return;
+
+	int width = EditWidth->Text.ToInt();
+	int height = EditHeight->Text.ToInt();
+
+	// Update boundary
+	double xres = EditXres->Text.ToDouble();
+	double yres = EditYres->Text.ToDouble();
+	LatLon nw, se;
+	nw.lat.SetStr(EditN->Text);
+	nw.lon.SetStr(EditW->Text);
+
+	se.lat.deg = nw.lat.deg - height * yres;
+        se.lon.deg = nw.lon.deg + width * xres;
+
+        EditS->Text = se.lat.GetStr();
+        EditE->Text = se.lon.GetStr();
+}
+//---------------------------------------------------------------------------
 
