@@ -514,7 +514,6 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 		delete bitmap;
 	}
 	bitmap = //new Graphics::TBitmap;
-		//new TMyBitmap;
 		new TBitmap2;
 	try {
 		bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));

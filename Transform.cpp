@@ -82,11 +82,13 @@ LatLon Transform::CalcLatLon(int x, int y)
 // Reverse conversion
 int Transform::CalcX(double lon)
 {
+	if (res.x == 0) return 0;
 	return (lon - base.lon.deg) / res.x;
 }
 
 int Transform::CalcY(double lat)
 {
+	if (res.y == 0) return 0;
 	return - (lat - base.lat.deg) / res.y;
 }
 

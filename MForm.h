@@ -35,7 +35,7 @@
 #include <Dialogs.hpp>
 
 #include "Project.h"
-#include "bitmap2.h"
+#include "Bitmap.h"
 #include <ToolWin.hpp>
 
 //---------------------------------------------------------------------------
