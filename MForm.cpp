@@ -81,8 +81,6 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 		// do nothing
 	}
 
-	TranslateComponent(this);
-
 	UpdateMenu();
 
 	HICON h = ::LoadCursor(HInstance, "MOVECURSOR");
@@ -166,7 +164,18 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 	if (!CheckSave()) return;
 	if (!OpenPrjDialog->Execute()) return;
 
-	proj->LoadFromFile(OpenPrjDialog->FileName);
+	PSMProject *newproj = new PSMProject;
+	try {
+		newproj->LoadFromFile(OpenPrjDialog->FileName);
+	}
+	catch (Exception &e) {
+		AnsiString msg = _("Can't load project file.");
+		Application->MessageBox(msg.c_str(), "Error", MB_OK | MB_ICONERROR);	
+		return;	// abort
+	}
+
+	delete proj;
+	proj = newproj;
 
 	// Reload BMP file
 	ChangeBmp(curBmpIdx, true);
