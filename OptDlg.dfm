@@ -3,8 +3,8 @@ object OptionDlg: TOptionDlg
   Top = 252
   BorderStyle = bsDialog
   Caption = 'Options'
-  ClientHeight = 141
-  ClientWidth = 468
+  ClientHeight = 189
+  ClientWidth = 509
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -25,21 +25,31 @@ object OptionDlg: TOptionDlg
   end
   object Label2: TLabel
     Left = 12
-    Top = 48
+    Top = 96
     Width = 90
     Height = 14
     Caption = 'Imagetool folder'
   end
   object Label3: TLabel
     Left = 12
-    Top = 80
+    Top = 128
     Width = 53
     Height = 14
     Caption = 'Language'
   end
+  object Label4: TLabel
+    Left = 128
+    Top = 40
+    Width = 369
+    Height = 49
+    Caption = 
+      'Note: You MUST use FS2000 Terrain SDK. Custom Terrain SDK has so' +
+      'me bugs, so it does not work properly!!!'
+    WordWrap = True
+  end
   object ButtonOK: TButton
     Left = 160
-    Top = 104
+    Top = 152
     Width = 75
     Height = 25
     Caption = 'OK'
@@ -49,7 +59,7 @@ object OptionDlg: TOptionDlg
   end
   object Button2: TButton
     Left = 256
-    Top = 104
+    Top = 152
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -59,12 +69,12 @@ object OptionDlg: TOptionDlg
   object EditSDKPath: TEdit
     Left = 128
     Top = 12
-    Width = 281
+    Width = 329
     Height = 22
     TabOrder = 2
   end
   object ButtonBrowseSDK: TButton
-    Left = 424
+    Left = 464
     Top = 10
     Width = 25
     Height = 25
@@ -74,14 +84,14 @@ object OptionDlg: TOptionDlg
   end
   object EditImagetoolPath: TEdit
     Left = 128
-    Top = 44
-    Width = 281
+    Top = 92
+    Width = 329
     Height = 22
     TabOrder = 4
   end
   object ButtonBrowserImagetool: TButton
-    Left = 424
-    Top = 42
+    Left = 464
+    Top = 90
     Width = 25
     Height = 25
     Caption = '...'
@@ -90,7 +100,7 @@ object OptionDlg: TOptionDlg
   end
   object ListLang: TComboBox
     Left = 128
-    Top = 76
+    Top = 124
     Width = 129
     Height = 22
     Style = csDropDownList
@@ -100,6 +110,6 @@ object OptionDlg: TOptionDlg
   object OpenDialog: TOpenDialog
     DefaultExt = 'exe'
     Left = 344
-    Top = 80
+    Top = 128
   end
 end

@@ -48,6 +48,7 @@ __published:	// IDE managed components
 	TComboBox *ListLang;
 	TLabel *Label3;
 	TOpenDialog *OpenDialog;
+	TLabel *Label4;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall ButtonOKClick(TObject *Sender);
 	void __fastcall ButtonBrowseSDKClick(TObject *Sender);
