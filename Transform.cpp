@@ -31,19 +31,20 @@
 
 #pragma package(smart_init)
 
-// 変換パラメータを計算する
+// Calculate transform parameters
+//
 void Transform::CalcParameters(ControlPoint *cp)
 {
 	int dx, dy;
 
-	// まずピクセルあたりの角度を計算する
+	// Calculate degree per one pixel
 	dx = cp[1].v.x - cp[0].v.x;
 	dy = cp[1].v.y - cp[0].v.y;
 
 	res.x =  (cp[1].p.lon.deg - cp[0].p.lon.deg) / dx;
 	res.y = -(cp[1].p.lat.deg - cp[0].p.lat.deg) / dy;
 
-	// 画像左上の座標を計算する
+	// Calculate north/west coordinates
 	base.lon.deg = cp[0].p.lon.deg - cp[0].v.x * res.x;
 	base.lat.deg = cp[0].p.lat.deg - (-cp[0].v.y) * res.y;
 
@@ -53,20 +54,21 @@ void Transform::CalcParameters(ControlPoint *cp)
 //------------------------------------------------------------------
 void Transform::CalcResolution(void)
 {
-	// 画像解像度
-	//	テクスチャは LOD13。cover 範囲は南北 90/8192 度、東西 120/8192度。
-	//	テクスチャサイズは 256x256。
-	//	これから、pixel あたりの角度が計算できる。
+	// Optimal resolution
+	//	Texture size is LOD13. Covered area with one texture 
+	//	is 90/8192 degree(N-S), 120/8192 degree(E-W).
+	//	Texture size is 256x256 pixel.
 	optres.y = (90.0 / 8192.0 / 256.0);
 	optres.x = 120.0 / 8192.0 / 256.0;
 
-	// 拡大率を計算する
+	// Calculate magnify rate
 	mag.x = res.x / optres.x;
 	mag.y = res.y / optres.y;
 }
 
 //------------------------------------------------------------------
-// 画像座標から緯度経度への変換
+// Convert pixel coordinates to latitude/longigute
+//
 LatLon Transform::CalcLatLon(int x, int y)
 {
 	LatLon ll;
@@ -76,7 +78,8 @@ LatLon Transform::CalcLatLon(int x, int y)
 
 	return ll;
 }
-// 逆変換
+
+// Reverse conversion
 int Transform::CalcX(double lon)
 {
 	return (lon - base.lon.deg) / res.x;
@@ -88,14 +91,16 @@ int Transform::CalcY(double lat)
 }
 
 //------------------------------------------------------------------
-// 適正サイズ計算
+// Calculate optimal bitmap size
 void Transform::CalcOptSize(int width, int height, int *correct_w, int *correct_h)
 {
-	// 補正後のサイズを計算
 	*correct_w = width * mag.x;
 	*correct_h = height * mag.y;
 }
 
+//--------------------------------------------------------------------------
+// Optimize bitmaps
+#if 0
 inline void CMultiAdd(int &r, int &g, int &b, const TColor &cref, double m)
 {
 	int rc, gc, bc;
@@ -109,11 +114,8 @@ inline void CMultiAdd(int &r, int &g, int &b, const TColor &cref, double m)
 	b += bc * m;
 }	
 
-//--------------------------------------------------------------------------
-// 画像補正実行
 TPicture *Transform::TransImage(TPicture *pict)
 {
-#if 0
 	int x, y, xx, yy;
 
 
@@ -121,7 +123,7 @@ TPicture *Transform::TransImage(TPicture *pict)
 	int oheight = pict->Bitmap->Height;
 	TCanvas *oc = pict->Bitmap->Canvas;
 
-	// リファレンス用データの作成
+	// Create reference data
 	unsigned long *cref;
 	cref = new unsigned long [owidth * oheight];
 
@@ -131,11 +133,11 @@ TPicture *Transform::TransImage(TPicture *pict)
 		}
 	}
 
-	// 新規画像のサイズを計算
+	// Calculate new bitmap size
 	int cwidth, cheight;
 	CalcOptSize(owidth, oheight, &cwidth, &cheight);
 
-	// 新規画像生成
+	// Create new bitmap
 	Graphics::TBitmap *newbmp = new Graphics::TBitmap;
 	newbmp->Width = cwidth;
 	newbmp->Height = cheight;
@@ -150,11 +152,11 @@ TPicture *Transform::TransImage(TPicture *pict)
 		Application->ProcessMessages();
 
 		for (x = 0; x < cwidth; x++) {
-			// 逆座標変換
+			// Reverse conversion
 			ox = x / Xmag;
 			oy = y / Ymag;
 
-			// 線形補間によりピクセル値を計算する
+			// Calculate pixel with linear interpolation.
 			xx = (int)ox;
 			yy = (int)oy;
 
@@ -185,11 +187,11 @@ TPicture *Transform::TransImage(TPicture *pict)
 
 	delete cref;
 
-	// 解像度を入れ替え
+	// Modify resolution
 	Xres = OptXres;
 	Yres = OptYres;
 	
 	return newpict;
-#endif
 }
+#endif
 

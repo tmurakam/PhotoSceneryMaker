@@ -268,7 +268,7 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 {
 	// drag
 	if (!isCpSpecifing) {
-		// ドラッグ開始
+		// Start dragging
 		isDragging = true;
 		POINT p;
 		GetCursorPos(&p);
@@ -280,18 +280,20 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 		
 		Timer->Enabled = true;
 
-		// Drag 中のカーソルを変更
-		// なぜか PaintBox->Cursor の変更ではうまくいかない、、、
+		// Modify dragging cursor
+		// Note: PaintBox->Cursor modification does not work...
 		Screen->Cursor = crMove;
 		return;
 	}
+
+	// Specify new control point.
 
 	ControlPoint *c = &cp[CpSpecifing];
 
 	c->v.x = X;
 	c->v.y = Y;
 
-	// 緯度経度を入力する
+	// Show lat/lon
 	LatLonDlg->ShowModal();
 	c->p.lat.SetStr(LatLonDlg->LatEdit->Text);
 	c->p.lon.SetStr(LatLonDlg->LonEdit->Text);
@@ -306,7 +308,7 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 
 		PaintBox->Cursor = crDefault;
 
-		// 補正パラメータ計算
+		// Calculate calibration parameters
 		proj->Trans->CalcParameters(cp);
 		proj->Modified = true;
 
@@ -372,30 +374,6 @@ void __fastcall TMainForm::ExecCorrectionClick(TObject *Sender)
 
 	mes = mes1 + mes2;
 	Application->MessageBox(mes.c_str(), "Info", MB_ICONINFORMATION | MB_OK);
-
-#if 0
-	// 境界補正
-	int cx, cy;
-	proj->Trans->CalcOptSize(bitmap->Width, bitmap->Height, &cx, &cy);
-	AnsiString query;
-	query.sprintf("補正後の画像サイズは %d x %d から"
-		" %d x %d ピクセルになります\nよろしいですか？",
-		bitmap->Width, bitmap->Height, cx, cy);
-	if (Application->MessageBox(query.c_str(), "確認", MB_ICONQUESTION | MB_YESNO)
-		!= IDYES) {
-		return;
-	}
-
-	// 変換実行
-	StatusBar->Panels->Items[0]->Text = "処理中です。しばらくお待ちください、、、";
-	TPicture *pict = proj->Trans->TransImage(Image->Picture);
-	Image->Picture = pict;
-
-	UpdateMenu();
-	StatusBar->Panels->Items[0]->Text = "補正完了";
-
-	proj->Modified = true;
-#endif
 }
 //---------------------------------------------------------------------------
 // Show option dialog
@@ -422,7 +400,7 @@ void __fastcall TMainForm::MenuAboutClick(TObject *Sender)
 void TMainForm::SetProgress(int perc)
 {
 	AnsiString tmp;
-	tmp.sprintf("処理中: %d%%", perc);
+	tmp.sprintf("Processing: %d%%", perc);
 	StatusBar->Panels->Items[0]->Text = tmp;
 }
 //---------------------------------------------------------------------------
@@ -438,7 +416,6 @@ void TMainForm::ChangeBmp(int bmpidx, bool reload)
 	try {
 		bitmap->LoadFromFile(proj->BmpFile(curBmpIdx));
 
-		// 描画領域のサイズを修正
 		proj->Trans->Width = bitmap->Width;
 		proj->Trans->Height = bitmap->Height;
 
@@ -463,10 +440,10 @@ void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 {
 	if (!bitmap) return;
 	
-	// ビットマップ描画
+	// Draw Bitmap
 	PaintBox->Canvas->Draw(0, 0, bitmap);
 
-	// グリッド描画
+	// Draw grids
 	PaintBox->Canvas->Pen->Color = clWhite;
 	PaintBox->Canvas->Pen->Width = 1;
         PaintBox->Canvas->Pen->Style = psDashDot;
@@ -478,7 +455,7 @@ void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 
 	int min, max, i;
 
-	// 緯線
+	// Latitude line
 	const double latbound = 90.0 / 8196.0;	// LOD 13
 	min = (int)(se.lat.deg / latbound - 0.5);
 	max = (int)(nw.lat.deg / latbound - 0.5) + 1;
@@ -488,7 +465,7 @@ void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 		PaintBox->Canvas->LineTo(bitmap->Width - 1, y);
 	}
 
-	// 経線
+	// Longitude line
 	const double lonbound = 120.0 / 8196.0;	// LOD 13
 	min = (int)(nw.lon.deg / lonbound - 0.5);
 	max = (int)(se.lon.deg / lonbound - 0.5) + 1;

@@ -100,7 +100,7 @@ void TPrjForm::UpdateData(PSMProject *proj)
 }
 
 //---------------------------------------------------------------------------
-// フォルダ選択
+// Select folder
 void TPrjForm::RefFolder(TEdit *edit)
 {
 	AnsiString f = SelectFolder(edit->Text, Handle);
@@ -115,7 +115,7 @@ void __fastcall TPrjForm::ButtonRefOutDirClick(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// BMPファイル選択
+// Select BMP file
 void TPrjForm::RefBmpFile(TEdit *edit)
 {
 	if (OpenDialog->Execute()) {

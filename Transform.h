@@ -72,7 +72,7 @@ public:
 	int CalcY(double lat);
 	void CalcOptSize(int width, int height, int *correct_w, int *correct_h);
 
-        TPicture *TransImage(TPicture *pict);
+        // TPicture *TransImage(TPicture *pict);
 
 	__property int Width = { read=width, write=width };
 	__property int Height = { read=height, write=height };

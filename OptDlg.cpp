@@ -76,7 +76,7 @@ AnsiString TOptionDlg::GetLangCode(void)
 }
 
 //---------------------------------------------------------------------------
-// オプション値をレジストリから読み込む
+// Load option values from registry
 void TOptionDlg::LoadReg(void)
 {
 	TRegistry *reg = new TRegistry;
