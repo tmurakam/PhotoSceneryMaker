@@ -447,3 +447,14 @@ void __fastcall TMainForm::MenuViewAlphaClick(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
+void __fastcall TMainForm::MenuManualClick(TObject *Sender)
+{
+	AnsiString man;
+
+	man = ExtractFilePath(Application->ExeName);
+	man += "doc\\manual.html";
+	ShellExecute(this->Handle, "open", man.c_str(),
+		NULL, NULL, SW_SHOW);
+}
+//---------------------------------------------------------------------------
+

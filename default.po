@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-08-20 01:03+0900\n"
+"POT-Creation-Date: 2003-08-20 01:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -284,22 +284,27 @@ msgstr ""
 msgid "Help(&H)"
 msgstr ""
 
-#. MainForm..MainMenu..H1..MenuAbout..Caption
+#. MainForm..MainMenu..H1..MenuManual..Caption
 #: MForm.dfm:148 
+msgid "Manual(&M)..."
+msgstr ""
+
+#. MainForm..MainMenu..H1..MenuAbout..Caption
+#: MForm.dfm:152 
 msgid "About(&A)..."
 msgstr ""
 
 #. MainForm..OpenPrjDialog..DefaultExt
 #. MainForm..SavePrjDialog..DefaultExt
-#: MForm.dfm:154 
- MForm.dfm:160
+#: MForm.dfm:158 
+ MForm.dfm:164
 msgid "psm"
 msgstr ""
 
 #. MainForm..OpenPrjDialog..Filter
 #. MainForm..SavePrjDialog..Filter
-#: MForm.dfm:155 
- MForm.dfm:161
+#: MForm.dfm:159 
+ MForm.dfm:165
 msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
 msgstr ""
 

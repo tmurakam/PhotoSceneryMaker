@@ -1,8 +1,8 @@
 object MainForm: TMainForm
   Left = 194
   Top = 107
-  Width = 637
-  Height = 481
+  Width = 644
+  Height = 519
   Caption = 'Photo Scenery Maker'
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
@@ -12,14 +12,13 @@ object MainForm: TMainForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
-  WindowState = wsMaximized
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 12
   object StatusBar: TStatusBar
     Left = 0
-    Top = 413
-    Width = 629
+    Top = 451
+    Width = 636
     Height = 19
     Panels = <
       item
@@ -38,8 +37,8 @@ object MainForm: TMainForm
   object ScrollBox: TScrollBox
     Left = 0
     Top = 0
-    Width = 629
-    Height = 413
+    Width = 636
+    Height = 451
     HorzScrollBar.Tracking = True
     VertScrollBar.Tracking = True
     Align = alClient
@@ -145,6 +144,10 @@ object MainForm: TMainForm
     end
     object H1: TMenuItem
       Caption = 'Help(&H)'
+      object MenuManual: TMenuItem
+        Caption = 'Manual(&M)...'
+        OnClick = MenuManualClick
+      end
       object MenuAbout: TMenuItem
         Caption = 'About(&A)...'
         OnClick = MenuAboutClick

@@ -73,6 +73,7 @@ __published:	// IDE managed components
 	TMenuItem *MenuViewAlpha;
 	TPaintBox *PaintBox;
 	TTimer *Timer;
+	TMenuItem *MenuManual;
 
 	void __fastcall SetCPointClick(TObject *Sender);
 	void __fastcall OnMouseDown(TObject *Sender, TMouseButton Button,
@@ -101,6 +102,7 @@ __published:	// IDE managed components
 	void __fastcall PaintBoxPaint(TObject *Sender);
 	void __fastcall OnTimer(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall MenuManualClick(TObject *Sender);
 private:	// ÉÜÅ[ÉUÅ[êÈåæ
 	bool isCpSpecifing;
         int CpSpecifing;
