@@ -32,14 +32,12 @@
 #include "OptDlg.h"
 #include "Util.h"
 
-#define	REG_KEY		"\\Software\\Takuya Murakami\\Photo Scenery Maker"
-
 struct _lang {
 	char *code;
 	char *locale;
 	char *desc;
 } Lang[] = {
-	//{ "", "", "System Locale" },
+	{ "", "", "System Locale" },
 	{ "en", "en", "English" },
 	{ "ja", "ja_JP", "Japanese" },
 	{ NULL, NULL }
@@ -65,7 +63,16 @@ void TOptionDlg::ChangeLang(void)
 
 AnsiString TOptionDlg::GetLangCode(void)
 {
-	return Lang[curLangIdx].code;
+	AnsiString lang = Lang[curLangIdx].code;
+	if (lang.IsEmpty()) {
+		lang = GetCurrentLanguage();
+		if (lang == "C") {
+			lang = "en";
+		} else {
+			lang = lang.SubString(1, 2);
+		}
+	}
+	return lang;
 }
 
 //---------------------------------------------------------------------------

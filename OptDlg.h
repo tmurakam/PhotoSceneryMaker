@@ -31,6 +31,9 @@
 #include <Forms.hpp>
 #include <Dialogs.hpp>
 //---------------------------------------------------------------------------
+#define	REG_KEY		"\\Software\\Takuya Murakami\\Photo Scenery Maker"
+
+//---------------------------------------------------------------------------
 class TOptionDlg : public TForm
 {
 __published:	// IDE managed components
