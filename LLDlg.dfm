@@ -45,12 +45,21 @@ object LatLonDlg: TLatLonDlg
     TabOrder = 1
   end
   object Button1: TButton
-    Left = 80
+    Left = 32
     Top = 88
     Width = 75
     Height = 25
     Caption = 'OK'
     ModalResult = 1
     TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 128
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 3
   end
 end
