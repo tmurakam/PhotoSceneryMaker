@@ -1,6 +1,6 @@
 object SCGenForm: TSCGenForm
-  Left = 503
-  Top = 289
+  Left = 370
+  Top = 276
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Scenery Generation'

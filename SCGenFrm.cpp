@@ -79,6 +79,7 @@ void __fastcall TSCGenForm::ButtonMakeInfClick(TObject *Sender)
 
 	if (!proj->HasSeason) {
 		MakeInf(BM_SUMMER);
+		MakeInf(BM_ALPHA);
 	} else {
 		for (int i = 0; i < BM_MAX; i++) {
 			MakeInf(i);
@@ -173,6 +174,11 @@ int TSCGenForm::ExecCmd(AnsiString cmdline)
 void __fastcall TSCGenForm::ButtonResampleClick(TObject *Sender)
 {
 	for (int i = 0; i < BM_MAX; i++) {
+		if (!proj->HasSeason &&
+		    i != BM_SUMMER && i != BM_ALPHA) {
+			continue;
+		}
+
 		// 作業用ディレクトリにchdir する
 		AnsiString bmppath = BmpPath(i);
 		ChDir(bmppath);

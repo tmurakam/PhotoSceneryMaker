@@ -64,12 +64,10 @@ void TPrjForm::LoadData(PSMProject *proj)
 	EditN->Text = proj->Trans->Base.lat.GetStr();
 	EditW->Text = proj->Trans->Base.lon.GetStr();
 
-	LatLon se = proj->Trans->CalcLatLon(proj->Trans->Width, proj->Trans->Height);
-	EditS->Text = se.lat.GetStr();
-        EditE->Text = se.lon.GetStr();
+	EditXres->Text = proj->Trans->Resolution.x;
+	EditYres->Text = proj->Trans->Resolution.y;
 
-        EditXres->Text = proj->Trans->Resolution.x;
-        EditYres->Text = proj->Trans->Resolution.y;
+	OnResEditExit(NULL);	// ad hoc...
 
 	EditOutDir->Text = proj->OutDir;
 	EditBaseFile->Text = proj->BaseFile;
@@ -87,7 +85,13 @@ void TPrjForm::UpdateData(PSMProject *proj)
 
 	proj->HasSeason = CheckSeason->Checked;
 
-        // ### TODO: Update Coordinates
+	proj->Trans->Base.lat.SetStr(EditN->Text);
+	proj->Trans->Base.lon.SetStr(EditW->Text);
+
+	XYparam res;
+	res.x = EditXres->Text.ToDouble();
+	res.y = EditYres->Text.ToDouble();
+	proj->Trans->Resolution = res;
 
 	proj->OutDir = EditOutDir->Text;
 	proj->BaseFile = EditBaseFile->Text;
@@ -188,7 +192,7 @@ void __fastcall TPrjForm::OnResEditExit(TObject *Sender)
 {
 	TEdit *edit = (TEdit *)Sender;
 
-        if (!edit->Modified) return;
+	if (edit && !edit->Modified) return;
 
 	int width = EditWidth->Text.ToInt();
 	int height = EditHeight->Text.ToInt();

@@ -7,7 +7,7 @@
     <OBJFILES value="PhotoSceneryMaker.obj MForm.obj latlon.obj LLDlg.obj Transform.obj 
       OptDlg.obj AboutDlg.obj SCGenFrm.obj Util.obj Project.obj PJForm.obj 
       gnugettext.obj targa.obj"/>
-    <RESFILES value="PhotoSceneryMaker.res"/>
+    <RESFILES value="PhotoSceneryMaker.res cursor.res"/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) MForm.dfm LLDlg.dfm OptDlg.dfm AboutDlg.dfm SCGenFrm.dfm 
       PJForm.dfm"/>
@@ -60,6 +60,7 @@
       <FILE FILENAME="PJForm.cpp" FORMNAME="PrjForm" UNITNAME="PJForm" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="gnugettext.pas" FORMNAME="" UNITNAME="gnugettext" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="targa.cpp" FORMNAME="" UNITNAME="targa" CONTAINERID="C/C++ コンパイラ" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cursor.res" FORMNAME="" UNITNAME="cursor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -95,13 +96,8 @@ Comments=
 [Excluded Packages]
 c:\program files\borland\cbuilder6\Bin\dclbcbsmp60.bpl=Borland Sample Controls Design Time Package
 c:\program files\borland\cbuilder6\Bin\dclado60.bpl=Borland ADO DB Components
-C:\Program Files\Borland\CBuilder6\Bin\dcldb60.bpl=Borland Database Components
 c:\program files\borland\cbuilder6\Bin\dclqrt60.bpl=QuickReport Components
 C:\WINDOWS\System32\ibevnt60.bpl=Borland Interbase Event Alerter Component
-c:\program files\borland\cbuilder6\Bin\dclbde60.bpl=Borland BDE DB Components
-C:\Program Files\Borland\CBuilder6\Bin\dbx60.bpl=Borland SQL Explorer UI Package
-c:\program files\borland\cbuilder6\Bin\dclcds60.bpl=Borland Base Cached ClientDataset Component
-C:\Program Files\Borland\CBuilder6\Bin\dclmid60.bpl=Borland MyBase DataAccess Components
 c:\program files\borland\cbuilder6\Bin\dclbdecds60.bpl=Borland Local BDE ClientDataset Components
 c:\program files\borland\cbuilder6\Bin\dcltee60.bpl=TeeChart Components
 c:\program files\borland\cbuilder6\Bin\applet60.bpl=Borland Control Panel Applet Package
@@ -111,18 +107,7 @@ c:\program files\borland\cbuilder6\Bin\dclclxdb60.bpl=Borland CLX Database Compo
 C:\Program Files\Borland\CBuilder6\Bin\dclclxstd60.bpl=Borland CLX Standard Components
 c:\program files\borland\cbuilder6\Bin\dclemacsedit60.bpl=Borland Editor Emacs Enhancements
 c:\program files\borland\cbuilder6\Bin\dclmlwiz60.bpl=Borland Markup Language Wizards
-c:\program files\borland\cbuilder6\Bin\dclnet60.bpl=Borland Internet Components
-c:\program files\borland\cbuilder6\Bin\DBWEBXPRT.BPL=Borland Web Wizard Package
-c:\program files\borland\cbuilder6\Bin\DCLNMF60.bpl=NetMasters Fastnet Tools
-c:\program files\borland\cbuilder6\Bin\bcbie60.bpl=Borland C++Builder Internet Explorer 5 Components Package
-c:\program files\borland\cbuilder6\Bin\dclsoap60.bpl=Borland SOAP Components
-c:\program files\borland\cbuilder6\Bin\dclocx60.bpl=Borland Sample Imported ActiveX Controls
-c:\program files\borland\cbuilder6\Bin\dcldbx60.bpl=Borland dbExpress Components
-c:\program files\borland\cbuilder6\Bin\dcldbxcds60.bpl=Borland Local DBX ClientDataset Components
-c:\program files\borland\cbuilder6\Bin\dclindy60.bpl=Internet Direct (Indy) for D6 Property and Component Editors
-c:\program files\borland\cbuilder6\Bin\bcb2kaxserver60.bpl=Borland C++Builder COM Server Components Sample Package
 c:\program files\borland\cbuilder6\Bin\dclsmpedit60.bpl=Borland Editor Script Enhancements
-c:\program files\borland\cbuilder6\Projects\Bpl\SMLPack.bpl=SMLPack DesignTime Package
 
 [HistoryLists\hlIncludePath]
 Count=2
