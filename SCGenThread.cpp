@@ -262,7 +262,7 @@ void SCGenThread::Resample(void)
 		AnsiString inf = InfFileName(i);
 	
 		AnsiString cmdline;
-		cmdline.sprintf("%s\\resample.exe %s",
+		cmdline.sprintf("\"%s\\resample.exe\" \"%s\"",
 				OptionDlg->GetSDKPath(), inf);
 		if (ExecCmd(cmdline, "resample.exe") != 0) {
 			AnsiString title = _("Error");
@@ -391,12 +391,12 @@ void SCGenThread::GenBgl(void)
 
 	// Compress tmf file
 	AnsiString cmdline;
-	cmdline.sprintf("%s\\tmfcompress.exe %s %s", sdkpath, tmf, tmfc);
+	cmdline.sprintf("\"%s\\tmfcompress.exe\" \"%s\" \"%s\"", sdkpath, tmf, tmfc);
 	ExecCmd(cmdline, "tmfcompress.exe");
 	if (Terminated) return;
 
 	// Convert BGL file
-	cmdline.sprintf("%s\\tmf2bgl.exe %s %s", sdkpath, tmfc, bgl);
+	cmdline.sprintf("\"%s\\tmf2bgl.exe\" \"%s\" \"%s\"", sdkpath, tmfc, bgl);
 	ExecCmd(cmdline, "tmf2bgl.exe");
 }
 
