@@ -1,4 +1,6 @@
-/* Photo Scenery Maker
+/*
+ * Photo Scenery Maker
+ *
  * Copyright (C) 2003 Takuya Murakami
  *
  * MForm.cpp : Main Form
@@ -39,7 +41,7 @@
 TMainForm *MainForm;
 //---------------------------------------------------------------------------
 //
-// コンストラクタ
+// Constructor
 //
 const crMove = 5;
 
@@ -68,7 +70,7 @@ void __fastcall TMainForm::FormCreate(TObject *Sender)
 
 //---------------------------------------------------------------------------
 //
-// 終了
+// Quit
 //
 void __fastcall TMainForm::MenuQuitClick(TObject *Sender)
 {
@@ -77,7 +79,7 @@ void __fastcall TMainForm::MenuQuitClick(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// 新規プロジェクト作成
+// Create new project
 void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 {
 	delete proj;
@@ -85,7 +87,7 @@ void __fastcall TMainForm::MenuNewPrjClick(TObject *Sender)
 	MenuPrjPropertyClick(Sender);
 }
 //---------------------------------------------------------------------------
-// プロジェクトを開く
+// Open project
 void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 {
 	if (!OpenPrjDialog->Execute()) return;
@@ -96,14 +98,14 @@ void __fastcall TMainForm::MenuOpenPrjClick(TObject *Sender)
 	ChangeBmp(curBmpIdx);
 }
 //---------------------------------------------------------------------------
-// プロジェクトの上書き保存
+// Save project
 void __fastcall TMainForm::MenuPrjSaveClick(TObject *Sender)
 {
 	proj->SaveToFile();
 	UpdateMenu();
 }
 //---------------------------------------------------------------------------
-// プロジェクトに名前をつけて保存
+// Save project as new file
 void __fastcall TMainForm::MenuPrjSaveAsClick(TObject *Sender)
 {
 	if (!SavePrjDialog->Execute()) return;
@@ -112,7 +114,7 @@ void __fastcall TMainForm::MenuPrjSaveAsClick(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// プロジェクトのプロパティ
+// Specify project property
 void __fastcall TMainForm::MenuPrjPropertyClick(TObject *Sender)
 {
 	PrjForm->LoadData(proj);
@@ -124,7 +126,7 @@ void __fastcall TMainForm::MenuPrjPropertyClick(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// メニューの更新
+// Update menu items
 void TMainForm::UpdateMenu(void)
 {
 	MenuPrjSave->Enabled = false;
@@ -151,7 +153,7 @@ void TMainForm::UpdateMenu(void)
 }
 
 //---------------------------------------------------------------------------
-// コントロールポイント指定の開始
+// Start specify control points for calibration
 void __fastcall TMainForm::SetCPointClick(TObject *Sender)
 {
 	isCpSpecifing = true;
@@ -162,7 +164,7 @@ void __fastcall TMainForm::SetCPointClick(TObject *Sender)
 	PaintBox->Cursor = crCross;
 }
 //---------------------------------------------------------------------------
-// コントロールポイント指定
+// Start specify control points for calibration
 void TMainForm::StartCpSpecify(void)
 {
 	AnsiString tmp;
@@ -172,7 +174,7 @@ void TMainForm::StartCpSpecify(void)
 }
 
 //---------------------------------------------------------------------------
-// マウスイベント : Down
+// Mouse Event : Down
 void __fastcall TMainForm::OnMouseDown(TObject *Sender,
       TMouseButton Button, TShiftState Shift, int X, int Y)
 {
@@ -226,7 +228,7 @@ void __fastcall TMainForm::OnMouseDown(TObject *Sender,
 
 }
 //---------------------------------------------------------------------------
-// マウスイベント : Move
+// Mouse Event : Move
 void __fastcall TMainForm::OnMouseMove(TObject *Sender,
       TShiftState Shift, int X, int Y)
 {
@@ -248,7 +250,7 @@ void __fastcall TMainForm::OnMouseMove(TObject *Sender,
 }
 
 //---------------------------------------------------------------------------
-// マウスイベント : Up
+// Mouse Event : Up
 void __fastcall TMainForm::OnMouseUp(TObject *Sender,
       TMouseButton Button, TShiftState Shift, int X, int Y)
 {
@@ -259,7 +261,7 @@ void __fastcall TMainForm::OnMouseUp(TObject *Sender,
 	}
 }
 //---------------------------------------------------------------------------
-// 画像移動
+// Scroll texture
 void __fastcall TMainForm::OnTimer(TObject *Sender)
 {
 	if (!isDragging) return;
@@ -269,7 +271,7 @@ void __fastcall TMainForm::OnTimer(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-// 画像補正
+// Texture Correction
 void __fastcall TMainForm::ExecCorrectionClick(TObject *Sender)
 {
 #if 0
@@ -297,26 +299,26 @@ void __fastcall TMainForm::ExecCorrectionClick(TObject *Sender)
 #endif
 }
 //---------------------------------------------------------------------------
-// オプションダイアログ
+// Show option dialog
 void __fastcall TMainForm::MenuOptionClick(TObject *Sender)
 {
 	if (OptionDlg->ShowModal() != mrOk) return;
 }
 //---------------------------------------------------------------------------
-// シーナリ生成ダイアログ
+// Show scenery generation dialog
 void __fastcall TMainForm::MenuSCGenClick(TObject *Sender)
 {
 	SCGenForm->SetParam(proj, bitmap->Width, bitmap->Height);
 	SCGenForm->ShowModal();
 }
 //---------------------------------------------------------------------------
-// バージョン情報ダイアログ
+// Show about(version) dialog
 void __fastcall TMainForm::MenuAboutClick(TObject *Sender)
 {
 	AboutDialog->ShowModal();
 }
 //---------------------------------------------------------------------------
-// 処理状態表示
+// Show progress on status bar
 void TMainForm::SetProgress(int perc)
 {
 	AnsiString tmp;
@@ -324,7 +326,7 @@ void TMainForm::SetProgress(int perc)
 	StatusBar->Panels->Items[0]->Text = tmp;
 }
 //---------------------------------------------------------------------------
-// 表示ビットマップの切り替え
+// Switch seasonal bitmaps
 void TMainForm::ChangeBmp(int bmpidx)
 {
 	curBmpIdx = bmpidx;
@@ -344,7 +346,7 @@ void TMainForm::ChangeBmp(int bmpidx)
 	UpdateMenu();
 }
 //---------------------------------------------------------------------------
-// 描画処理
+// Display texture
 void __fastcall TMainForm::PaintBoxPaint(TObject *Sender)
 {
 	if (!bitmap) return;
