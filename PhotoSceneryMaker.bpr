@@ -37,8 +37,8 @@
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- 
-      -k- -vi -c -tW -tWM"/>
+    <CFLAG1 value="-O2 -H=c:\PROGRA~1\borland\CBUILD~2\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -5 
+      -b- -k- -vi -c -tW -tWM"/>
     <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zn"/>
@@ -80,7 +80,7 @@ AutoIncBuild=0
 MajorVer=1
 MinorVer=2
 Release=0
-Build=0
+Build=1
 Debug=0
 PreRelease=1
 Special=0
@@ -92,8 +92,8 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Takuya Murakami
 FileDescription=Photo Scenery Maker
-FileVersion=1.2.0.0
-InternalName=
+FileVersion=1.2.0.1
+InternalName=Photo Scenery Maker
 LegalCopyright=Copyright (c) 2003, Takuya Murakami
 LegalTrademarks=
 OriginalFilename=PhotoSceneryMaker.exe
