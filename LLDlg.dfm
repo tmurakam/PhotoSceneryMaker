@@ -1,9 +1,9 @@
 object LatLonDlg: TLatLonDlg
-  Left = 574
-  Top = 372
+  Left = 586
+  Top = 368
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'LatLonDlg'
+  Caption = 'Lat/Lon'
   ClientHeight = 124
   ClientWidth = 228
   Color = clBtnFace
