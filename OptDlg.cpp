@@ -39,7 +39,7 @@ struct _lang {
 	char *locale;
 	char *desc;
 } Lang[] = {
-	{ "", "", "System Locale" },
+	//{ "", "", "System Locale" },
 	{ "en", "en", "English" },
 	{ "ja", "ja_JP", "Japanese" },
 	{ NULL, NULL }

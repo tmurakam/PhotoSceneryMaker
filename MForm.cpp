@@ -527,6 +527,8 @@ void TMainForm::ShowHtml(AnsiString prefix)
 	html += OptionDlg->GetLangCode();
 	html += ".html";
 
+	ShowMessage(html);
+	
 	ShellExecute(this->Handle, "open", html.c_str(),
 		NULL, NULL, SW_SHOW);
 }

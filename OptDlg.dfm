@@ -4,7 +4,7 @@ object OptionDlg: TOptionDlg
   BorderStyle = bsDialog
   Caption = 'Options'
   ClientHeight = 141
-  ClientWidth = 516
+  ClientWidth = 468
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText

@@ -26,6 +26,11 @@ Name: "desktopicon"; Description: "Create a &desktop icon"; GroupDescription: "A
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\PhotoSceneryMaker.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\doc\*.*"; DestDir: "{app}\doc"; Flags: ignoreversion
 Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\locale\ja_JP\LC_MESSAGES\default.mo"; DestDir: "{app}\locale\ja_JP\LC_MESSAGES"; Flags: ignoreversion
+
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\setup\vcl60.bpl"; DestDir: "{sys}"; Flags: restartreplace uninsneveruninstall
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\setup\BORLNDMM.DLL"; DestDir: "{sys}"; Flags: restartreplace uninsneveruninstall
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\setup\cc3260mt.dll"; DestDir: "{sys}"; Flags: restartreplace uninsneveruninstall
+Source: "D:\USR\FS.SceneryTools\PhotoSceneryMaker\setup\rtl60.bpl"; DestDir: "{sys}"; Flags: restartreplace uninsneveruninstall
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
