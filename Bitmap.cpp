@@ -97,6 +97,7 @@ void __fastcall TBitmap2::LoadFromStream(TStream *stream)
 			DeleteObject(hBitmaps[i]);
 		}
 		delete hBitmaps;
+		nBitmap = 0;
 	}
 
 	stream->Seek(0, soFromBeginning);
