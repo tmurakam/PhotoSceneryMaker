@@ -1,6 +1,6 @@
 object AboutDialog: TAboutDialog
-  Left = 506
-  Top = 265
+  Left = 405
+  Top = 219
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'About'
@@ -29,11 +29,11 @@ object AboutDialog: TAboutDialog
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 152
+    Left = 168
     Top = 56
-    Width = 141
+    Width = 80
     Height = 18
-    Caption = 'Version 1.0.0 beta 2'
+    Caption = 'Version 1.1'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2003-08-24 16:08+0900\n"
+"POT-Creation-Date: 2003-08-31 00:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,10 @@ msgstr ""
 
 #. AboutDialog..Caption
 #. AboutDialog..Caption
+#. AboutDialog..Caption
 #: AboutDlg.dfm:6 
  release/1.0b1/src/AboutDlg.dfm:6
+#: release/1.0b2/src/AboutDlg.dfm:6
 msgid "About"
 msgstr ""
 
@@ -27,9 +29,12 @@ msgstr ""
 #. MainForm..Caption
 #. AboutDialog..Label1..Caption
 #. MainForm..Caption
-#: AboutDlg.dfm:24 
+#. AboutDialog..Label1..Caption
+#. MainForm..Caption
+#: AboutDlg.dfm:23 
  MForm.dfm:6 bak/MainFrm.dfm:6
 #: release/1.0b1/src/AboutDlg.dfm:24 release/1.0b1/src/MForm.dfm:6
+#: release/1.0b2/src/AboutDlg.dfm:24 release/1.0b2/src/MForm.dfm:6
 msgid "Photo Scenery Maker"
 msgstr ""
 
@@ -43,32 +48,42 @@ msgstr ""
 #. AboutDialog..Label3..Font.Name
 #. AboutDialog..LabelURL..Font.Name
 #. AboutDialog..Memo1..Font.Name
-#: AboutDlg.dfm:28 
- AboutDlg.dfm:41 AboutDlg.dfm:54 AboutDlg.dfm:68
-#: AboutDlg.dfm:200 release/1.0b1/src/AboutDlg.dfm:28
+#. AboutDialog..Label1..Font.Name
+#. AboutDialog..Label2..Font.Name
+#. AboutDialog..Label3..Font.Name
+#. AboutDialog..LabelURL..Font.Name
+#. AboutDialog..Memo1..Font.Name
+#: AboutDlg.dfm:27 
+ AboutDlg.dfm:40 AboutDlg.dfm:53 AboutDlg.dfm:67
+#: AboutDlg.dfm:199 release/1.0b1/src/AboutDlg.dfm:28
 #: release/1.0b1/src/AboutDlg.dfm:41 release/1.0b1/src/AboutDlg.dfm:54
 #: release/1.0b1/src/AboutDlg.dfm:68 release/1.0b1/src/AboutDlg.dfm:200
+#: release/1.0b2/src/AboutDlg.dfm:28 release/1.0b2/src/AboutDlg.dfm:41
+#: release/1.0b2/src/AboutDlg.dfm:54 release/1.0b2/src/AboutDlg.dfm:68
+#: release/1.0b2/src/AboutDlg.dfm:200
 msgid "Arial"
 msgstr ""
 
 #. AboutDialog..Label2..Caption
-#. AboutDialog..Label2..Caption
-#: AboutDlg.dfm:37 
- release/1.0b1/src/AboutDlg.dfm:37
-msgid "Version 1.0.0 beta 1"
+#: AboutDlg.dfm:36 
+msgid "Version 1.1"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
 #. AboutDialog..Label3..Caption
-#: AboutDlg.dfm:50 
+#. AboutDialog..Label3..Caption
+#: AboutDlg.dfm:49 
  release/1.0b1/src/AboutDlg.dfm:50
+#: release/1.0b2/src/AboutDlg.dfm:50
 msgid "Copyright (C) 2003, Takuya Murakami"
 msgstr ""
 
 #. AboutDialog..LabelURL..Caption
 #. AboutDialog..LabelURL..Caption
-#: AboutDlg.dfm:64 
+#. AboutDialog..LabelURL..Caption
+#: AboutDlg.dfm:63 
  release/1.0b1/src/AboutDlg.dfm:64
+#: release/1.0b2/src/AboutDlg.dfm:64
 msgid "http://scenerytools.sourceforge.net/"
 msgstr ""
 
@@ -76,108 +91,138 @@ msgstr ""
 #. SCGenForm..ButtonClose..Caption
 #. AboutDialog..Button1..Caption
 #. SCGenForm..ButtonClose..Caption
-#: AboutDlg.dfm:188 
- SCGenFrm.dfm:39 release/1.0b1/src/AboutDlg.dfm:188
-#: release/1.0b1/src/SCGenFrm.dfm:39
+#. AboutDialog..Button1..Caption
+#. SCGenForm..ButtonClose..Caption
+#: AboutDlg.dfm:187 
+ SCGenFrm.dfm:38 release/1.0b1/src/AboutDlg.dfm:188
+#: release/1.0b1/src/SCGenFrm.dfm:39 release/1.0b2/src/AboutDlg.dfm:188
+#: release/1.0b2/src/SCGenFrm.dfm:39
 msgid "Close"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:205 
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:204 
  release/1.0b1/src/AboutDlg.dfm:205
+#: release/1.0b2/src/AboutDlg.dfm:205
 msgid "This program is free software; you can redistribute it and/or modify"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:208 
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:207 
  release/1.0b1/src/AboutDlg.dfm:208
+#: release/1.0b2/src/AboutDlg.dfm:208
 msgid "it under the terms of the GNU General Public License as published by"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:211 
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:210 
  release/1.0b1/src/AboutDlg.dfm:211
+#: release/1.0b2/src/AboutDlg.dfm:211
 msgid "the Free Software Foundation; either version 2 of the License, or"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:212 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:211 
  release/1.0b1/src/AboutDlg.dfm:212
+#: release/1.0b2/src/AboutDlg.dfm:212
 msgid "(at your option) any later version."
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:214 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:213 
  release/1.0b1/src/AboutDlg.dfm:214
+#: release/1.0b2/src/AboutDlg.dfm:214
 msgid "This program is distributed in the hope that it will be useful,"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:215 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:214 
  release/1.0b1/src/AboutDlg.dfm:215
+#: release/1.0b2/src/AboutDlg.dfm:215
 msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:216 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:215 
  release/1.0b1/src/AboutDlg.dfm:216
+#: release/1.0b2/src/AboutDlg.dfm:216
 msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:217 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:216 
  release/1.0b1/src/AboutDlg.dfm:217
+#: release/1.0b2/src/AboutDlg.dfm:217
 msgid "GNU General Public License for more details."
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:221 
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:220 
  release/1.0b1/src/AboutDlg.dfm:221
+#: release/1.0b2/src/AboutDlg.dfm:221
 msgid "You should have received a copy of the GNU General Public License"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:222 
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:221 
  release/1.0b1/src/AboutDlg.dfm:222
+#: release/1.0b2/src/AboutDlg.dfm:222
 msgid "along with this program; if not, write to the Free Software"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:225 
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:224 
  release/1.0b1/src/AboutDlg.dfm:225
+#: release/1.0b2/src/AboutDlg.dfm:225
 msgid ""
 "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
 
 #. LatLonDlg..Caption
 #. LatLonDlg..Caption
+#. LatLonDlg..Caption
 #: LLDlg.dfm:6 
- release/1.0b1/src/LLDlg.dfm:6
+ release/1.0b1/src/LLDlg.dfm:6 release/1.0b2/src/LLDlg.dfm:6
 msgid "Lat/Lon"
 msgstr ""
 
 #. LatLonDlg..Label1..Caption
 #. LatLonDlg..Label1..Caption
-#: LLDlg.dfm:24 
+#. LatLonDlg..Label1..Caption
+#: LLDlg.dfm:23 
  release/1.0b1/src/LLDlg.dfm:24
+#: release/1.0b2/src/LLDlg.dfm:24
 msgid "Latitude"
 msgstr ""
 
 #. LatLonDlg..Label2..Caption
 #. LatLonDlg..Label2..Caption
-#: LLDlg.dfm:31 
+#. LatLonDlg..Label2..Caption
+#: LLDlg.dfm:30 
  release/1.0b1/src/LLDlg.dfm:31
+#: release/1.0b2/src/LLDlg.dfm:31
 msgid "Longitude"
 msgstr ""
 
@@ -187,9 +232,14 @@ msgstr ""
 #. LatLonDlg..Button1..Caption
 #. OptionDlg..ButtonOK..Caption
 #. PrjForm..Panel1..Button1..Caption
-#: LLDlg.dfm:52 
- OptDlg.dfm:45 PJForm.dfm:433 release/1.0b1/src/LLDlg.dfm:52
+#. LatLonDlg..Button1..Caption
+#. OptionDlg..ButtonOK..Caption
+#. PrjForm..Panel1..Button1..Caption
+#: LLDlg.dfm:51 
+ OptDlg.dfm:45 PJForm.dfm:512 release/1.0b1/src/LLDlg.dfm:52
 #: release/1.0b1/src/OptDlg.dfm:45 release/1.0b1/src/PJForm.dfm:433
+#: release/1.0b2/src/LLDlg.dfm:52 release/1.0b2/src/OptDlg.dfm:45
+#: release/1.0b2/src/PJForm.dfm:433
 msgid "OK"
 msgstr ""
 
@@ -198,9 +248,13 @@ msgstr ""
 #. PrjForm..Panel1..Button2..Caption
 #. OptionDlg..Button2..Caption
 #. PrjForm..Panel1..Button2..Caption
-#: LLDlg.dfm:61 
- OptDlg.dfm:55 PJForm.dfm:442 release/1.0b1/src/OptDlg.dfm:55
-#: release/1.0b1/src/PJForm.dfm:442
+#. LatLonDlg..Button2..Caption
+#. OptionDlg..Button2..Caption
+#. PrjForm..Panel1..Button2..Caption
+#: LLDlg.dfm:60 
+ OptDlg.dfm:55 PJForm.dfm:521 release/1.0b1/src/OptDlg.dfm:55
+#: release/1.0b1/src/PJForm.dfm:442 release/1.0b2/src/LLDlg.dfm:61
+#: release/1.0b2/src/OptDlg.dfm:55 release/1.0b2/src/PJForm.dfm:442
 msgid "Cancel"
 msgstr ""
 
@@ -210,45 +264,62 @@ msgstr ""
 #. MainForm..StatusBar......Text
 #. MainForm..StatusBar..SimpleText
 #. SCGenForm..StatusBar..SimpleText
-#: MForm.dfm:28 
- MForm.dfm:38 SCGenFrm.dfm:113 release/1.0b1/src/MForm.dfm:27
+#. MainForm..StatusBar......Text
+#. MainForm..StatusBar..SimpleText
+#. SCGenForm..StatusBar..SimpleText
+#: MForm.dfm:31 
+ MForm.dfm:41 SCGenFrm.dfm:112 release/1.0b1/src/MForm.dfm:27
 #: release/1.0b1/src/MForm.dfm:37 release/1.0b1/src/SCGenFrm.dfm:113
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:304
+#: release/1.0b2/src/MForm.dfm:28 release/1.0b2/src/MForm.dfm:38
+#: release/1.0b2/src/SCGenFrm.dfm:113
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:365
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:407
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:304
 msgid "Ready"
 msgstr ""
 
 #. MainForm..MainMenu..F1..Caption
 #. MainForm..MainMenu..F1..Caption
-#: MForm.dfm:65 
+#. MainForm..MainMenu..F1..Caption
+#: MForm.dfm:68 
  release/1.0b1/src/MForm.dfm:64
+#: release/1.0b2/src/MForm.dfm:65
 msgid "File(&F)"
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuNewPrj..Caption
 #. MainForm..MainMenu..F1..MenuNewPrj..Caption
-#: MForm.dfm:67 
+#. MainForm..MainMenu..F1..MenuNewPrj..Caption
+#: MForm.dfm:70 
  release/1.0b1/src/MForm.dfm:66
+#: release/1.0b2/src/MForm.dfm:67
 msgid "New(&N)..."
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuOpenPrj..Caption
 #. MainForm..MainMenu..F1..MenuOpenPrj..Caption
-#: MForm.dfm:71 
+#. MainForm..MainMenu..F1..MenuOpenPrj..Caption
+#: MForm.dfm:74 
  release/1.0b1/src/MForm.dfm:70
+#: release/1.0b2/src/MForm.dfm:71
 msgid "Open(&O)..."
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuPrjSave..Caption
 #. MainForm..MainMenu..F1..MenuPrjSave..Caption
-#: MForm.dfm:75 
+#. MainForm..MainMenu..F1..MenuPrjSave..Caption
+#: MForm.dfm:78 
  release/1.0b1/src/MForm.dfm:74
+#: release/1.0b2/src/MForm.dfm:75
 msgid "Save(&S)"
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
 #. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
-#: MForm.dfm:79 
+#. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
+#: MForm.dfm:82 
  release/1.0b1/src/MForm.dfm:78
+#: release/1.0b2/src/MForm.dfm:79
 msgid "Save As(&A)..."
 msgstr ""
 
@@ -260,158 +331,236 @@ msgstr ""
 #. MainForm..MainMenu..F1..N1..Caption
 #. MainForm..MainMenu..F1..N5..Caption
 #. MainForm..MainMenu..H1..N2..Caption
-#: MForm.dfm:83 
- MForm.dfm:90 MForm.dfm:159 bak/MainFrm.dfm:25
+#. MainForm..MainMenu..F1..N1..Caption
+#. MainForm..MainMenu..F1..N5..Caption
+#. MainForm..MainMenu..H1..N2..Caption
+#: MForm.dfm:86 
+ MForm.dfm:93 MForm.dfm:181 bak/MainFrm.dfm:25
 #: bak/MainFrm.dfm:37 release/1.0b1/src/MForm.dfm:82
 #: release/1.0b1/src/MForm.dfm:89 release/1.0b1/src/MForm.dfm:158
+#: release/1.0b2/src/MForm.dfm:83 release/1.0b2/src/MForm.dfm:90
+#: release/1.0b2/src/MForm.dfm:159
 msgid "-"
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuPrjProperty..Caption
 #. MainForm..MainMenu..F1..MenuPrjProperty..Caption
-#: MForm.dfm:86 
+#. MainForm..MainMenu..F1..MenuPrjProperty..Caption
+#: MForm.dfm:89 
  release/1.0b1/src/MForm.dfm:85
+#: release/1.0b2/src/MForm.dfm:86
 msgid "Project Property(&P)..."
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuQuit..Caption
 #. MainForm..MainMenu..F1..MenuQuit..Caption
-#: MForm.dfm:93 
+#. MainForm..MainMenu..F1..MenuQuit..Caption
+#: MForm.dfm:96 
  release/1.0b1/src/MForm.dfm:92
+#: release/1.0b2/src/MForm.dfm:93
 msgid "Quit(&Q)"
 msgstr ""
 
+#. MainForm..MainMenu..MenuView..Caption
 #. MainForm..MainMenu..V1..Caption
 #. MainForm..MainMenu..V1..Caption
-#: MForm.dfm:98 
+#: MForm.dfm:101 
  release/1.0b1/src/MForm.dfm:97
+#: release/1.0b2/src/MForm.dfm:98
 msgid "Vew(&V)"
 msgstr ""
 
-#. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. MainForm..MainMenu..MenuView..MenuViewSummer..Caption
 #. PrjForm..PageControl1..TabSheet1..Label1..Caption
 #. MainForm..MainMenu..V1..MenuViewSummer..Caption
 #. PrjForm..PageControl1..TabSheet1..Label1..Caption
-#: MForm.dfm:100 
- PJForm.dfm:35 release/1.0b1/src/MForm.dfm:99
-#: release/1.0b1/src/PJForm.dfm:35
+#. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..Label1..Caption
+#: MForm.dfm:103 
+ PJForm.dfm:34 release/1.0b1/src/MForm.dfm:99
+#: release/1.0b1/src/PJForm.dfm:35 release/1.0b2/src/MForm.dfm:100
+#: release/1.0b2/src/PJForm.dfm:35
 msgid "Summer"
 msgstr ""
 
-#. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. MainForm..MainMenu..MenuView..MenuViewSpring..Caption
 #. PrjForm..PageControl1..TabSheet1..Label2..Caption
 #. MainForm..MainMenu..V1..MenuViewSpring..Caption
 #. PrjForm..PageControl1..TabSheet1..Label2..Caption
-#: MForm.dfm:105 
- PJForm.dfm:42 release/1.0b1/src/MForm.dfm:104
-#: release/1.0b1/src/PJForm.dfm:42
+#. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..Label2..Caption
+#: MForm.dfm:108 
+ PJForm.dfm:41 release/1.0b1/src/MForm.dfm:104
+#: release/1.0b1/src/PJForm.dfm:42 release/1.0b2/src/MForm.dfm:105
+#: release/1.0b2/src/PJForm.dfm:42
 msgid "Spring"
 msgstr ""
 
-#. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. MainForm..MainMenu..MenuView..MenuViewFall..Caption
 #. PrjForm..PageControl1..TabSheet1..Label3..Caption
 #. MainForm..MainMenu..V1..MenuViewFall..Caption
 #. PrjForm..PageControl1..TabSheet1..Label3..Caption
-#: MForm.dfm:109 
- PJForm.dfm:49 release/1.0b1/src/MForm.dfm:108
-#: release/1.0b1/src/PJForm.dfm:49
+#. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. PrjForm..PageControl1..TabSheet1..Label3..Caption
+#: MForm.dfm:112 
+ PJForm.dfm:48 release/1.0b1/src/MForm.dfm:108
+#: release/1.0b1/src/PJForm.dfm:49 release/1.0b2/src/MForm.dfm:109
+#: release/1.0b2/src/PJForm.dfm:49
 msgid "Fall"
 msgstr ""
 
-#. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. MainForm..MainMenu..MenuView..MenuViewWinter..Caption
 #. PrjForm..PageControl1..TabSheet1..Label4..Caption
 #. MainForm..MainMenu..V1..MenuViewWinter..Caption
 #. PrjForm..PageControl1..TabSheet1..Label4..Caption
-#: MForm.dfm:113 
- PJForm.dfm:56 release/1.0b1/src/MForm.dfm:112
-#: release/1.0b1/src/PJForm.dfm:56
+#. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..Label4..Caption
+#: MForm.dfm:116 
+ PJForm.dfm:55 release/1.0b1/src/MForm.dfm:112
+#: release/1.0b1/src/PJForm.dfm:56 release/1.0b2/src/MForm.dfm:113
+#: release/1.0b2/src/PJForm.dfm:56
 msgid "Winter"
 msgstr ""
 
+#. MainForm..MainMenu..MenuView..MenuViewHSWinter..Caption
 #. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
 #. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
-#: MForm.dfm:117 
+#: MForm.dfm:120 
  release/1.0b1/src/MForm.dfm:116
+#: release/1.0b2/src/MForm.dfm:117
 msgid "Hard Winter"
 msgstr ""
 
-#. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. MainForm..MainMenu..MenuView..MenuViewLightmap..Caption
 #. PrjForm..PageControl1..TabSheet1..Label6..Caption
 #. MainForm..MainMenu..V1..MenuViewLightmap..Caption
 #. PrjForm..PageControl1..TabSheet1..Label6..Caption
-#: MForm.dfm:121 
- PJForm.dfm:70 release/1.0b1/src/MForm.dfm:120
-#: release/1.0b1/src/PJForm.dfm:70
+#. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..Label6..Caption
+#: MForm.dfm:124 
+ PJForm.dfm:69 release/1.0b1/src/MForm.dfm:120
+#: release/1.0b1/src/PJForm.dfm:70 release/1.0b2/src/MForm.dfm:121
+#: release/1.0b2/src/PJForm.dfm:70
 msgid "Lightmap"
 msgstr ""
 
+#. MainForm..MainMenu..MenuView..MenuViewAlpha..Caption
 #. MainForm..MainMenu..V1..MenuViewAlpha..Caption
 #. MainForm..MainMenu..V1..MenuViewAlpha..Caption
-#: MForm.dfm:125 
+#: MForm.dfm:128 
  release/1.0b1/src/MForm.dfm:124
+#: release/1.0b2/src/MForm.dfm:125
 msgid "Water(Alpha)"
 msgstr ""
 
+#. MainForm..MainMenu..MenuCalibration..Caption
 #. MainForm..MainMenu..C1..Caption
 #. MainForm..MainMenu..C1..Caption
-#: MForm.dfm:130 
+#: MForm.dfm:133 
  release/1.0b1/src/MForm.dfm:129
+#: release/1.0b2/src/MForm.dfm:130
 msgid "Calibration(&C)"
 msgstr ""
 
+#. MainForm..MainMenu..MenuCalibration..SetCPoint..Caption
 #. MainForm..MainMenu..C1..SetCPoint..Caption
 #. MainForm..MainMenu..C1..SetCPoint..Caption
-#: MForm.dfm:132 
+#: MForm.dfm:135 
  release/1.0b1/src/MForm.dfm:131
+#: release/1.0b2/src/MForm.dfm:132
 msgid "2 Point Calibration(&P)..."
 msgstr ""
 
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#: MForm.dfm:139 
+ PJForm.dfm:208 release/1.0b1/src/PJForm.dfm:209
+#: release/1.0b2/src/PJForm.dfm:209
+msgid "Bitmap Boundary"
+msgstr ""
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuTop..Caption
+#: MForm.dfm:141 
+msgid "Top(&T)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuBottom..Caption
+#: MForm.dfm:145 
+msgid "Bottom(&B)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuLeft..Caption
+#: MForm.dfm:149 
+msgid "Left(&L)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuRight..Caption
+#: MForm.dfm:153 
+msgid "Right(&R)"
+msgstr ""
+
+#. MainForm..MainMenu..MenuCalibration..ExecCorrection..Caption
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
-#: MForm.dfm:136 
+#: MForm.dfm:158 
  release/1.0b1/src/MForm.dfm:135
+#: release/1.0b2/src/MForm.dfm:136
 msgid "Calculate optimal bitmap size (&O)"
 msgstr ""
 
 #. MainForm..MainMenu..MenuSCGen..Caption
 #. MainForm..MainMenu..MenuSCGen..Caption
-#: MForm.dfm:141 
+#. MainForm..MainMenu..MenuSCGen..Caption
+#: MForm.dfm:163 
  release/1.0b1/src/MForm.dfm:140
+#: release/1.0b2/src/MForm.dfm:141
 msgid "Scenery Generation(&S)"
 msgstr ""
 
 #. MainForm..MainMenu..MenuOption..Caption
 #. MainForm..MainMenu..MenuOption..Caption
-#: MForm.dfm:145 
+#. MainForm..MainMenu..MenuOption..Caption
+#: MForm.dfm:167 
  release/1.0b1/src/MForm.dfm:144
+#: release/1.0b2/src/MForm.dfm:145
 msgid "Option (&O)"
 msgstr ""
 
 #. MainForm..MainMenu..H1..Caption
 #. MainForm..MainMenu..H1..Caption
-#: MForm.dfm:149 
+#. MainForm..MainMenu..H1..Caption
+#: MForm.dfm:171 
  release/1.0b1/src/MForm.dfm:148
+#: release/1.0b2/src/MForm.dfm:149
 msgid "Help(&H)"
 msgstr ""
 
 #. MainForm..MainMenu..H1..MenuTutorial..Caption
 #. MainForm..MainMenu..H1..MenuTutorial..Caption
-#: MForm.dfm:151 
+#. MainForm..MainMenu..H1..MenuTutorial..Caption
+#: MForm.dfm:173 
  release/1.0b1/src/MForm.dfm:150
+#: release/1.0b2/src/MForm.dfm:151
 msgid "Tutorial(&T)..."
 msgstr ""
 
 #. MainForm..MainMenu..H1..MenuManual..Caption
 #. MainForm..MainMenu..H1..MenuManual..Caption
-#: MForm.dfm:155 
+#. MainForm..MainMenu..H1..MenuManual..Caption
+#: MForm.dfm:177 
  release/1.0b1/src/MForm.dfm:154
+#: release/1.0b2/src/MForm.dfm:155
 msgid "Manual(&M)..."
 msgstr ""
 
 #. MainForm..MainMenu..H1..MenuAbout..Caption
 #. MainForm..MainMenu..H1..MenuAbout..Caption
-#: MForm.dfm:162 
+#. MainForm..MainMenu..H1..MenuAbout..Caption
+#: MForm.dfm:184 
  release/1.0b1/src/MForm.dfm:161
+#: release/1.0b2/src/MForm.dfm:162
 msgid "About(&A)..."
 msgstr ""
 
@@ -419,9 +568,12 @@ msgstr ""
 #. MainForm..SavePrjDialog..DefaultExt
 #. MainForm..OpenPrjDialog..DefaultExt
 #. MainForm..SavePrjDialog..DefaultExt
-#: MForm.dfm:168 
- MForm.dfm:174 release/1.0b1/src/MForm.dfm:167
-#: release/1.0b1/src/MForm.dfm:173
+#. MainForm..OpenPrjDialog..DefaultExt
+#. MainForm..SavePrjDialog..DefaultExt
+#: MForm.dfm:190 
+ MForm.dfm:196 release/1.0b1/src/MForm.dfm:167
+#: release/1.0b1/src/MForm.dfm:173 release/1.0b2/src/MForm.dfm:168
+#: release/1.0b2/src/MForm.dfm:174
 msgid "psm"
 msgstr ""
 
@@ -429,40 +581,61 @@ msgstr ""
 #. MainForm..SavePrjDialog..Filter
 #. MainForm..OpenPrjDialog..Filter
 #. MainForm..SavePrjDialog..Filter
-#: MForm.dfm:169 
- MForm.dfm:175 release/1.0b1/src/MForm.dfm:168
-#: release/1.0b1/src/MForm.dfm:174
+#. MainForm..OpenPrjDialog..Filter
+#. MainForm..SavePrjDialog..Filter
+#: MForm.dfm:191 
+ MForm.dfm:197 release/1.0b1/src/MForm.dfm:168
+#: release/1.0b1/src/MForm.dfm:174 release/1.0b2/src/MForm.dfm:169
+#: release/1.0b2/src/MForm.dfm:175
 msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
 msgstr ""
 
 #. OptionDlg..Caption
 #. OptionDlg..Caption
+#. OptionDlg..Caption
 #: OptDlg.dfm:5 
  release/1.0b1/src/OptDlg.dfm:5
+#: release/1.0b2/src/OptDlg.dfm:5
 msgid "Options"
 msgstr ""
 
 #. OptionDlg..Label1..Caption
 #. OptionDlg..Label1..Caption
+#. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24 
  release/1.0b1/src/OptDlg.dfm:24
+#: release/1.0b2/src/OptDlg.dfm:24
 msgid "Terrain SDK folder"
 msgstr ""
 
 #. OptionDlg..Label2..Caption
 #. OptionDlg..Label2..Caption
+#. OptionDlg..Label2..Caption
 #: OptDlg.dfm:31 
  release/1.0b1/src/OptDlg.dfm:31
+#: release/1.0b2/src/OptDlg.dfm:31
 msgid "Imagetool folder"
 msgstr ""
 
 #. OptionDlg..Label3..Caption
 #. OptionDlg..Label3..Caption
+#. OptionDlg..Label3..Caption
 #: OptDlg.dfm:38 
  release/1.0b1/src/OptDlg.dfm:38
+#: release/1.0b2/src/OptDlg.dfm:38
 msgid "Language"
 msgstr ""
 
+#. OptionDlg..ButtonBrowseSDK..Caption
+#. OptionDlg..ButtonBrowserImagetool..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpFall..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpHSWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..ButtonRefOutDir..Caption
 #. OptionDlg..ButtonBrowseSDK..Caption
 #. OptionDlg..ButtonBrowserImagetool..Caption
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
@@ -484,334 +657,490 @@ msgstr ""
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:71 
- OptDlg.dfm:87 PJForm.dfm:142 PJForm.dfm:151 PJForm.dfm:160
-#: PJForm.dfm:169 PJForm.dfm:178 PJForm.dfm:187 PJForm.dfm:196 PJForm.dfm:415
+ OptDlg.dfm:87 PJForm.dfm:141 PJForm.dfm:150 PJForm.dfm:159
+#: PJForm.dfm:168 PJForm.dfm:177 PJForm.dfm:186 PJForm.dfm:195 PJForm.dfm:407
 #: release/1.0b1/src/OptDlg.dfm:71 release/1.0b1/src/OptDlg.dfm:87
 #: release/1.0b1/src/PJForm.dfm:142 release/1.0b1/src/PJForm.dfm:151
 #: release/1.0b1/src/PJForm.dfm:160 release/1.0b1/src/PJForm.dfm:169
 #: release/1.0b1/src/PJForm.dfm:178 release/1.0b1/src/PJForm.dfm:187
 #: release/1.0b1/src/PJForm.dfm:196 release/1.0b1/src/PJForm.dfm:415
+#: release/1.0b2/src/OptDlg.dfm:71 release/1.0b2/src/OptDlg.dfm:87
+#: release/1.0b2/src/PJForm.dfm:142 release/1.0b2/src/PJForm.dfm:151
+#: release/1.0b2/src/PJForm.dfm:160 release/1.0b2/src/PJForm.dfm:169
+#: release/1.0b2/src/PJForm.dfm:178 release/1.0b2/src/PJForm.dfm:187
+#: release/1.0b2/src/PJForm.dfm:196 release/1.0b2/src/PJForm.dfm:415
 msgid "..."
 msgstr ""
 
 #. OptionDlg..OpenDialog..DefaultExt
 #. OptionDlg..OpenDialog..DefaultExt
+#. OptionDlg..OpenDialog..DefaultExt
 #: OptDlg.dfm:101 
  release/1.0b1/src/OptDlg.dfm:101
+#: release/1.0b2/src/OptDlg.dfm:101
 msgid "exe"
 msgstr ""
 
 #. PrjForm..Caption
 #. PrjForm..Caption
+#. PrjForm..Caption
 #: PJForm.dfm:6 
  release/1.0b1/src/PJForm.dfm:6
+#: release/1.0b2/src/PJForm.dfm:6
 msgid "Project Property"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet1..Caption
 #. PrjForm..PageControl1..TabSheet1..Caption
-#: PJForm.dfm:29 
+#. PrjForm..PageControl1..TabSheet1..Caption
+#: PJForm.dfm:28 
  release/1.0b1/src/PJForm.dfm:29
+#: release/1.0b2/src/PJForm.dfm:29
 msgid "Bitmaps"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet1..Label5..Caption
 #. PrjForm..PageControl1..TabSheet1..Label5..Caption
-#: PJForm.dfm:63 
+#. PrjForm..PageControl1..TabSheet1..Label5..Caption
+#: PJForm.dfm:62 
  release/1.0b1/src/PJForm.dfm:63
+#: release/1.0b2/src/PJForm.dfm:63
 msgid "Harsh Winter"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet1..Label7..Caption
 #. PrjForm..PageControl1..TabSheet1..Label7..Caption
-#: PJForm.dfm:77 
+#. PrjForm..PageControl1..TabSheet1..Label7..Caption
+#: PJForm.dfm:76 
  release/1.0b1/src/PJForm.dfm:77
+#: release/1.0b2/src/PJForm.dfm:77
 msgid "Water(alpha)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
-#: PJForm.dfm:98 
+#. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
+#: PJForm.dfm:97 
  release/1.0b1/src/PJForm.dfm:98
+#: release/1.0b2/src/PJForm.dfm:98
 msgid "Support Seasons"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..Caption
 #. PrjForm..PageControl1..TabSheet2..Caption
-#: PJForm.dfm:202 
+#. PrjForm..PageControl1..TabSheet2..Caption
+#: PJForm.dfm:201 
  release/1.0b1/src/PJForm.dfm:202
+#: release/1.0b2/src/PJForm.dfm:202
 msgid "Coordinates"
 msgstr ""
 
-#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#: PJForm.dfm:209 
- release/1.0b1/src/PJForm.dfm:209
-msgid "Bitmap Boundary"
-msgstr ""
-
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
-#: PJForm.dfm:216 
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
+#: PJForm.dfm:215 
  release/1.0b1/src/PJForm.dfm:216
+#: release/1.0b2/src/PJForm.dfm:216
 msgid "North"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
-#: PJForm.dfm:223 
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
+#: PJForm.dfm:222 
  release/1.0b1/src/PJForm.dfm:223
+#: release/1.0b2/src/PJForm.dfm:223
 msgid "South"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
-#: PJForm.dfm:230 
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
+#: PJForm.dfm:229 
  release/1.0b1/src/PJForm.dfm:230
+#: release/1.0b2/src/PJForm.dfm:230
 msgid "West"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
-#: PJForm.dfm:237 
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
+#: PJForm.dfm:236 
  release/1.0b1/src/PJForm.dfm:237
+#: release/1.0b2/src/PJForm.dfm:237
 msgid "East"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
-#: PJForm.dfm:277 
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
+#: PJForm.dfm:276 
  release/1.0b1/src/PJForm.dfm:277
+#: release/1.0b2/src/PJForm.dfm:277
 msgid "Resolution"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
-#: PJForm.dfm:284 
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
+#: PJForm.dfm:283 
  release/1.0b1/src/PJForm.dfm:284
+#: release/1.0b2/src/PJForm.dfm:284
 msgid "CellXDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
-#: PJForm.dfm:291 
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
+#: PJForm.dfm:290 
  release/1.0b1/src/PJForm.dfm:291
+#: release/1.0b2/src/PJForm.dfm:291
 msgid "CellYDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
-#: PJForm.dfm:315 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
+#: PJForm.dfm:314 
  release/1.0b1/src/PJForm.dfm:315
+#: release/1.0b2/src/PJForm.dfm:315
 msgid "Info"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
-#: PJForm.dfm:322 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
+#: PJForm.dfm:321 
  release/1.0b1/src/PJForm.dfm:322
+#: release/1.0b2/src/PJForm.dfm:322
 msgid "Bitmap Width"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
-#: PJForm.dfm:329 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
+#: PJForm.dfm:328 
  release/1.0b1/src/PJForm.dfm:329
+#: release/1.0b2/src/PJForm.dfm:329
 msgid "Bitmap Height"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
-#: PJForm.dfm:336 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
+#: PJForm.dfm:335 
  release/1.0b1/src/PJForm.dfm:336
+#: release/1.0b2/src/PJForm.dfm:336
 msgid "X resolution (m/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
-#: PJForm.dfm:343 
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
+#: PJForm.dfm:342 
  release/1.0b1/src/PJForm.dfm:343
+#: release/1.0b2/src/PJForm.dfm:343
 msgid "Y resolution (m/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet3..Caption
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:380 
+#. PrjForm..PageControl1..TabSheet3..Caption
+#: PJForm.dfm:379 
  release/1.0b1/src/PJForm.dfm:380
+#: release/1.0b2/src/PJForm.dfm:380
 msgid "Output"
 msgstr ""
 
-#. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:387 
- release/1.0b1/src/PJForm.dfm:387
-msgid "Output Folder"
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Caption
+#: PJForm.dfm:386 
+msgid "File output"
 msgstr ""
 
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Label9..Caption
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:394 
+#: PJForm.dfm:393 
  release/1.0b1/src/PJForm.dfm:394
+#: release/1.0b2/src/PJForm.dfm:394
 msgid "Base File Name"
 msgstr ""
 
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Label8..Caption
+#. PrjForm..PageControl1..TabSheet3..Label8..Caption
+#. PrjForm..PageControl1..TabSheet3..Label8..Caption
+#: PJForm.dfm:400 
+ release/1.0b1/src/PJForm.dfm:387
+#: release/1.0b2/src/PJForm.dfm:387
+msgid "Output Folder"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Caption
+#: PJForm.dfm:431 
+msgid "Bitmap boundary"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label20..Caption
+#: PJForm.dfm:438 
+msgid "Top"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label21..Caption
+#: PJForm.dfm:445 
+msgid "Left"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label22..Caption
+#: PJForm.dfm:452 
+msgid "Right"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label23..Caption
+#: PJForm.dfm:459 
+msgid "Bottom"
+msgstr ""
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..CheckUseWhole..Caption
+#: PJForm.dfm:466 
+msgid "Use whole bitmap"
+msgstr ""
+
 #. PrjForm..OpenDialog..DefaultExt
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:448 
+#. PrjForm..OpenDialog..DefaultExt
+#: PJForm.dfm:527 
  release/1.0b1/src/PJForm.dfm:448
+#: release/1.0b2/src/PJForm.dfm:448
 msgid "bmp"
 msgstr ""
 
+#. PrjForm..OpenDialog..Filter
+#: PJForm.dfm:528 
+msgid "Bitmap File (*.bmp)|*.bmp|All Files (*.*)|*.*"
+msgstr ""
+
+#. SCGenForm..Caption
 #. SCGenForm..Caption
 #. SCGenForm..Caption
 #: SCGenFrm.dfm:6 
  release/1.0b1/src/SCGenFrm.dfm:6
+#: release/1.0b2/src/SCGenFrm.dfm:6
 msgid "Scenery Generation"
 msgstr ""
 
 #. SCGenForm..ButtonDoAll..Caption
 #. SCGenForm..ButtonDoAll..Caption
-#: SCGenFrm.dfm:24 
+#. SCGenForm..ButtonDoAll..Caption
+#: SCGenFrm.dfm:23 
  release/1.0b1/src/SCGenFrm.dfm:24
+#: release/1.0b2/src/SCGenFrm.dfm:24
 msgid "Run whole process"
 msgstr ""
 
 #. SCGenForm..GroupBox1..Caption
 #. SCGenForm..GroupBox1..Caption
-#: SCGenFrm.dfm:48 
+#. SCGenForm..GroupBox1..Caption
+#: SCGenFrm.dfm:47 
  release/1.0b1/src/SCGenFrm.dfm:48
+#: release/1.0b2/src/SCGenFrm.dfm:48
 msgid "Step execution"
 msgstr ""
 
 #. SCGenForm..GroupBox1..ButtonMakeInf..Caption
 #. SCGenForm..GroupBox1..ButtonMakeInf..Caption
-#: SCGenFrm.dfm:55 
+#. SCGenForm..GroupBox1..ButtonMakeInf..Caption
+#: SCGenFrm.dfm:54 
  release/1.0b1/src/SCGenFrm.dfm:55
+#: release/1.0b2/src/SCGenFrm.dfm:55
 msgid "1. Generate inf file"
 msgstr ""
 
 #. SCGenForm..GroupBox1..ButtonResample..Caption
 #. SCGenForm..GroupBox1..ButtonResample..Caption
-#: SCGenFrm.dfm:64 
+#. SCGenForm..GroupBox1..ButtonResample..Caption
+#: SCGenFrm.dfm:63 
  release/1.0b1/src/SCGenFrm.dfm:64
+#: release/1.0b2/src/SCGenFrm.dfm:64
 msgid "2. Resample"
 msgstr ""
 
 #. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
 #. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
-#: SCGenFrm.dfm:73 
+#. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
+#: SCGenFrm.dfm:72 
  release/1.0b1/src/SCGenFrm.dfm:73
+#: release/1.0b2/src/SCGenFrm.dfm:73
 msgid "4. Convert Texture"
 msgstr ""
 
 #. SCGenForm..GroupBox1..ButtonGenBGL..Caption
 #. SCGenForm..GroupBox1..ButtonGenBGL..Caption
-#: SCGenFrm.dfm:82 
+#. SCGenForm..GroupBox1..ButtonGenBGL..Caption
+#: SCGenFrm.dfm:81 
  release/1.0b1/src/SCGenFrm.dfm:82
+#: release/1.0b2/src/SCGenFrm.dfm:82
 msgid "5. Generate BGL"
 msgstr ""
 
 #. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
 #. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
-#: SCGenFrm.dfm:91 
+#. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
+#: SCGenFrm.dfm:90 
  release/1.0b1/src/SCGenFrm.dfm:91
+#: release/1.0b2/src/SCGenFrm.dfm:91
 msgid "3. Merge Alpha Texture"
 msgstr ""
 
 #. SCGenForm..ButtonStop..Caption
 #. SCGenForm..ButtonStop..Caption
-#: SCGenFrm.dfm:101 
+#. SCGenForm..ButtonStop..Caption
+#: SCGenFrm.dfm:100 
  release/1.0b1/src/SCGenFrm.dfm:101
+#: release/1.0b2/src/SCGenFrm.dfm:101
 msgid "Stop"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:196
+#. AboutDialog..Label2..Caption
+#: release/1.0b1/src/AboutDlg.dfm:37 
+msgid "Version 1.0.0 beta 1"
+msgstr ""
+
+#. AboutDialog..Label2..Caption
+#: release/1.0b2/src/AboutDlg.dfm:37 
+msgid "Version 1.0.0 beta 2"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:174
+msgid "Can't load project file."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:207
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:151
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:196
 msgid "Confirmation"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:197
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:208
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:152
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:197
 msgid "Project is modified. Do you want to save?"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:265
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:220
-#, c-format
-msgid "Specify #%d correction point"
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:304
+msgid "Specify #1 correction point"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:317
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:264
-msgid "All control points specified"
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:307
+msgid "Specify #2 correction point"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:383
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:310
+msgid "Specify bitmap top boundary"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:313
+msgid "Specify bitmap bottom boundary"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:316
+msgid "Specify bitmap left boundary"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:319
+msgid "Specify bitmap right boundary"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:468
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:330
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:383
 #, c-format
 msgid "Optimal bitmap size is %d x %d.\n"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:385
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:470
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:332
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:385
 msgid "You can resize the bitmap with some image editing tools."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:440
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:525
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:412
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:440
 msgid "Can't open bitmap file."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:86
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenFrm.cpp:80
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:66
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenFrm.cpp:86
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:86
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenFrm.cpp:86
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:66
 msgid "Done"
 msgstr ""
 
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:64
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:84
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:64
 msgid "Interrupted"
 msgstr ""
 
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:88
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:106
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:88
 msgid "Creating inf files..."
 msgstr ""
 
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:142
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:160
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:142
 #, c-format
 msgid "Can't open inf file : %s"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:240
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:252
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:255
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:240
 #, c-format
 msgid "Resampling : %s..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:256
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:268
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:271
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:256
 msgid "Error"
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:257
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:269
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:272
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:257
 msgid "Some errors occured."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:281
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:293
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:294
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:281
 msgid "Merging Alpha Textures..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:340
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:352
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:351
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:340
 msgid "Converting Textures..."
 msgstr ""
 
-#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:357
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\SCGenThread.cpp:369
 #: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\SCGenThread.cpp:367
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\SCGenThread.cpp:357
 msgid "Generating BGL files..."
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:220
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:265
+#, c-format
+msgid "Specify #%d correction point"
+msgstr ""
+
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b1\src\MForm.cpp:264
+#: D:\USR\FS.SceneryTools\PhotoSceneryMaker\release\1.0b2\src\MForm.cpp:317
+msgid "All control points specified"
 msgstr ""

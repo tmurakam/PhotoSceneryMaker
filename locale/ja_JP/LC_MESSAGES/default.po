@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Photo Scenery Maker 1.0\n"
 "POT-Creation-Date: 2003-07-27 16:26+0900\n"
-"PO-Revision-Date: 2003-08-24 16:08+0900\n"
+"PO-Revision-Date: 2003-08-31 00:32+0900\n"
 "Last-Translator: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "Language-Team: Takuya Murakami <tmurakam@mtd.biglobe.ne.jp>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,9 @@ msgstr ""
 
 #. AboutDialog..Caption
 #. AboutDialog..Caption
+#. AboutDialog..Caption
 #: AboutDlg.dfm:6
+#: release/1.0b2/src/AboutDlg.dfm:6
 msgid "About"
 msgstr "バージョン情報"
 
@@ -25,9 +27,13 @@ msgstr "バージョン情報"
 #. MainForm..Caption
 #. AboutDialog..Label1..Caption
 #. MainForm..Caption
-#: AboutDlg.dfm:24
+#. AboutDialog..Label1..Caption
+#. MainForm..Caption
+#: AboutDlg.dfm:23
 #: release/1.0b1/src/AboutDlg.dfm:24
 #: release/1.0b1/src/MForm.dfm:6
+#: release/1.0b2/src/AboutDlg.dfm:24
+#: release/1.0b2/src/MForm.dfm:6
 msgid "Photo Scenery Maker"
 msgstr ""
 
@@ -41,31 +47,44 @@ msgstr ""
 #. AboutDialog..Label3..Font.Name
 #. AboutDialog..LabelURL..Font.Name
 #. AboutDialog..Memo1..Font.Name
-#: AboutDlg.dfm:28
-#: AboutDlg.dfm:200
+#. AboutDialog..Label1..Font.Name
+#. AboutDialog..Label2..Font.Name
+#. AboutDialog..Label3..Font.Name
+#. AboutDialog..LabelURL..Font.Name
+#. AboutDialog..Memo1..Font.Name
+#: AboutDlg.dfm:27
+#: AboutDlg.dfm:199
 #: release/1.0b1/src/AboutDlg.dfm:28
 #: release/1.0b1/src/AboutDlg.dfm:41
 #: release/1.0b1/src/AboutDlg.dfm:54
 #: release/1.0b1/src/AboutDlg.dfm:68
 #: release/1.0b1/src/AboutDlg.dfm:200
+#: release/1.0b2/src/AboutDlg.dfm:28
+#: release/1.0b2/src/AboutDlg.dfm:41
+#: release/1.0b2/src/AboutDlg.dfm:54
+#: release/1.0b2/src/AboutDlg.dfm:68
+#: release/1.0b2/src/AboutDlg.dfm:200
 msgid "Arial"
 msgstr ""
 
 #. AboutDialog..Label2..Caption
-#. AboutDialog..Label2..Caption
-#: AboutDlg.dfm:37
-msgid "Version 1.0.0 beta 1"
+#: AboutDlg.dfm:36
+msgid "Version 1.1"
 msgstr ""
 
 #. AboutDialog..Label3..Caption
 #. AboutDialog..Label3..Caption
-#: AboutDlg.dfm:50
+#. AboutDialog..Label3..Caption
+#: AboutDlg.dfm:49
+#: release/1.0b2/src/AboutDlg.dfm:50
 msgid "Copyright (C) 2003, Takuya Murakami"
 msgstr ""
 
 #. AboutDialog..LabelURL..Caption
 #. AboutDialog..LabelURL..Caption
-#: AboutDlg.dfm:64
+#. AboutDialog..LabelURL..Caption
+#: AboutDlg.dfm:63
+#: release/1.0b2/src/AboutDlg.dfm:64
 msgid "http://scenerytools.sourceforge.net/"
 msgstr ""
 
@@ -73,77 +92,104 @@ msgstr ""
 #. SCGenForm..ButtonClose..Caption
 #. AboutDialog..Button1..Caption
 #. SCGenForm..ButtonClose..Caption
-#: AboutDlg.dfm:188
+#. AboutDialog..Button1..Caption
+#. SCGenForm..ButtonClose..Caption
+#: AboutDlg.dfm:187
 #: release/1.0b1/src/SCGenFrm.dfm:39
+#: release/1.0b2/src/AboutDlg.dfm:188
+#: release/1.0b2/src/SCGenFrm.dfm:39
 msgid "Close"
 msgstr "閉じる"
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:205
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:204
+#: release/1.0b2/src/AboutDlg.dfm:205
 msgid "This program is free software; you can redistribute it and/or modify"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:208
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:207
+#: release/1.0b2/src/AboutDlg.dfm:208
 msgid "it under the terms of the GNU General Public License as published by"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:211
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:210
+#: release/1.0b2/src/AboutDlg.dfm:211
 msgid "the Free Software Foundation; either version 2 of the License, or"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:212
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:211
+#: release/1.0b2/src/AboutDlg.dfm:212
 msgid "(at your option) any later version."
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:214
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:213
+#: release/1.0b2/src/AboutDlg.dfm:214
 msgid "This program is distributed in the hope that it will be useful,"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:215
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:214
+#: release/1.0b2/src/AboutDlg.dfm:215
 msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:216
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:215
+#: release/1.0b2/src/AboutDlg.dfm:216
 msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:217
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:216
+#: release/1.0b2/src/AboutDlg.dfm:217
 msgid "GNU General Public License for more details."
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:221
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:220
+#: release/1.0b2/src/AboutDlg.dfm:221
 msgid "You should have received a copy of the GNU General Public License"
 msgstr ""
 
 #. AboutDialog..Memo1....Lines.Strings
 #. AboutDialog..Memo1....Lines.Strings
-#: AboutDlg.dfm:222
+#. AboutDialog..Memo1....Lines.Strings
+#: AboutDlg.dfm:221
+#: release/1.0b2/src/AboutDlg.dfm:222
 msgid "along with this program; if not, write to the Free Software"
 msgstr ""
 
 #. AboutDialog..Memo1......Lines.Strings
 #. AboutDialog..Memo1......Lines.Strings
-#: AboutDlg.dfm:225
+#. AboutDialog..Memo1......Lines.Strings
+#: AboutDlg.dfm:224
+#: release/1.0b2/src/AboutDlg.dfm:225
 msgid "Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
 
+#. LatLonDlg..Caption
 #. LatLonDlg..Caption
 #. LatLonDlg..Caption
 #: LLDlg.dfm:6
@@ -152,13 +198,17 @@ msgstr "緯度/経度"
 
 #. LatLonDlg..Label1..Caption
 #. LatLonDlg..Label1..Caption
-#: LLDlg.dfm:24
+#. LatLonDlg..Label1..Caption
+#: LLDlg.dfm:23
+#: release/1.0b2/src/LLDlg.dfm:24
 msgid "Latitude"
 msgstr "緯度"
 
 #. LatLonDlg..Label2..Caption
 #. LatLonDlg..Label2..Caption
-#: LLDlg.dfm:31
+#. LatLonDlg..Label2..Caption
+#: LLDlg.dfm:30
+#: release/1.0b2/src/LLDlg.dfm:31
 msgid "Longitude"
 msgstr "経度"
 
@@ -168,9 +218,15 @@ msgstr "経度"
 #. LatLonDlg..Button1..Caption
 #. OptionDlg..ButtonOK..Caption
 #. PrjForm..Panel1..Button1..Caption
-#: LLDlg.dfm:52
+#. LatLonDlg..Button1..Caption
+#. OptionDlg..ButtonOK..Caption
+#. PrjForm..Panel1..Button1..Caption
+#: LLDlg.dfm:51
 #: release/1.0b1/src/OptDlg.dfm:45
 #: release/1.0b1/src/PJForm.dfm:433
+#: release/1.0b2/src/LLDlg.dfm:52
+#: release/1.0b2/src/OptDlg.dfm:45
+#: release/1.0b2/src/PJForm.dfm:433
 msgid "OK"
 msgstr ""
 
@@ -179,8 +235,14 @@ msgstr ""
 #. PrjForm..Panel1..Button2..Caption
 #. OptionDlg..Button2..Caption
 #. PrjForm..Panel1..Button2..Caption
-#: LLDlg.dfm:61
+#. LatLonDlg..Button2..Caption
+#. OptionDlg..Button2..Caption
+#. PrjForm..Panel1..Button2..Caption
+#: LLDlg.dfm:60
 #: release/1.0b1/src/PJForm.dfm:442
+#: release/1.0b2/src/LLDlg.dfm:61
+#: release/1.0b2/src/OptDlg.dfm:55
+#: release/1.0b2/src/PJForm.dfm:442
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -190,39 +252,55 @@ msgstr "キャンセル"
 #. MainForm..StatusBar......Text
 #. MainForm..StatusBar..SimpleText
 #. SCGenForm..StatusBar..SimpleText
-#: MForm.dfm:28
+#. MainForm..StatusBar......Text
+#. MainForm..StatusBar..SimpleText
+#. SCGenForm..StatusBar..SimpleText
+#: MForm.dfm:31
 #: release/1.0b1/src/MForm.dfm:37
 #: release/1.0b1/src/SCGenFrm.dfm:113
+#: release/1.0b2/src/MForm.dfm:28
+#: release/1.0b2/src/MForm.dfm:38
+#: release/1.0b2/src/SCGenFrm.dfm:113
 msgid "Ready"
 msgstr "レディ"
 
 #. MainForm..MainMenu..F1..Caption
 #. MainForm..MainMenu..F1..Caption
-#: MForm.dfm:65
+#. MainForm..MainMenu..F1..Caption
+#: MForm.dfm:68
+#: release/1.0b2/src/MForm.dfm:65
 msgid "File(&F)"
 msgstr "ファイル(&F)"
 
 #. MainForm..MainMenu..F1..MenuNewPrj..Caption
 #. MainForm..MainMenu..F1..MenuNewPrj..Caption
-#: MForm.dfm:67
+#. MainForm..MainMenu..F1..MenuNewPrj..Caption
+#: MForm.dfm:70
+#: release/1.0b2/src/MForm.dfm:67
 msgid "New(&N)..."
 msgstr "新規作成(&N)..."
 
 #. MainForm..MainMenu..F1..MenuOpenPrj..Caption
 #. MainForm..MainMenu..F1..MenuOpenPrj..Caption
-#: MForm.dfm:71
+#. MainForm..MainMenu..F1..MenuOpenPrj..Caption
+#: MForm.dfm:74
+#: release/1.0b2/src/MForm.dfm:71
 msgid "Open(&O)..."
 msgstr "開く(&O)..."
 
 #. MainForm..MainMenu..F1..MenuPrjSave..Caption
 #. MainForm..MainMenu..F1..MenuPrjSave..Caption
-#: MForm.dfm:75
+#. MainForm..MainMenu..F1..MenuPrjSave..Caption
+#: MForm.dfm:78
+#: release/1.0b2/src/MForm.dfm:75
 msgid "Save(&S)"
 msgstr "上書き保存(&S)"
 
 #. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
 #. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
-#: MForm.dfm:79
+#. MainForm..MainMenu..F1..MenuPrjSaveAs..Caption
+#: MForm.dfm:82
+#: release/1.0b2/src/MForm.dfm:79
 msgid "Save As(&A)..."
 msgstr "名前をつけて保存(&A)..."
 
@@ -234,140 +312,223 @@ msgstr "名前をつけて保存(&A)..."
 #. MainForm..MainMenu..F1..N1..Caption
 #. MainForm..MainMenu..F1..N5..Caption
 #. MainForm..MainMenu..H1..N2..Caption
-#: MForm.dfm:83
+#. MainForm..MainMenu..F1..N1..Caption
+#. MainForm..MainMenu..F1..N5..Caption
+#. MainForm..MainMenu..H1..N2..Caption
+#: MForm.dfm:86
 #: bak/MainFrm.dfm:37
 #: release/1.0b1/src/MForm.dfm:82
 #: release/1.0b1/src/MForm.dfm:89
 #: release/1.0b1/src/MForm.dfm:158
+#: release/1.0b2/src/MForm.dfm:83
+#: release/1.0b2/src/MForm.dfm:90
+#: release/1.0b2/src/MForm.dfm:159
 msgid "-"
 msgstr ""
 
 #. MainForm..MainMenu..F1..MenuPrjProperty..Caption
 #. MainForm..MainMenu..F1..MenuPrjProperty..Caption
-#: MForm.dfm:86
+#. MainForm..MainMenu..F1..MenuPrjProperty..Caption
+#: MForm.dfm:89
+#: release/1.0b2/src/MForm.dfm:86
 msgid "Project Property(&P)..."
 msgstr "プロジェクトのプロパティ(&P)..."
 
 #. MainForm..MainMenu..F1..MenuQuit..Caption
 #. MainForm..MainMenu..F1..MenuQuit..Caption
-#: MForm.dfm:93
+#. MainForm..MainMenu..F1..MenuQuit..Caption
+#: MForm.dfm:96
+#: release/1.0b2/src/MForm.dfm:93
 msgid "Quit(&Q)"
 msgstr "終了(&Q)"
 
+#. MainForm..MainMenu..MenuView..Caption
 #. MainForm..MainMenu..V1..Caption
 #. MainForm..MainMenu..V1..Caption
-#: MForm.dfm:98
+#: MForm.dfm:101
+#: release/1.0b2/src/MForm.dfm:98
 msgid "Vew(&V)"
 msgstr "表示(&V)"
 
-#. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. MainForm..MainMenu..MenuView..MenuViewSummer..Caption
 #. PrjForm..PageControl1..TabSheet1..Label1..Caption
 #. MainForm..MainMenu..V1..MenuViewSummer..Caption
 #. PrjForm..PageControl1..TabSheet1..Label1..Caption
-#: MForm.dfm:100
+#. MainForm..MainMenu..V1..MenuViewSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..Label1..Caption
+#: MForm.dfm:103
 #: release/1.0b1/src/PJForm.dfm:35
+#: release/1.0b2/src/MForm.dfm:100
+#: release/1.0b2/src/PJForm.dfm:35
 msgid "Summer"
 msgstr "夏"
 
-#. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. MainForm..MainMenu..MenuView..MenuViewSpring..Caption
 #. PrjForm..PageControl1..TabSheet1..Label2..Caption
 #. MainForm..MainMenu..V1..MenuViewSpring..Caption
 #. PrjForm..PageControl1..TabSheet1..Label2..Caption
-#: MForm.dfm:105
+#. MainForm..MainMenu..V1..MenuViewSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..Label2..Caption
+#: MForm.dfm:108
 #: release/1.0b1/src/PJForm.dfm:42
+#: release/1.0b2/src/MForm.dfm:105
+#: release/1.0b2/src/PJForm.dfm:42
 msgid "Spring"
 msgstr "春"
 
-#. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. MainForm..MainMenu..MenuView..MenuViewFall..Caption
 #. PrjForm..PageControl1..TabSheet1..Label3..Caption
 #. MainForm..MainMenu..V1..MenuViewFall..Caption
 #. PrjForm..PageControl1..TabSheet1..Label3..Caption
-#: MForm.dfm:109
+#. MainForm..MainMenu..V1..MenuViewFall..Caption
+#. PrjForm..PageControl1..TabSheet1..Label3..Caption
+#: MForm.dfm:112
 #: release/1.0b1/src/PJForm.dfm:49
+#: release/1.0b2/src/MForm.dfm:109
+#: release/1.0b2/src/PJForm.dfm:49
 msgid "Fall"
 msgstr "秋"
 
-#. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. MainForm..MainMenu..MenuView..MenuViewWinter..Caption
 #. PrjForm..PageControl1..TabSheet1..Label4..Caption
 #. MainForm..MainMenu..V1..MenuViewWinter..Caption
 #. PrjForm..PageControl1..TabSheet1..Label4..Caption
-#: MForm.dfm:113
+#. MainForm..MainMenu..V1..MenuViewWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..Label4..Caption
+#: MForm.dfm:116
 #: release/1.0b1/src/PJForm.dfm:56
+#: release/1.0b2/src/MForm.dfm:113
+#: release/1.0b2/src/PJForm.dfm:56
 msgid "Winter"
 msgstr "冬"
 
+#. MainForm..MainMenu..MenuView..MenuViewHSWinter..Caption
 #. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
 #. MainForm..MainMenu..V1..MenuViewHSWinter..Caption
-#: MForm.dfm:117
+#: MForm.dfm:120
+#: release/1.0b2/src/MForm.dfm:117
 msgid "Hard Winter"
 msgstr "厳冬"
 
-#. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. MainForm..MainMenu..MenuView..MenuViewLightmap..Caption
 #. PrjForm..PageControl1..TabSheet1..Label6..Caption
 #. MainForm..MainMenu..V1..MenuViewLightmap..Caption
 #. PrjForm..PageControl1..TabSheet1..Label6..Caption
-#: MForm.dfm:121
+#. MainForm..MainMenu..V1..MenuViewLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..Label6..Caption
+#: MForm.dfm:124
 #: release/1.0b1/src/PJForm.dfm:70
+#: release/1.0b2/src/MForm.dfm:121
+#: release/1.0b2/src/PJForm.dfm:70
 msgid "Lightmap"
 msgstr "ライトマップ"
 
+#. MainForm..MainMenu..MenuView..MenuViewAlpha..Caption
 #. MainForm..MainMenu..V1..MenuViewAlpha..Caption
 #. MainForm..MainMenu..V1..MenuViewAlpha..Caption
-#: MForm.dfm:125
+#: MForm.dfm:128
+#: release/1.0b2/src/MForm.dfm:125
 msgid "Water(Alpha)"
 msgstr "水面（アルファ）"
 
+#. MainForm..MainMenu..MenuCalibration..Caption
 #. MainForm..MainMenu..C1..Caption
 #. MainForm..MainMenu..C1..Caption
-#: MForm.dfm:130
+#: MForm.dfm:133
+#: release/1.0b2/src/MForm.dfm:130
 msgid "Calibration(&C)"
 msgstr "補正(&C)"
 
+#. MainForm..MainMenu..MenuCalibration..SetCPoint..Caption
 #. MainForm..MainMenu..C1..SetCPoint..Caption
 #. MainForm..MainMenu..C1..SetCPoint..Caption
-#: MForm.dfm:132
+#: MForm.dfm:135
+#: release/1.0b2/src/MForm.dfm:132
 msgid "2 Point Calibration(&P)..."
 msgstr "２点補正(&P)..."
 
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
+#: MForm.dfm:139
+#: release/1.0b2/src/PJForm.dfm:209
+msgid "Bitmap Boundary"
+msgstr "ビットマップ範囲"
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuTop..Caption
+#: MForm.dfm:141
+msgid "Top(&T)"
+msgstr "上(&T)"
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuBottom..Caption
+#: MForm.dfm:145
+msgid "Bottom(&B)"
+msgstr "下(&B)"
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuLeft..Caption
+#: MForm.dfm:149
+msgid "Left(&L)"
+msgstr "左(&L)"
+
+#. MainForm..MainMenu..MenuCalibration..MenuBitmapBoundary..MenuRight..Caption
+#: MForm.dfm:153
+msgid "Right(&R)"
+msgstr "右(&R)"
+
+#. MainForm..MainMenu..MenuCalibration..ExecCorrection..Caption
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
 #. MainForm..MainMenu..C1..ExecCorrection..Caption
-#: MForm.dfm:136
+#: MForm.dfm:158
+#: release/1.0b2/src/MForm.dfm:136
 msgid "Calculate optimal bitmap size (&O)"
 msgstr "最適ビットマップサイズ計算 (&P)"
 
 #. MainForm..MainMenu..MenuSCGen..Caption
 #. MainForm..MainMenu..MenuSCGen..Caption
-#: MForm.dfm:141
+#. MainForm..MainMenu..MenuSCGen..Caption
+#: MForm.dfm:163
+#: release/1.0b2/src/MForm.dfm:141
 msgid "Scenery Generation(&S)"
 msgstr "シーナリ生成(&S)"
 
 #. MainForm..MainMenu..MenuOption..Caption
 #. MainForm..MainMenu..MenuOption..Caption
-#: MForm.dfm:145
+#. MainForm..MainMenu..MenuOption..Caption
+#: MForm.dfm:167
+#: release/1.0b2/src/MForm.dfm:145
 msgid "Option (&O)"
 msgstr "オプション(&O)"
 
 #. MainForm..MainMenu..H1..Caption
 #. MainForm..MainMenu..H1..Caption
-#: MForm.dfm:149
+#. MainForm..MainMenu..H1..Caption
+#: MForm.dfm:171
+#: release/1.0b2/src/MForm.dfm:149
 msgid "Help(&H)"
 msgstr "ヘルプ(&H)"
 
 #. MainForm..MainMenu..H1..MenuTutorial..Caption
 #. MainForm..MainMenu..H1..MenuTutorial..Caption
-#: MForm.dfm:151
+#. MainForm..MainMenu..H1..MenuTutorial..Caption
+#: MForm.dfm:173
+#: release/1.0b2/src/MForm.dfm:151
 msgid "Tutorial(&T)..."
 msgstr "チュートリアル(&T)..."
 
 #. MainForm..MainMenu..H1..MenuManual..Caption
 #. MainForm..MainMenu..H1..MenuManual..Caption
-#: MForm.dfm:155
+#. MainForm..MainMenu..H1..MenuManual..Caption
+#: MForm.dfm:177
+#: release/1.0b2/src/MForm.dfm:155
 msgid "Manual(&M)..."
 msgstr "マニュアル(&M)..."
 
 #. MainForm..MainMenu..H1..MenuAbout..Caption
 #. MainForm..MainMenu..H1..MenuAbout..Caption
-#: MForm.dfm:162
+#. MainForm..MainMenu..H1..MenuAbout..Caption
+#: MForm.dfm:184
+#: release/1.0b2/src/MForm.dfm:162
 msgid "About(&A)..."
 msgstr "バージョン情報(&A)..."
 
@@ -375,8 +536,12 @@ msgstr "バージョン情報(&A)..."
 #. MainForm..SavePrjDialog..DefaultExt
 #. MainForm..OpenPrjDialog..DefaultExt
 #. MainForm..SavePrjDialog..DefaultExt
-#: MForm.dfm:168
+#. MainForm..OpenPrjDialog..DefaultExt
+#. MainForm..SavePrjDialog..DefaultExt
+#: MForm.dfm:190
 #: release/1.0b1/src/MForm.dfm:173
+#: release/1.0b2/src/MForm.dfm:168
+#: release/1.0b2/src/MForm.dfm:174
 msgid "psm"
 msgstr ""
 
@@ -384,35 +549,57 @@ msgstr ""
 #. MainForm..SavePrjDialog..Filter
 #. MainForm..OpenPrjDialog..Filter
 #. MainForm..SavePrjDialog..Filter
-#: MForm.dfm:169
+#. MainForm..OpenPrjDialog..Filter
+#. MainForm..SavePrjDialog..Filter
+#: MForm.dfm:191
 #: release/1.0b1/src/MForm.dfm:174
+#: release/1.0b2/src/MForm.dfm:169
+#: release/1.0b2/src/MForm.dfm:175
 msgid "Project files (*.psm)|*.psm|All files (*.*)|*.*"
 msgstr ""
 
 #. OptionDlg..Caption
 #. OptionDlg..Caption
+#. OptionDlg..Caption
 #: OptDlg.dfm:5
+#: release/1.0b2/src/OptDlg.dfm:5
 msgid "Options"
 msgstr "オプション"
 
 #. OptionDlg..Label1..Caption
 #. OptionDlg..Label1..Caption
+#. OptionDlg..Label1..Caption
 #: OptDlg.dfm:24
+#: release/1.0b2/src/OptDlg.dfm:24
 msgid "Terrain SDK folder"
 msgstr "Terrain SDK フォルダ"
 
 #. OptionDlg..Label2..Caption
 #. OptionDlg..Label2..Caption
+#. OptionDlg..Label2..Caption
 #: OptDlg.dfm:31
+#: release/1.0b2/src/OptDlg.dfm:31
 msgid "Imagetool folder"
 msgstr "Imagetool フォルダ"
 
 #. OptionDlg..Label3..Caption
 #. OptionDlg..Label3..Caption
+#. OptionDlg..Label3..Caption
 #: OptDlg.dfm:38
+#: release/1.0b2/src/OptDlg.dfm:38
 msgid "Language"
 msgstr "言語"
 
+#. OptionDlg..ButtonBrowseSDK..Caption
+#. OptionDlg..ButtonBrowserImagetool..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSpring..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpFall..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpHSWinter..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpLightmap..Caption
+#. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..ButtonRefOutDir..Caption
 #. OptionDlg..ButtonBrowseSDK..Caption
 #. OptionDlg..ButtonBrowserImagetool..Caption
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpSummer..Caption
@@ -434,11 +621,11 @@ msgstr "言語"
 #. PrjForm..PageControl1..TabSheet1..ButtonRefBmpAlpha..Caption
 #. PrjForm..PageControl1..TabSheet3..ButtonRefOutDir..Caption
 #: OptDlg.dfm:71
-#: PJForm.dfm:169
-#: PJForm.dfm:178
-#: PJForm.dfm:187
-#: PJForm.dfm:196
-#: PJForm.dfm:415
+#: PJForm.dfm:168
+#: PJForm.dfm:177
+#: PJForm.dfm:186
+#: PJForm.dfm:195
+#: PJForm.dfm:407
 #: release/1.0b1/src/OptDlg.dfm:71
 #: release/1.0b1/src/OptDlg.dfm:87
 #: release/1.0b1/src/PJForm.dfm:142
@@ -449,206 +636,328 @@ msgstr "言語"
 #: release/1.0b1/src/PJForm.dfm:187
 #: release/1.0b1/src/PJForm.dfm:196
 #: release/1.0b1/src/PJForm.dfm:415
+#: release/1.0b2/src/OptDlg.dfm:71
+#: release/1.0b2/src/OptDlg.dfm:87
+#: release/1.0b2/src/PJForm.dfm:142
+#: release/1.0b2/src/PJForm.dfm:151
+#: release/1.0b2/src/PJForm.dfm:160
+#: release/1.0b2/src/PJForm.dfm:169
+#: release/1.0b2/src/PJForm.dfm:178
+#: release/1.0b2/src/PJForm.dfm:187
+#: release/1.0b2/src/PJForm.dfm:196
+#: release/1.0b2/src/PJForm.dfm:415
 msgid "..."
 msgstr ""
 
 #. OptionDlg..OpenDialog..DefaultExt
 #. OptionDlg..OpenDialog..DefaultExt
+#. OptionDlg..OpenDialog..DefaultExt
 #: OptDlg.dfm:101
+#: release/1.0b2/src/OptDlg.dfm:101
 msgid "exe"
 msgstr ""
 
 #. PrjForm..Caption
 #. PrjForm..Caption
+#. PrjForm..Caption
 #: PJForm.dfm:6
+#: release/1.0b2/src/PJForm.dfm:6
 msgid "Project Property"
 msgstr "プロジェクトのプロパティ"
 
 #. PrjForm..PageControl1..TabSheet1..Caption
 #. PrjForm..PageControl1..TabSheet1..Caption
-#: PJForm.dfm:29
+#. PrjForm..PageControl1..TabSheet1..Caption
+#: PJForm.dfm:28
+#: release/1.0b2/src/PJForm.dfm:29
 msgid "Bitmaps"
 msgstr "ビットマップ"
 
 #. PrjForm..PageControl1..TabSheet1..Label5..Caption
 #. PrjForm..PageControl1..TabSheet1..Label5..Caption
-#: PJForm.dfm:63
+#. PrjForm..PageControl1..TabSheet1..Label5..Caption
+#: PJForm.dfm:62
+#: release/1.0b2/src/PJForm.dfm:63
 msgid "Harsh Winter"
 msgstr "厳冬"
 
 #. PrjForm..PageControl1..TabSheet1..Label7..Caption
 #. PrjForm..PageControl1..TabSheet1..Label7..Caption
-#: PJForm.dfm:77
+#. PrjForm..PageControl1..TabSheet1..Label7..Caption
+#: PJForm.dfm:76
+#: release/1.0b2/src/PJForm.dfm:77
 msgid "Water(alpha)"
 msgstr "水面（アルファ）"
 
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
 #. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
-#: PJForm.dfm:98
+#. PrjForm..PageControl1..TabSheet1..CheckSeason..Caption
+#: PJForm.dfm:97
+#: release/1.0b2/src/PJForm.dfm:98
 msgid "Support Seasons"
 msgstr "季節のサポート"
 
 #. PrjForm..PageControl1..TabSheet2..Caption
 #. PrjForm..PageControl1..TabSheet2..Caption
-#: PJForm.dfm:202
+#. PrjForm..PageControl1..TabSheet2..Caption
+#: PJForm.dfm:201
+#: release/1.0b2/src/PJForm.dfm:202
 msgid "Coordinates"
 msgstr "座標"
 
-#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#. PrjForm..PageControl1..TabSheet2..GroupBox1..Caption
-#: PJForm.dfm:209
-msgid "Bitmap Boundary"
-msgstr "ビットマップ範囲"
-
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
-#: PJForm.dfm:216
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label10..Caption
+#: PJForm.dfm:215
+#: release/1.0b2/src/PJForm.dfm:216
 msgid "North"
 msgstr "北"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
-#: PJForm.dfm:223
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label11..Caption
+#: PJForm.dfm:222
+#: release/1.0b2/src/PJForm.dfm:223
 msgid "South"
 msgstr "南"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
-#: PJForm.dfm:230
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label12..Caption
+#: PJForm.dfm:229
+#: release/1.0b2/src/PJForm.dfm:230
 msgid "West"
 msgstr "西"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
-#: PJForm.dfm:237
+#. PrjForm..PageControl1..TabSheet2..GroupBox1..Label13..Caption
+#: PJForm.dfm:236
+#: release/1.0b2/src/PJForm.dfm:237
 msgid "East"
 msgstr "東"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
-#: PJForm.dfm:277
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Caption
+#: PJForm.dfm:276
+#: release/1.0b2/src/PJForm.dfm:277
 msgid "Resolution"
 msgstr "解像度"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
-#: PJForm.dfm:284
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label14..Caption
+#: PJForm.dfm:283
+#: release/1.0b2/src/PJForm.dfm:284
 msgid "CellXDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
-#: PJForm.dfm:291
+#. PrjForm..PageControl1..TabSheet2..GroupBox2..Label15..Caption
+#: PJForm.dfm:290
+#: release/1.0b2/src/PJForm.dfm:291
 msgid "CellYDimensionDeg (deg/pixel)"
 msgstr ""
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
-#: PJForm.dfm:315
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Caption
+#: PJForm.dfm:314
+#: release/1.0b2/src/PJForm.dfm:315
 msgid "Info"
 msgstr "情報"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
-#: PJForm.dfm:322
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label16..Caption
+#: PJForm.dfm:321
+#: release/1.0b2/src/PJForm.dfm:322
 msgid "Bitmap Width"
 msgstr "ビットマップ幅"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
-#: PJForm.dfm:329
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label17..Caption
+#: PJForm.dfm:328
+#: release/1.0b2/src/PJForm.dfm:329
 msgid "Bitmap Height"
 msgstr "ビットマップ高"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
-#: PJForm.dfm:336
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label18..Caption
+#: PJForm.dfm:335
+#: release/1.0b2/src/PJForm.dfm:336
 msgid "X resolution (m/pixel)"
 msgstr "X解像度 (m/pixel)"
 
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
 #. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
-#: PJForm.dfm:343
+#. PrjForm..PageControl1..TabSheet2..GroupBoxInfo..Label19..Caption
+#: PJForm.dfm:342
+#: release/1.0b2/src/PJForm.dfm:343
 msgid "Y resolution (m/pixel)"
 msgstr "Y解像度(m/pixel)"
 
 #. PrjForm..PageControl1..TabSheet3..Caption
 #. PrjForm..PageControl1..TabSheet3..Caption
-#: PJForm.dfm:380
+#. PrjForm..PageControl1..TabSheet3..Caption
+#: PJForm.dfm:379
+#: release/1.0b2/src/PJForm.dfm:380
 msgid "Output"
 msgstr "出力"
 
-#. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#. PrjForm..PageControl1..TabSheet3..Label8..Caption
-#: PJForm.dfm:387
-msgid "Output Folder"
-msgstr "出力フォルダ"
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Caption
+#: PJForm.dfm:386
+msgid "File output"
+msgstr "ファイル出力"
 
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Label9..Caption
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
 #. PrjForm..PageControl1..TabSheet3..Label9..Caption
-#: PJForm.dfm:394
+#: PJForm.dfm:393
+#: release/1.0b2/src/PJForm.dfm:394
 msgid "Base File Name"
 msgstr "ベースファイル名"
 
+#. PrjForm..PageControl1..TabSheet3..GroupBox3..Label8..Caption
+#. PrjForm..PageControl1..TabSheet3..Label8..Caption
+#. PrjForm..PageControl1..TabSheet3..Label8..Caption
+#: PJForm.dfm:400
+#: release/1.0b2/src/PJForm.dfm:387
+msgid "Output Folder"
+msgstr "出力フォルダ"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Caption
+#: PJForm.dfm:431
+msgid "Bitmap boundary"
+msgstr "ビットマップ範囲"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label20..Caption
+#: PJForm.dfm:438
+msgid "Top"
+msgstr "上"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label21..Caption
+#: PJForm.dfm:445
+msgid "Left"
+msgstr "左"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label22..Caption
+#: PJForm.dfm:452
+msgid "Right"
+msgstr "右"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..Label23..Caption
+#: PJForm.dfm:459
+msgid "Bottom"
+msgstr "下"
+
+#. PrjForm..PageControl1..TabSheet3..GroupBox4..CheckUseWhole..Caption
+#: PJForm.dfm:466
+msgid "Use whole bitmap"
+msgstr "ビットマップ全体を使用"
+
 #. PrjForm..OpenDialog..DefaultExt
 #. PrjForm..OpenDialog..DefaultExt
-#: PJForm.dfm:448
+#. PrjForm..OpenDialog..DefaultExt
+#: PJForm.dfm:527
+#: release/1.0b2/src/PJForm.dfm:448
 msgid "bmp"
+msgstr ""
+
+#. PrjForm..OpenDialog..Filter
+#: PJForm.dfm:528
+msgid "Bitmap File (*.bmp)|*.bmp|All Files (*.*)|*.*"
 msgstr ""
 
 #. SCGenForm..Caption
 #. SCGenForm..Caption
+#. SCGenForm..Caption
 #: SCGenFrm.dfm:6
+#: release/1.0b2/src/SCGenFrm.dfm:6
 msgid "Scenery Generation"
 msgstr "シーナリ生成"
 
 #. SCGenForm..ButtonDoAll..Caption
 #. SCGenForm..ButtonDoAll..Caption
-#: SCGenFrm.dfm:24
+#. SCGenForm..ButtonDoAll..Caption
+#: SCGenFrm.dfm:23
+#: release/1.0b2/src/SCGenFrm.dfm:24
 msgid "Run whole process"
 msgstr "全実行"
 
 #. SCGenForm..GroupBox1..Caption
 #. SCGenForm..GroupBox1..Caption
-#: SCGenFrm.dfm:48
+#. SCGenForm..GroupBox1..Caption
+#: SCGenFrm.dfm:47
+#: release/1.0b2/src/SCGenFrm.dfm:48
 msgid "Step execution"
 msgstr "ステップ実行"
 
 #. SCGenForm..GroupBox1..ButtonMakeInf..Caption
 #. SCGenForm..GroupBox1..ButtonMakeInf..Caption
-#: SCGenFrm.dfm:55
+#. SCGenForm..GroupBox1..ButtonMakeInf..Caption
+#: SCGenFrm.dfm:54
+#: release/1.0b2/src/SCGenFrm.dfm:55
 msgid "1. Generate inf file"
 msgstr "1. inf ファイル生成"
 
 #. SCGenForm..GroupBox1..ButtonResample..Caption
 #. SCGenForm..GroupBox1..ButtonResample..Caption
-#: SCGenFrm.dfm:64
+#. SCGenForm..GroupBox1..ButtonResample..Caption
+#: SCGenFrm.dfm:63
+#: release/1.0b2/src/SCGenFrm.dfm:64
 msgid "2. Resample"
 msgstr "2. Resample実行"
 
 #. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
 #. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
-#: SCGenFrm.dfm:73
+#. SCGenForm..GroupBox1..ButtonConvertTexture..Caption
+#: SCGenFrm.dfm:72
+#: release/1.0b2/src/SCGenFrm.dfm:73
 msgid "4. Convert Texture"
 msgstr "4. テクスチャ変換"
 
 #. SCGenForm..GroupBox1..ButtonGenBGL..Caption
 #. SCGenForm..GroupBox1..ButtonGenBGL..Caption
-#: SCGenFrm.dfm:82
+#. SCGenForm..GroupBox1..ButtonGenBGL..Caption
+#: SCGenFrm.dfm:81
+#: release/1.0b2/src/SCGenFrm.dfm:82
 msgid "5. Generate BGL"
 msgstr "5. BGLファイル生成"
 
 #. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
 #. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
-#: SCGenFrm.dfm:91
+#. SCGenForm..GroupBox1..ButtonMergeAlpha..Caption
+#: SCGenFrm.dfm:90
+#: release/1.0b2/src/SCGenFrm.dfm:91
 msgid "3. Merge Alpha Texture"
 msgstr "3. アルファテクスチャのマージ"
 
 #. SCGenForm..ButtonStop..Caption
 #. SCGenForm..ButtonStop..Caption
-#: SCGenFrm.dfm:101
+#. SCGenForm..ButtonStop..Caption
+#: SCGenFrm.dfm:100
+#: release/1.0b2/src/SCGenFrm.dfm:101
 msgid "Stop"
 msgstr "中断"
+
+#. AboutDialog..Label2..Caption
+#: release/1.0b1/src/AboutDlg.dfm:37
+msgid "Version 1.0.0 beta 1"
+msgstr ""
+
+#. AboutDialog..Label2..Caption
+#: release/1.0b2/src/AboutDlg.dfm:37
+msgid "Version 1.0.0 beta 2"
+msgstr ""
+
+# D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:382
+msgid "Can't load project file."
+msgstr "プロジェクトファイルを開けません"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:151
 msgid "Confirmation"
@@ -659,13 +968,24 @@ msgid "Project is modified. Do you want to save?"
 msgstr "プロジェクトが変更されています。保存しますか？"
 
 # D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
-#, c-format
-msgid "Specify #%d correction point"
-msgstr "%d番目のコントロールポイントを指定してください"
+msgid "Specify #1 correction point"
+msgstr "1番目のコントロールポイントを指定してください"
 
-# D:\USR\FS\PhotoSceneryMaker\MForm.cpp:193
-msgid "All control points specified"
-msgstr "コントロールポイント指定完了"
+# D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
+msgid "Specify #2 correction point"
+msgstr "2番目のコントロールポイントを指定してください"
+
+msgid "Specify bitmap top boundary"
+msgstr "ビットマップの上端を指定してください"
+
+msgid "Specify bitmap bottom boundary"
+msgstr "ビットマップの下端を指定してください"
+
+msgid "Specify bitmap left boundary"
+msgstr "ビットマップの左端を指定してください"
+
+msgid "Specify bitmap right boundary"
+msgstr "ビットマップの右端を指定してください"
 
 # D:\USR\FS.SceneryTools\PhotoSceneryMaker\MForm.cpp:282
 #, c-format
@@ -718,4 +1038,13 @@ msgstr "テクスチャ変換中..."
 
 msgid "Generating BGL files..."
 msgstr "BGL ファイル生成中..."
+
+# D:\USR\FS\PhotoSceneryMaker\MForm.cpp:149
+#, c-format
+msgid "Specify #%d correction point"
+msgstr "%d番目のコントロールポイントを指定してください"
+
+# D:\USR\FS\PhotoSceneryMaker\MForm.cpp:193
+msgid "All control points specified"
+msgstr "コントロールポイント指定完了"
 
