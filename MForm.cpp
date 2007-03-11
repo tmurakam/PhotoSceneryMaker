@@ -53,6 +53,7 @@ __fastcall TMainForm::TMainForm(TComponent* Owner)
 
 	isCpSpecifing = false;
 	isDragging = false;
+        isTranslated = false;
 
 	bitmap = NULL;
 	curBmpIdx = BM_SUMMER;
@@ -122,12 +123,22 @@ void __fastcall TMainForm::FormShow(TObject *Sender)
 //
 void TMainForm::TranslateAllForms(void)
 {
-	TranslateComponent(this);
-	TranslateComponent(LatLonDlg);
-	TranslateComponent(OptionDlg);
-	TranslateComponent(AboutDialog);
-	TranslateComponent(SCGenForm);
-	TranslateComponent(PrjForm);
+	if (isTranslated) {
+		RetranslateComponent(this);
+		RetranslateComponent(LatLonDlg);
+		RetranslateComponent(OptionDlg);
+		RetranslateComponent(AboutDialog);
+		RetranslateComponent(SCGenForm);
+		RetranslateComponent(PrjForm);
+        } else {
+		TranslateComponent(this);
+		TranslateComponent(LatLonDlg);
+		TranslateComponent(OptionDlg);
+		TranslateComponent(AboutDialog);
+		TranslateComponent(SCGenForm);
+		TranslateComponent(PrjForm);
+                isTranslated = true;
+        }
 }
 
 //---------------------------------------------------------------------------

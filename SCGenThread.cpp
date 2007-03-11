@@ -71,7 +71,7 @@ void __fastcall SCGenThread::Execute()
 		ResultMsg = e.Message;
 	}
 
-	Synchronize(ShowMsg);
+	Synchronize((TThreadMethod)&ShowMsg);
 }
 
 // Show Messagebox

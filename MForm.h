@@ -140,6 +140,7 @@ private:	// User decl.
 	//Graphics::TBitmap	*bitmap;
 	TBitmap2	*bitmap;	
 	int curBmpIdx;
+        bool isTranslated;
 
 	bool CheckSave(void);
 	

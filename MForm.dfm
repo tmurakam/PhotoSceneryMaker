@@ -1,9 +1,9 @@
 object MainForm: TMainForm
   Left = 253
   Top = 122
-  Width = 644
-  Height = 519
   Caption = 'Photo Scenery Maker'
+  ClientHeight = 461
+  ClientWidth = 628
   Color = clBtnFace
   Font.Charset = SHIFTJIS_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object MainForm: TMainForm
   TextHeight = 14
   object StatusBar: TStatusBar
     Left = 0
-    Top = 451
-    Width = 636
+    Top = 442
+    Width = 628
     Height = 19
     Panels = <
       item
@@ -37,14 +37,13 @@ object MainForm: TMainForm
       item
         Width = 120
       end>
-    SimplePanel = False
     SimpleText = 'Ready'
   end
   object ScrollBox: TScrollBox
     Left = 0
     Top = 0
-    Width = 636
-    Height = 451
+    Width = 628
+    Height = 442
     HorzScrollBar.Tracking = True
     VertScrollBar.Tracking = True
     Align = alClient
